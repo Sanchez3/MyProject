@@ -35,8 +35,8 @@ Javascript规定，每一个构造函数都有一个prototype属性，指向另�
 
 ##对象字面量方式（比较清楚的查找对象包含的属性及方法） [引用](http://www.cnblogs.com/gaojun/archive/2013/10/24/3386552.html "Title")
 [sample2](https://github.com/Sanchez3/MyProject/blob/master/BaiduList/sample2.js)
-```
-jsvar person = {
+```js
+var person = {
 name : 'My name',
 age : 18,
 getName : function(){
