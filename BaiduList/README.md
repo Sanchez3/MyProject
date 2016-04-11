@@ -28,6 +28,26 @@ Javascript规定，每一个构造函数都有一个prototype属性，指向另�
 　　cat1.eat(); // 吃老鼠
 ```
 这时所有实例的type属性和eat()方法，其实都是同一个内存地址，指向prototype对象，因此就提高了运行效率。
+
 ```js
 　　alert(cat1.eat == cat2.eat); //true
+```
+
+##对象字面量方式（比较清楚的查找对象包含的属性及方法） [引用](http://www.cnblogs.com/gaojun/archive/2013/10/24/3386552.html "Title")
+[sample2](https://github.com/Sanchez3/MyProject/blob/master/BaiduList/sample2.js)
+```
+jsvar person = {
+name : 'My name',
+age : 18,
+getName : function(){
+return this.name;
+}
+}
+```
+JS的对象可以使用‘.’操作符动态的扩展其属性，可以使用’delete’操作符或将属性值设置为’undefined’来删除属性。如下：
+```js
+person.newAtt=’new Attr’;//添加属性
+alert(person.newAtt);//new Attr
+delete person.age;
+alert(person.age);//undefined(删除属性后值为undefined);
 ```
