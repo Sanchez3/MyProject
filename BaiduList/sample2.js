@@ -8,8 +8,11 @@ var mproject = {
         var that = this;
         var ww = window.innerWidth,
             wh = window.innerHeight;
-        that.curH = (750 / ww) * wh
-        $("#main").css({"height": that.curH, "scale": ww / 750});
+        that.curH = (750 / ww) * wh;
+        var main=document.getElementById("main");
+        main.style.height=that.curH;
+        // main.style.scale=ww/750;
+        // $("#main").css({"height": that.curH, "scale": ww / 750});
         that.viewport.scaleY = wh / 1206;
         that.viewport.scaleX = ww / 750;
         //Share page
@@ -56,4 +59,4 @@ var mproject = {
 };
 window.onload = function () {
     mproject.init();
-}
+};
