@@ -51,9 +51,9 @@ var person = {
 name : 'My name',
 age : 18,
 getName : function(){
-var that=this;
-return that.name;
-}
+    var that=this;
+    return that.name;
+    }
 }
 ```
 JS的对象可以使用‘.’操作符动态的扩展其属性，可以使用’delete’操作符或将属性值设置为’undefined’来删除属性。如下：
