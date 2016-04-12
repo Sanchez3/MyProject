@@ -1,7 +1,10 @@
 /**
  * Created by Sanchez on 16/4/12.
  */
-
+/*
+ 对象字面量方式
+ 整个project html的主要函数
+ */
 var mproject = {
     viewport: {w: 0, h: 0, scale: 1, scaleX: 1, scaleY: 1, cur: -1, curH: 1206},
     resizeHandler: function () {
