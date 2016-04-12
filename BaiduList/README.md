@@ -58,7 +58,7 @@ return that.name;
 ```
 JS的对象可以使用‘.’操作符动态的扩展其属性，可以使用’delete’操作符或将属性值设置为’undefined’来删除属性。如下：
 ```js
-person.newAtt=’new Attr’;//添加属性
+person.newAtt='new Attr';//添加属性
 alert(person.newAtt);//new Attr
 delete person.age;
 alert(person.age);//undefined(删除属性后值为undefined);
