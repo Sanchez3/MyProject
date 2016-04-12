@@ -33,14 +33,26 @@ Javascript规定，每一个构造函数都有一个prototype属性，指向另�
 　　alert(cat1.eat == cat2.eat); //true
 ```
 
-##对象字面量方式（比较清楚的查找对象包含的属性及方法） [引用](http://www.cnblogs.com/gaojun/archive/2013/10/24/3386552.html "Title")
+##对象字面量方式（比较清楚的查找对象包含的属性及方法）
+ [引用](http://www.cnblogs.com/gaojun/archive/2013/10/24/3386552.html "Title")
+
 [sample2](https://github.com/Sanchez3/MyProject/blob/master/BaiduList/sample2.js)
+
+利用对象字面量 直接创建对象。
+
+其中this作为对象方法调用
+
+在JavaScript中，函数也是对象，因此函数可以作为一个对象的属性，此时该函数被称为该对象的方法，在使用这种调用方式时，this 被自然绑定到该对象。
+
+ps.由于'某些情况下,this会被绑定到全局对象,而不是局部对象'JavaScript的设计缺陷，正确的设计方式是内部函数的this应该绑定到其外层函数对应的对象上，为了规避这一设计缺陷，聪明的JavaScript程序员想出了变量替代的方法，约定俗成，该变量一般被命名为that。
+
 ```js
 var person = {
 name : 'My name',
 age : 18,
 getName : function(){
-return this.name;
+var that=this;
+return that.name;
 }
 }
 ```
