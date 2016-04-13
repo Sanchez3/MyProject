@@ -15,7 +15,7 @@ MyObj = function (_game, x, y, spriteName) {
 
     this.title = this.add.sprite(0, 0);
     this.addChild(this.title);
-}
+};
 
 
 MyObj.prototype = Object.create(Phaser.Sprite.prototype);
@@ -24,7 +24,7 @@ MyObj.prototype.constructor = MyObj;
 
 MyObj.prototype.myfunction = function () {
 
-}
+};
 
 
 // eg
