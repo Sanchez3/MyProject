@@ -8,7 +8,7 @@
 * Swiper Load 属性完成分段加载
 
 * Swiper 多个间跳转时,需要重新初始化及销毁上一个swiper
-
+ 
 * 重写Swiper的样式表,完成所需要的swiper-bar和swiper-pagination
 
 ```js
