@@ -10,7 +10,8 @@
  @
  */
 function CircProgress (_game, x, y,radius, circBgName,circBgpName) {
-    Phaser.Sprite.call(this, _game, x, y, circBgName);
+    Phaser.Sprite.call(this, _game, x, y);
+
     this.origX = x;
     this.origY = y;
     this.radius=radius;
