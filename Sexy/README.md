@@ -50,7 +50,7 @@
 
 #调用图片接口，生成图片
 
- eg.项目：测测你有多少粉丝
+ eg.项目：[测测你有多少粉丝](http://wx.ig28.com/fvalue/maker.html)
 
  - FileReader：读取本地图片文件并显示
 ```js
