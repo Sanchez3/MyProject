@@ -144,4 +144,18 @@ function htmlEscape(str) {
 1. [WxMoment](http://wximg.qq.com/wxp/wxmoment-doc/3.3.html)
 当域名为qq.com时,可使用WxMoment是由微信朋友圈广告团队面向广告详情页开发者提供的一个 JavaScript库。通过使用WxMoment，开发者可以简单的实现详情页中的常见功能，例如：微信分享、横屏提示、网页统计等。
 
-2. [wxtool]()
+2. [wxtool](https://github.com/Sanchez3/MyProject/blob/master/Sexy/wxtool.js)
+ 需要注入权限验证配置
+```js
+ {
+     debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+     appId:'', // 必填，公众号的唯一标识
+     timestamp: 2, // 必填，生成签名的时间戳
+     nonceStr: '', // 必填，生成签名的随机串
+     signature:'',// 必填，签名，见附录1
+     jsApiList:[] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+ }
+ ```
+ 详情见微信[JS-SDK说明文档](http://mp.weixin.qq.com/wiki/11/74ad127cc054f6b80759c40f77ec03db.html)
+
+
