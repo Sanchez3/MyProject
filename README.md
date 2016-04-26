@@ -30,7 +30,7 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 * [让你在现场](http://www.digitaling.com/projects/16320.html)   ***已下线***
 
 ###KAPPA抽奖活动
-* [Kappa](http://kc.kappa.com.cn/100anniversary)
+* [Kappa](http://kc.kappa.com.cn/100anniversary)   ***已下线***
 
 ###007推广
 
