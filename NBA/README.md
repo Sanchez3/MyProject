@@ -45,3 +45,16 @@
  //eg
 var movieClip = new MovieClip(this,0,0,750,1206,window.enterConfig,function(){});
 ```
+
+##Phaser Group
+new Group(game, parent, name, addToStage, enableBody, physicsBodyType)
+同group内精灵层级
+
+```js
+var g1=this.add.group();
+var s1=g1.create(0,0,'s1');
+var s2=g1.create(0,0,'s1');
+var s3=g1.create(0,0,'s1');
+
+s1.bringToTop();//s1置于最上层
+```
