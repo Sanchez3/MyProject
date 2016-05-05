@@ -28,7 +28,7 @@ var mproject = {
         return that;
     },
     eventInit: function (argument) {
-        var _ = this;
+        var that = this;
         document.addEventListener('touchstart', function (e) {
         }, false);
         document.addEventListener('touchmove', function (e) {
@@ -36,7 +36,7 @@ var mproject = {
         }, false);
         //禁止弹出选择菜单
         document.documentElement.style.webkitTouchCallout = "none";
-        return _;
+        return that;
     },
     cssInit: function (argument) {
         var that = this;
