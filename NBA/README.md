@@ -58,3 +58,23 @@ var s3=g1.create(0,0,'s1');
 
 s1.bringToTop();//s1置于最上层
 ```
+
+##DeviceOrientation DeviceMotion
+HTML5 特性 DeviceOrientation
+- android IOS 支持DeviceOrientation
+- android不支持DeviceMotion
+- 设备运动时,使用css3的transform,transition 或者greensock的 tweenmax 等完成html中的移动
+```js
+if (window.DeviceOrientationEvent) {
+  // Our browser supports DeviceOrientation
+   window.addEventListener("deviceorientation",function() {
+   //do ....
+
+   }, false);
+} else {
+  console.log("Sorry, your browser doesn't support Device Orientation");
+}
+
+```
+
+
