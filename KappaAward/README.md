@@ -18,3 +18,21 @@ pattern的用法都一样，这里不再啰嗦各种详细写法了，只是列�
 ##input 输入插件js
 [formatter.js](http://firstopinion.github.io/formatter.js/index.html)
 
+##禁用移动Webkit的选择高亮
+```css
+body {
+
+-webkit-touch-callout: none;
+
+-webkit-user-select: none;
+
+-khtml-user-select: none;
+
+-moz-user-select: none;
+
+-ms-user-select: none;
+
+user-select: none;
+}
+
+```
