@@ -18,3 +18,12 @@ firstBezierPointX and firstBezierPointY are "control points" on the curve. You s
 
 ##横竖屏旋转提示
 从WxMoment中摘取相关代码,以此做模板根据项目需要做改动
+
+
+##动态插入js代码
+```js
+var hm = document.createElement("script");
+hm.src = "http://tajs.qq.com/stats?sId=53604919";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+```
