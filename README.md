@@ -49,7 +49,7 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 
 ###"放开我，北鼻"预热
 * [baby siri](http://omgmkt.qq.com/babysiri/)
-* 数英网 [「放开我，北鼻」预热：Siri 返老还童，变成了 Baby 版 Siri](http://www.digitaling.com/projects/17969.html)
+* 数英网 [「放开我，北鼻」预热：Siri返老还童，变成了Baby版Siri](http://www.digitaling.com/projects/17969.html)
 
 `绝大多数项目都在微信端
 `
