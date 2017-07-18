@@ -1,6 +1,6 @@
-#维秘性感测试手册
+# 维秘性感测试手册
 
-##微信分享tool
+## 微信分享tool
 1. [WxMoment](http://wximg.qq.com/wxp/wxmoment-doc/3.3.html)
 当域名为qq.com时,可使用WxMoment是由微信朋友圈广告团队面向广告详情页开发者提供的一个 JavaScript库。通过使用WxMoment，开发者可以简单的实现详情页中的常见功能，例如：微信分享、横屏提示、网页统计等。
 
@@ -34,7 +34,7 @@
 
 
 
-##动画序列帧与雪碧图
+## 动画序列帧与雪碧图
 
 使用texturepacker 完成序列帧动画 [雪碧图](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites)
 
@@ -82,7 +82,7 @@
 }
 ```
 
-#调用图片接口，生成图片
+# 调用图片接口，生成图片
 
  eg.项目：[测测你有多少粉丝](http://wx.ig28.com/fvalue/maker.html)
 
@@ -113,7 +113,7 @@
 
 
 
-#预加载图片声音视频
+# 预加载图片声音视频
 
 用的是以前公司员工一位大神写的js插件
 
@@ -134,7 +134,7 @@ http://www.croppic.net/
 不支持手势放大,支持点击功能zoom pinch
 
 
-##网站安全问题
+## 网站安全问题
 
 站点：omgmkt.qq.com
 站点负责人：jimmycui（若域名负责人有变更，请在gslb进行更新）

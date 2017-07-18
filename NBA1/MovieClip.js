@@ -42,7 +42,7 @@ MovieClip.prototype = Object.create(Phaser.Sprite.prototype);
 
 MovieClip.prototype.constructor = MovieClip;
 
-MovieClip.prototype.playVideo = function () {
+MovieClip.prototype.playVideo = function() {
 
 
     if (this.sprite == null) {
@@ -56,11 +56,11 @@ MovieClip.prototype.playVideo = function () {
 
     this.anim.onComplete.add(this.onAnimationFinish, this);
     this.sprite.anchor.set(0);
-    this.sprite.scale.set(this._scale);  //以视频的宽为准
+    this.sprite.scale.set(this._scale); //以视频的宽为准
     this.sprite.animations.play('anim' + this.curentIndex, this.videoConfig.frameRate, false);
 };
 
-MovieClip.prototype.onAnimationFinish = function (pSender) {
+MovieClip.prototype.onAnimationFinish = function(pSender) {
     this.curentIndex++;
     if (this.curentIndex > this.videoConfig.end) {
         if (!!this.onComplete || typeof(this.onComplete) == 'function') {
@@ -76,13 +76,13 @@ MovieClip.prototype.onAnimationFinish = function (pSender) {
 
 
 //是否暂停
-MovieClip.prototype.isPause = function () {
+MovieClip.prototype.isPause = function() {
     return this._pause;
 };
 
 
 //暂停
-MovieClip.prototype.pause = function () {
+MovieClip.prototype.pause = function() {
     if (!!this.sprite) {
         this.sprite.animations.stop('anim' + this.curentIndex, false);
         this._pause = true;
@@ -90,7 +90,7 @@ MovieClip.prototype.pause = function () {
 };
 
 //停止 恢复首帧
-MovieClip.prototype.stop = function () {
+MovieClip.prototype.stop = function() {
     if (!!this.sprite) {
         this.sprite.animations.stop('anim' + this.curentIndex, false);
         this.curentIndex = 0;
@@ -99,7 +99,7 @@ MovieClip.prototype.stop = function () {
 };
 
 //继续播放
-MovieClip.prototype.resume = function () {
+MovieClip.prototype.resume = function() {
     if (!!this.sprite) {
         this.sprite.animations.play('anim' + this.curentIndex, this.videoConfig.frameRate, false);
         // console.log("resume");

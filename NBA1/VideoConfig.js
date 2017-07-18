@@ -38,7 +38,7 @@ function VideoConfig(game, filepath, prefix, postfix, start, end, frameWidth, fr
 
 
 VideoConfig.prototype = {
-    preload: function () {
+    preload: function() {
         for (var i = this.start; i <= this.end; i++) {
             var nFrame = this.frames;
             if (i == this.end) { //最后一张图片计算剩余帧数
@@ -48,7 +48,7 @@ VideoConfig.prototype = {
             this.game.load.spritesheet(this.prefix + i, this.filepath + this.prefix + i + this.postfix, this.frameWidth, this.frameHeight, nFrame);
         }
     },
-    getStartIndex: function () {
+    getStartIndex: function() {
         return this.start;
     }
 };

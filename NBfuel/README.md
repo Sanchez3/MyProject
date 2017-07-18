@@ -12,7 +12,7 @@
 
 - 在ended事件里启动一段音频或视频，使用插件[Howler](https://howlerjs.com/)也不成
 
-  - ```
+  - ```javascript
     video.addEventListener('timeupdate',function (){
         //当视频的currentTime大于0.1时表示黑屏时间已过，已有视频画面，可以移除浮层（.pagestart的div元素）
         if ( !video.isPlayed && this.currentTime>0.1 ){
@@ -33,8 +33,61 @@
 
 
 
+
 ## H5被植入广告
 
-移动端的H5页面被广告植入是因为被网络劫持了，被网络劫持的原因有两种，一种是http劫持，一种是DNS劫持。
+移动端的H5页面被广告植入是因为被网络劫持了，被网络劫持的原因如下，一种是http劫持，一种是DNS劫持，XSS攻击
+DNS劫持是网络运营商的强制劫持，很多时候我们用联通，电信的网络或者WiFi，下面都会弹出他们自己的广告。
+http劫持的解决办法是加密成https，成本并不高，而且安全有效，这个需要企业的技术开发者进行处理。
+XSS攻击
 
-DNS劫持是网络运营商的强制劫持，很多时候我们用联通，电信的网络或者WiFi，下面都会弹出他们自己的广告。http劫持的解决办法是加密成https，成本并不高，而且安全有效，这个需要企业的技术开发者进行处理。（但是影响资源加载）
+### [XSS攻击](http://www.cnblogs.com/coco1s/p/5777260.html)
+跨站脚本攻击(Cross Site Scripting)，为不和层叠样式表(Cascading Style Sheets, CSS)的缩写混淆，故将跨站脚本攻击缩写为XSS。恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。
+
+### Solution
+
+- 使用https而不是http
+
+- 禁止引用未知插件、引用也要使用https
+
+- 进行转义，用户输入、地址分析等（http://127.0.0.1/?key=1）
+
+  - ```javascript
+    //& 转成 &amp;“ 转成 &quot;< 转成 &lt;> 转成 &gt;‘ 转成 &#39;
+    function escapeHtml(unsafe) {
+        return unsafe
+             .replace(/&/g, "&amp;")
+             .replace(/</g, "&lt;")
+             .replace(/>/g, "&gt;")
+             .replace(/"/g, "&quot;")
+             .replace(/'/g, "&#039;");
+     }
+    //参数key为name的值
+     function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var searchURL=escapeHtml(window.location.search);
+        var r =searchURL.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+    ```
+
+# rem应用与resize事件响应
+
+[从网易与淘宝的font-size思考前端设计稿与工作流](http://www.cnblogs.com/lyzg/p/4877277.html)
+
+从网易上扒下源代码，[rootResize]()
+
+# Console
+
+彩蛋 or Note
+
+通过调试工具提醒用户（同行、大神……）
+
+```javascript
+console.log('%c一张网页，要经历多少艰难过程，才能抵达你面前？\n 请各位高抬贵手，若有bug or question，\n 可以邮件指点（sanchezliu@lxustudio.com）', 
+    'background-color:green;color:white');
+```
+### 参考资料
+[Console - Web APIs | MDN](https://developer.mozilla.org/en/docs/Web/API/console)
+[[译] 如何充分利用 JavaScript 控制台](https://juejin.im/post/59510ac45188250d8860c908)
