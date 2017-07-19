@@ -72,12 +72,80 @@ XSS攻击
     }
     ```
 
-# rem应用与resize事件响应
+# rem应用与orientationchange事件响应
 
-[从网易与淘宝的font-size思考前端设计稿与工作流](http://www.cnblogs.com/lyzg/p/4877277.html)
+## rem
+
+从网易与淘宝的font-size思考前端设计稿与工作流](http://www.cnblogs.com/lyzg/p/4877277.html)
 
 从网易上扒下源代码，[rootResize](https://github.com/Sanchez3/MyProject/blob/master/NBfuel/rootResize.js)
 
+DOMContentLoaded，当初始HTML文档被完全加载和解析时，**DOMContentLoaded **事件被触发。这时再触发rootResize
+
+## orientationchange事件
+
+[Managing screen orientation](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+
+> Orientation change needs a delay to pick up on the new heights and widths. This works 80% of the time.
+
+- Solution1
+
+  > Note that 200ms is nowhere near enough (iOS, Safari). The actual time is somewhere between 600-1000ms. 
+
+  ```javascript
+  //Note that 200ms is nowhere near enough (iOS, Safari). The actual time is somewhere between 600-1000ms. 
+  window.setTimeout(function() {
+      //insert logic with height or width calulations here.
+  }, 500);
+  ```
+
+- Solution2
+
+  ```javascript
+  var noChangeCountToEnd = 100,
+      noEndTimeout = 1000;
+
+  window
+      .addEventListener('orientationchange', function() {
+          var interval,
+              timeout,
+              end,
+              lastInnerWidth,
+              lastInnerHeight,
+              noChangeCount;
+
+          end = function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+
+              interval = null;
+              timeout = null;
+
+              // "orientationchangeend"
+          };
+
+          interval = setInterval(function() {
+              if (global.innerWidth === lastInnerWidth && global.innerHeight === lastInnerHeight) {
+                  noChangeCount++;
+
+                  if (noChangeCount === noChangeCountToEnd) {
+                      // The interval resolved the issue first.
+
+                      end();
+                  }
+              } else {
+                  lastInnerWidth = global.innerWidth;
+                  lastInnerHeight = global.innerHeight;
+                  noChangeCount = 0;
+              }
+          });
+          timeout = setTimeout(function() {
+              // The timeout happened first.
+
+              end();
+          }, noEndTimeout);
+      });    
+  ```
 
 
 
