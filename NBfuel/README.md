@@ -6,7 +6,7 @@
 
 - ios手机点击后才能播放
 
-- video canplay 和 canplay事件 触发ended事件，视频并没有播放，且video play后才能监听该事件
+- video canplaythrough 和 canplay事件 触发ended事件，视频并没有播放，且video play后才能监听该事件
 
 - preload="auto" 也无法触发video load事件
 
