@@ -13,11 +13,13 @@ swiper的结构更明确，重写样式更为方便。slide需要jquery支持。
 
 当禁止touchmove （e.preventDefault();），进而禁止了原生scroll，若需要scroll场景时需要swiper模仿。
 
-###swiper bug 
+###swiper  
 
-- 最新版本	分页器不可用，暂用3.3.x
+- 最新版本分页器原方法更改，参考最新api！！！！
+
 - display none 时，swiper初始化无效。
-- ​
+
+  ​
 
 
 
