@@ -41,11 +41,16 @@
 
 - [ ] 横竖屏 [rootResize.js](https://github.com/Sanchez3/MyProject/blob/master/TMD/rootResize.js) / 横屏提示[orientLayer](https://github.com/Sanchez3/MyProject/blob/master/NBA2/orientLayer.html) 
 - [ ] 复制淘命令 [clipboard.js](https://github.com/zenorocha/clipboard.js),，succes 浮窗成功提示，error 浮窗提示(长按复制框内信息打开天猫app/淘宝)
-- [ ] ​
+
+      ​
 
 
 
 ### BUG
 
-- [ ] video播放不了，多测几台机子，重启
-- [ ] 天猫字样……
+- [ ] video播放不了，多测几台机子，重启。
+
+- [ ] 微信传播h5，严格遵守传播规定。（🚫天猫等字样出现，网络爬虫会抓获文本）
+
+      ​
+
