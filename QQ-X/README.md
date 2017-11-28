@@ -1,13 +1,13 @@
-#QQ空间南极探索招募令
+# QQ空间南极探索招募令
 
-##[Skrollr.js](https://github.com/Prinzhorn/skrollr)视差滚动效果
+## [Skrollr.js](https://github.com/Prinzhorn/skrollr)视差滚动效果
 手机端 原生`overflow:scroll`被禁用。通过手势移动距离，控制dom移动。与swiper插件可共存。
 
 详细资料：[使用Skrollr.js實作視差滾動](http://lala0812.logdown.com/posts/240837-skrollr-easily-implement-css3-html5-parallax-scrolling)
 
 
 
-##swiper与slick的选择
+## swiper与slick的选择
 
 swiper的结构更明确，重写样式更为方便。slide需要jquery支持。总体大小相比较差不多。
 
@@ -36,7 +36,7 @@ swiper的结构更明确，重写样式更为方便。slide需要jquery支持。
 
 
 
-##禁止scroll的方法
+## 禁止scroll的方法
 
 js:
 
@@ -57,7 +57,7 @@ overflow: scroll;
 
 
 
-##CSS3动画帧数
+## CSS3动画帧数
 
 CSS3 Animation steps
 
