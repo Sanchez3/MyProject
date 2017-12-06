@@ -119,7 +119,7 @@
 
 [imgloader](https://github.com/wow0218/imgloader)
 
-#Jquery图片剪切插件
+# Jquery图片剪切插件
 http://hammerjs.github.io/
 
 手势支持js 支持手势放大 手势移动 等等
