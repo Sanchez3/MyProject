@@ -27,8 +27,8 @@
 
 - [ ] 使用单位rem/px
 
-      - [ ] rem，屏幕旋转，rem重设。css逐帧动画与雪碧图 使用复杂
-      - [ ] px  transform scale 等比缩放 适配
+      - [ ] rem，屏幕旋转，rem重设，全局font-size重设。css逐帧动画与雪碧图 使用复杂
+      - [ ] px  transform scale 等比缩放 适配  
 
 - [ ] 使用pixijs、phaser、createjs
 
