@@ -10,10 +10,13 @@
       //     window.innerWidth : window.innerWidth;
       var wWidth = window.innerWidth;
       var wHeight = window.innerHeight;
-      wFsize = wWidth / 7.5;
+      if (wWidth > wHeight) {
+          wFsize = wHeight / 646 * 100;
+      } else {
+          wFsize = wWidth / 750 * 100;
+      }
       document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
       if (startR) {
-
           if (wWidth > wHeight) {
               _h = wWidth;
               _w = wHeight;
