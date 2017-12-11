@@ -1,6 +1,6 @@
-#Kappa抽奖活动
+# Kappa抽奖活动
 
-##常用的正则表达式
+## 常用的正则表达式
 
 pattern的用法都一样，这里不再啰嗦各种详细写法了，只是列出来一些常用的正则就好了：
 
@@ -15,10 +15,10 @@ pattern的用法都一样，这里不再啰嗦各种详细写法了，只是列�
 - 强密码：^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,10}$ 包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间
 - 7个汉字或14个字符：^[\u4e00-\u9fa5]{1,7}$|^[\dA-Za-z_]{1,14}$
 
-##input 输入插件js
+## input 输入插件js
 [formatter.js](http://firstopinion.github.io/formatter.js/index.html)
 
-##禁用移动Webkit的选择高亮
+## 禁用移动Webkit的选择高亮
 ```css
 body {
 
