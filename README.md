@@ -14,9 +14,13 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 
 - [腾讯QQ-X计划：地球最后的净土，我在南极等你加入](https://qzs.qzone.qq.com/qzone/qzact/act/external/qqx_116/qqx_1116/dist/)
 
-### NB fuel 
+  ​
+
+
+### NB fuel 疾速对决 
 
 - [欧阳靖的Battle，你敢接吗？](http://nbfuel.lxustudio.cn/?key=1)
+- 数英网 [New Balance #疾速对决#，欧阳靖约你赛车道上“Battle”！](https://www.digitaling.com/projects/22403.html)
 
 ### 2015百度品牌数字资产榜
 * [百度品牌数字资产榜 part2 榜单详情](http://2015moments.baidu.com/list.php)
