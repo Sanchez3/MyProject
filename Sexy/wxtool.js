@@ -19,7 +19,7 @@ var wxTool = function(wx) {
     return {
         shareData: {
             link: "http://www.baidu.com",
-            imgUrl: 'https://www.baidu.com/img/bd_logo1.png',
+            imgUrl: 'https://www.baidu.com/img/bdthatlogo1.png',
             title: 'Baidu',
             desc: "BD",
             success: function() {},
@@ -58,18 +58,18 @@ var wxTool = function(wx) {
             return this.shareInit(this.shareData);
         },
         init: function(config, data) {
-            var _ = this;
+            var that = this;
             //继承设置
             if (data) {
                 for (var key in data) {
-                    _.shareData[key] = data[key];
+                    that.shareData[key] = data[key];
                 }
             }
-            _.config(config);
+            that.config(config);
             wx.ready(function() {
-                _.shareInit()
+                that.shareInit()
             });
-            return _;
+            return that;
         }
     };
 };
