@@ -16,60 +16,60 @@
  */
 
 var wxTool = function(wx) {
-    return {
-        shareData: {
-            link: "http://www.baidu.com",
-            imgUrl: 'https://www.baidu.com/img/bdthatlogo1.png',
-            title: 'Baidu',
-            desc: "BD",
-            success: function() {},
-            cancel: function() {}
-        },
-        config: function(opts) {
-            wx.config(opts)
-        },
-        shareInit: function(data) {
-            data = data || this.shareData;
-            wx.onMenuShareAppMessage({
-                title: data.title,
-                desc: data.desc,
-                link: data.link,
-                imgUrl: data.imgUrl,
-                type: 'link',
-                dataUrl: '',
-                success: data.success,
-                cancel: data.cancel
-            });
-            wx.onMenuShareTimeline({
-                title: data.desc,
-                link: data.link,
-                imgUrl: data.imgUrl,
-                success: data.success,
-                cancel: data.cancel
-            });
-            wx.onMenuShareQQ(data);
-            wx.onMenuShareWeibo(data);
-            return this;
-        },
-        update: function(data) {
-            return this.shareInit(data);
-        },
-        reset: function() {
-            return this.shareInit(this.shareData);
-        },
-        init: function(config, data) {
-            var that = this;
-            //继承设置
-            if (data) {
-                for (var key in data) {
-                    that.shareData[key] = data[key];
-                }
+    shareData: {
+        title: 'Baidu',
+        desc: 'BD',
+        link: 'http://www.baidu.com',
+        imgUrl: 'https://www.baidu.com/img/bdthatlogo1.png',
+        success: function() {},
+        cancel: function() {}
+    },
+    config: function(opts) {
+        wx.config(opts)
+    },
+    shareInit: function(data) {
+        data = data || this.shareData;
+        wx.onMenuShareAppMessage({
+            title: data.title,
+            desc: data.desc,
+            link: data.link,
+            imgUrl: data.imgUrl,
+            type: 'link',
+            dataUrl: '',
+            success: data.success,
+            cancel: data.cancel
+        });
+        wx.onMenuShareTimeline({
+            title: data.desc,
+            link: data.link,
+            imgUrl: data.imgUrl,
+            success: data.success,
+            cancel: data.cancel
+        });
+        wx.onMenuShareQQ(data);
+        wx.onMenuShareWeibo(data);
+        wx.onMenuShareQZone(data);
+        return this;
+    },
+    update: function(data) {
+        return this.shareInit(data);
+    },
+    reset: function() {
+        return this.shareInit(this.shareData);
+    },
+    init: function(config, data) {
+        var that = this;
+        //继承设置
+        if (data) {
+            for (var key in data) {
+                that.shareData[key] = data[key];
             }
-            that.config(config);
-            wx.ready(function() {
-                that.shareInit()
-            });
-            return that;
         }
-    };
+        that.config(config);
+        wx.ready(function() {
+            that.shareInit()
+        });
+        return that;
+    }
+
 };
