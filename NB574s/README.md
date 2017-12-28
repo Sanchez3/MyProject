@@ -80,3 +80,5 @@ cropper.getCroppedCanvas({
       ticker.add(function() { app.renderer.render(app.stage); });
       ticker.start();
       ```
+
+OR 可尝试原生Canvas blur 但是由于使用rem作为单位，页面resize时不能很好的处理canvas大小，导致加载显示的图片尺寸不正确。
