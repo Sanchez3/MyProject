@@ -58,3 +58,25 @@ cropper.getCroppedCanvas({
 ## 微信分享工具
 
 将之前Sexy项目中的[wxtool.js](https://github.com/Sanchez3/MyProject/blob/master/Sexy/wxtool.js)改为字面量方式（方便使用即正义）
+
+
+
+## Blur效果
+
+尝试使用css `filter:blur`但是 [html2canvas](http://html2canvas.hertzen.com/) 不支持filter
+
+> Note: [Not working for webkit-filter](https://github.com/niklasvh/html2canvas/issues/493)
+
+于是使用 [pixijs](http://www.pixijs.com/) WebGL的Blur效果实现
+
+- [ ] pixijs 必须初始化时设置 `preserveDrawingBuffer: true`
+
+- [ ] 必须刷新stage
+
+      ```javascript
+      var ticker = new PIXI.ticker.Ticker();
+      ticker.autoStart = false;
+      ticker.stop();
+      ticker.add(function() { app.renderer.render(app.stage); });
+      ticker.start();
+      ```
