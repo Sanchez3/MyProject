@@ -82,3 +82,16 @@ cropper.getCroppedCanvas({
       ```
 
 OR 可尝试原生Canvas blur 但是由于使用rem作为单位，页面resize时不能很好的处理canvas大小，导致加载显示的图片尺寸不正确。
+
+
+
+## 广告劫持!!!
+
+H5 被插入广告，原因可能如下：
+
+1. DNS劫持，域名解析方面出现问题。
+2. js注入，页面未对特殊字符限制。
+3. iframe注入，页面被拦截之后加入了iframe标签，或者利用js注入后加载了广告的iframe标签。
+4. 服务器被黑。
+
+其中原因2之前项目中遇到过[Sexy](https://github.com/Sanchez3/MyProject/tree/master/Sexy),[NBfuel](https://github.com/Sanchez3/MyProject/tree/master/NBfuel)，需要特殊字符转义
