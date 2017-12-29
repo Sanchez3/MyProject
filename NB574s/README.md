@@ -116,3 +116,17 @@ H5 被插入广告，原因可能如下：
 
 [AlphabetJS](https://github.com/starkwang/alphabetJS)
 
+
+
+## 抛弃Jquery 
+
+ajax的替代品：[Ajax](https://github.com/fdaciuk/ajax)
+
+其他语法相关 [You-Dont-Need-jQuery](https://github.com/nefe/You-Dont-Need-jQuery)
+
+
+
+## BUG待解决
+
+- [ ] 给iframe写css样式后，会影响页面排版？？？
+
