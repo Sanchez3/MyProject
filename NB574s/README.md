@@ -85,6 +85,62 @@ OR 可尝试原生Canvas blur 但是由于使用rem作为单位，页面resize�
 
 
 
+## Textarea技术关键点
+
+可以换行但是也要在规定行数内 css的`rows`无法限制，但是可以利用rows标识，通过js控制
+
+参考：[如何精确控制textarea的行数，若输入超过指定的行数，则禁止输入？](https://www.zhihu.com/question/41044053)
+
+最终采用如下方案：
+
+利用两个textarea，计算`line-height`解决
+
+```javascript
+var styles = getComputedStyle(t);
+var lineHeight = parseFloat(styles.lineHeight);
+var old = t.value;
+var maxLines = 5;
+
+t.addEventListener('input', function () {
+  g.value = t.value;
+  var lines = Math.round(g.scrollHeight / lineHeight);
+  if (lines > maxLines) {
+    t.value = old;
+    w.textContent = '最多输入' + maxLines + '行！';
+  } else {
+    old = t.value;
+    o.textContent = lines;
+    w.textContent = '';
+  }
+});
+```
+
+
+
+通过监控`onscroll`方法判断是否超过行数有bug，待解决
+
+```javascript
+window.onload=function(){
+          var  textArea = document.getElementById("ta");
+            textArea.style.overflow="hidden";
+            textArea.rows=2;
+            textArea.flag =false;
+            textArea.onscroll=function(){
+              if(textArea.flag)
+                   return;
+              this.disabled = true;
+              this.value=this.value.slice(0,this.value.length-1);
+              textArea.flag=true;
+          };
+        };
+```
+
+两种方法都要注意 `textArea.value` 和`textArea.innerHTML`
+
+> Note：CSS中textarea是没有value属性的!!!
+
+
+
 ## 广告劫持!!!
 
 H5 被插入广告，原因可能如下：
