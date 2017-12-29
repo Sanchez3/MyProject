@@ -95,3 +95,24 @@ H5 被插入广告，原因可能如下：
 4. 服务器被黑。
 
 其中原因2之前项目中遇到过[Sexy](https://github.com/Sanchez3/MyProject/tree/master/Sexy),[NBfuel](https://github.com/Sanchez3/MyProject/tree/master/NBfuel)，需要特殊字符转义
+
+目前最佳最稳妥方法就是HTTPS
+
+[使用阿里云免费SSL证书实现全站HTTPS化](https://weiya.me/item/66.html) **方法借鉴，目前已无免费证书**
+
+
+
+## 玩转Console
+
+```
+ _____ ___ ____ _      _   
+|  ___|_ _/ ___| | ___| |_ 
+| |_   | | |  _| |/ _ \ __|
+|  _|  | | |_| | |  __/ |_ 
+|_|   |___\____|_|\___|\__|
+```
+
+[FiGlet](http://www.figlet.org/)  以及[FlGlet初识](https://aotu.io/notes/2016/11/22/figlet/)
+
+[AlphabetJS](https://github.com/starkwang/alphabetJS)
+
