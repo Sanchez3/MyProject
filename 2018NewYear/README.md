@@ -1,3 +1,7 @@
+---
+typora-root-url: ./p1.png
+---
+
 # AR技术兼容性
 其中核心技术为WebGL和WebRTC
 ## WebGL
@@ -6,10 +10,11 @@
 
 ## WebRTC 
 
-λ	Android设备版本要求Android4以上
-λ	IOS设备要求IOS11及其以上
-λ	除此之外，针对于微信app，IOS设备需要用户跳出微信app，转至浏览器Safari观看
-λ	IOS用户分享请自行使用原生浏览器分享
+- [ ] Android设备版本要求Android4以上
+
+- [ ] IOS设备要求IOS11及其以上
+- [ ] 除此之外，针对于微信app，IOS设备需要用户跳出微信app，转至浏览器Safari观看
+- [ ] IOS用户分享请自行使用原生浏览器分享
 
 
 ## 现有技术AR平台
@@ -21,14 +26,17 @@
 
 
 ## AR设计建议以及要求
-###图片训练测试 iteration约为300次
-简单图片：训练集
- 图1
- 图2
- 图3
- 图4
- 图5
- 图6
+###简单图片：训练集
+
+图片训练测试 iteration约为300次 [ConvNetJS](http://cs.stanford.edu/people/karpathy/convnetjs/demo/image_regression.html)
+
+ 图1![图1](../p1.png)
+ 图2![图2](../p2.png)
+ 图3![图3](../p3.png)
+ 图4![图4](../p4.png)
+ 图5![图5](../p5.png)
+ 图6![图6](../p6.png)
+
 如上述Maker图片得到结论：
 1.	Maker图像可以进行取样得到“独特”的训练图（色块分明）
 2.	色彩对比度要高，如图3
