@@ -10,6 +10,10 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 
 ## 项目
 
+### NB 574S
+- [你的2017成长关键词](http://nb574s.lxustudio.cn/)
+- [574S | 读取你的2017成长关键词](http://mp.weixin.qq.com/s/Y5P8D_3954HKYRZUGN_RqA)
+
 ### QQ-X腾讯
 
 - [腾讯QQ-X计划：地球最后的净土，我在南极等你加入](https://qzs.qzone.qq.com/qzone/qzact/act/external/qqx_116/qqx_1116/dist/)
