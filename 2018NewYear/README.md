@@ -13,10 +13,11 @@
 
 
 ## 现有技术AR平台
-微信AR ar接口开放，需要绑定域名，以及具体ar应用，可以向tbs tbs@tencent.com 咨询。
-视+AR（EasyAR）制作webar是定制服务，与他们商业合作，提供需求，他们技术来完成。
-Vuforia AR应用引擎需要后端实时数据交互，待测
-其他AR平台各自依赖app，目前无微信or web端AR应用
+**微信AR** ar接口开放，需要绑定域名，以及具体ar应用，可以向tbs tbs@tencent.com 咨询。
+**视+AR**（EasyAR）制作webar是定制服务，与他们商业合作，提供需求，他们技术来完成。
+**Vuforia** AR应用引擎需要后端实时数据交互，待测
+
+> Note: 其他AR平台各自依赖app，目前无微信or web端AR应用
 
 
 ## AR设计建议以及要求
