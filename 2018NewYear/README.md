@@ -61,7 +61,6 @@
 ![图6](https://github.com/Sanchez3/MyProject/blob/master/2018NewYear/p6.png)
 
 
-
 如上述Maker图片得到结论：
 1.	Maker图像可以进行取样得到“独特”的训练图（色块分明）
   2.色彩对比度要高，如图3
@@ -71,6 +70,6 @@
   6.多种Maker图像（即多个贴纸）的训练图，要有特别区分
 
 
-###复杂图片：特征值提取（待测）
+### 复杂图片：特征值提取（待测）
 eg. 如下图红点即为特征点
 ![图7](https://github.com/Sanchez3/MyProject/blob/master/2018NewYear/p7.png)
