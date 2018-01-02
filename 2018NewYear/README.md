@@ -3,12 +3,15 @@
 其中核心技术为WebGL和WebRTC
 ## WebGL
 
+![WebGL](https://github.com/Sanchez3/MyProject/blob/master/2018NewYear/webgl.png)
+
 如图所示，极少数设备（Opera Mini）不支持
 
 ## WebRTC 
 
-- [ ] Android设备版本要求Android4以上
+![WebRTC](https://github.com/Sanchez3/MyProject/blob/master/2018NewYear/webrtc.png)
 
+- [ ] Android设备版本要求Android4以上
 - [ ] IOS设备要求IOS11及其以上
 - [ ] 除此之外，针对于微信app，IOS设备需要用户跳出微信app，转至浏览器Safari观看
 - [ ] IOS用户分享请自行使用原生浏览器分享
@@ -55,11 +58,11 @@
 
 如上述Maker图片得到结论：
 1.	Maker图像可以进行取样得到“独特”的训练图（色块分明）
-  2.色彩对比度要高，如图3
-  3.避免使用细线和小的色块，如图5和图6
-  4.可以使用简单取样后训练图来代表原图，如图4和图1
-  5.Maker图片可以有细节，前提不影响训练图，如图2 美国国旗星星
-  6.多种Maker图像（即多个贴纸）的训练图，要有特别区分
+2.	色彩对比度要高，如图3
+3.	避免使用细线和小的色块，如图5和图6
+4.	可以使用简单取样后训练图来代表原图，如图4和图1
+5.	Maker图片可以有细节，前提不影响训练图，如图2 美国国旗星星
+6.	多种Maker图像（即多个贴纸）的训练图，要有特别区分
 
 
 ###复杂图片：特征值提取（待测）
