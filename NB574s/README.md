@@ -170,6 +170,12 @@ H5 被插入广告，原因可能如下：
 
 [FiGlet](http://www.figlet.org/)  以及[FlGlet初识](https://aotu.io/notes/2016/11/22/figlet/)
 
+npm上的FiGlet插件
+
+[figlet](https://www.npmjs.com/package/figlet)
+
+[asciify](https://www.npmjs.com/package/asciify) 
+
 [AlphabetJS](https://github.com/starkwang/alphabetJS)
 
 
