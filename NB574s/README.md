@@ -59,11 +59,9 @@ cropper.getCroppedCanvas({
 
 Pixijs burry [Retina support](https://github.com/pixijs/pixi.js/issues/621)
 
-
-
-
-
-
+- [ ] :x: `!!CanvasRenderingContext2D && (CanvasRenderingContext2D.imageSmoothingEnabled = false);`
+- [ ] :x: `loadapp.context.imageSmoothingEnabled = true;`
+- [ ] :o:  `PIXI.autodetectRenderer(100, 100, {resolution:2})` 还需要根据尺寸缩放stage中元素
 
 
 
