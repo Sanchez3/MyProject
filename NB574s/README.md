@@ -55,6 +55,18 @@ cropper.getCroppedCanvas({
 
 
 
+##PIXI模糊问题
+
+Pixijs burry [Retina support](https://github.com/pixijs/pixi.js/issues/621)
+
+
+
+
+
+
+
+
+
 ## 微信分享工具
 
 将之前Sexy项目中的[wxtool.js](https://github.com/Sanchez3/MyProject/blob/master/Sexy/wxtool.js)改为字面量方式（方便使用即正义）
