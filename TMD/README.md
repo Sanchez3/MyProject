@@ -42,11 +42,15 @@
   **rem:** 屏幕旋转，rem重设，全局font-size重设。css逐帧动画与雪碧图 使用复杂
   **px:**  transform scale 等比缩放 适配
 - [ ] 使用pixijs、phaser、createjs
+
+
 | Framework                        | Size (+loader) | Problem + Challenge       |
 | -------------------------------- | -------------- | ------------------------- |
 | Pixijs                           | 424kb          |                           |
 | Phaser                           | 540kb          | resize, orientationchange |
 | createjs ( easeljs + preloadjs ) | 128kb+65kb     | few demos                 |
+
+
 
 
 
