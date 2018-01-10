@@ -36,34 +36,38 @@
 > Note:其中`video-poster`的样式应该与`video`的样式相同，`object-fit`和`object-position`
 
 
-
-
 ### 关键点
 
 - [ ] 使用单位rem/px
-**rem:** 屏幕旋转，rem重设，全局font-size重设。css逐帧动画与雪碧图 使用复杂
-**px:**  transform scale 等比缩放 适配
-
+  **rem:** 屏幕旋转，rem重设，全局font-size重设。css逐帧动画与雪碧图 使用复杂
+  **px:**  transform scale 等比缩放 适配
 - [ ] 使用pixijs、phaser、createjs
 | Framework                        | Size (+loader) | Problem + Challenge       |
-| :------------------------------- | :------------- | :------------------------ |
+| -------------------------------- | -------------- | ------------------------- |
 | Pixijs                           | 424kb          |                           |
 | Phaser                           | 540kb          | resize, orientationchange |
 | createjs ( easeljs + preloadjs ) | 128kb+65kb     | few demos                 |
+
+
 
 - [ ] 横竖屏 [rootResize.js](https://github.com/Sanchez3/MyProject/blob/master/TMD/rootResize.js) / 横屏提示[orientLayer](https://github.com/Sanchez3/MyProject/blob/master/NBA2/orientLayer.html) 
 
 - [ ] 复制淘命令 [clipboard.js](https://github.com/zenorocha/clipboard.js)，succes 浮窗成功提示，error 浮窗提示(长按复制框内信息打开天猫app/淘宝)
 
 - [ ] 微信排版测试
-**iPhone 5s/SE尺寸:** 640 * 1008  / 320 * 504
-**普通尺寸:** 750 * 1206  / 375 * 603
-**iPhone X尺寸:** 750 * 1448 / 375 * 724
+
+  **iPhone 5s/SE尺寸:** 640 * 1008  / 320 * 504
+
+  **普通尺寸:** 750 * 1206  / 375 * 603
+
+  **iPhone X尺寸:** 750 * 1448 / 375 * 724
 
 
 - [ ] 微信media素材大小，参考[视频检测及压缩方法](https://wximg.qq.com/wxp/temp/VideoResizeMethod.pdf) 再加上通常习惯
-**视频 video:** 1min 不大于 10mb
-**音频 audio:** 30s 不大于 500kb  （建议1min左右，可循环）
+
+  **视频 video:** 1min 不大于 10mb
+
+  **音频 audio:** 30s 不大于 500kb  （建议1min左右，可循环）
 
 
 
