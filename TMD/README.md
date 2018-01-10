@@ -67,6 +67,11 @@
 
       **iPhone X尺寸:** 750 1448 / 375 724
 
+- [ ] 微信media素材大小，参考[视频检测及压缩方法](https://wximg.qq.com/wxp/temp/VideoResizeMethod.pdf) 再加上通常习惯
+
+      - [ ] 视频 video 1min 不大于 10mb
+      - [ ] 音频 audio 30s 不大于 500kb  （建议1min左右，可循环）
+
 
 
 ### BUG
