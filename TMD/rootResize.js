@@ -1,22 +1,20 @@
+  //Plugins gsap 
   var noChangeCountToEnd = 100,
       noEndTimeout = 1000,
-      startR = false;
+      orientResize = false;
 
   function rootResize() {
       var wFsize;
       var _w, _h;
-      //bug 
-      // var wWidth = (screen.width > 0) ? (window.innerWidth >= screen.width || window.innerWidth === 0) ? screen.width :
-      //     window.innerWidth : window.innerWidth;
       var wWidth = window.innerWidth;
       var wHeight = window.innerHeight;
       if (wWidth > wHeight) {
-          wFsize = wHeight / 646 * 100;
+          wFsize = wHeight / 750 * 100;
       } else {
           wFsize = wWidth / 750 * 100;
       }
       document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
-      if (startR) {
+      if (orientResize) {
           if (wWidth > wHeight) {
               _h = wWidth;
               _w = wHeight;
@@ -53,7 +51,7 @@
           clearTimeout(timeout);
           interval = null;
           timeout = null;
-          startR = true;
+          orientResize = true;
           rootResize();
       };
       interval = setInterval(function() {
