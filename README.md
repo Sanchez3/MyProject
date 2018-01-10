@@ -10,6 +10,15 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 
 ## 项目
 
+### TMall Discovery
+
+- 2017年12月
+  - [日本无人镇の秘密](http://jzsg.lxustudio.cn/)
+  - 数英网 [上Tmall Discovery，发现日本无人镇 の秘密](https://www.digitaling.com/projects/24364.html)
+- 2017年1月
+  - ​
+
+
 ### NB 574S
 - [你的2017成长关键词](http://nb574s.lxustudio.cn/)
 - [574S | 读取你的2017成长关键词](http://mp.weixin.qq.com/s/Y5P8D_3954HKYRZUGN_RqA)
