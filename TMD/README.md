@@ -56,9 +56,16 @@
 
 
 - [ ] 横竖屏 [rootResize.js](https://github.com/Sanchez3/MyProject/blob/master/TMD/rootResize.js) / 横屏提示[orientLayer](https://github.com/Sanchez3/MyProject/blob/master/NBA2/orientLayer.html) 
+
 - [ ] 复制淘命令 [clipboard.js](https://github.com/zenorocha/clipboard.js)，succes 浮窗成功提示，error 浮窗提示(长按复制框内信息打开天猫app/淘宝)
 
-      ​
+- [ ] 微信排版测试  
+
+      **5s/SE尺寸:** 640 1008  / 320 504
+
+      **普通尺寸:** 750 1206  / 375 603
+
+      **iphoneX尺寸:** 750 1448 / 375 724
 
 
 
