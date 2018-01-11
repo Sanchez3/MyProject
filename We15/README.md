@@ -37,6 +37,7 @@ function OnResize() {
     //横竖屏幕
     var mWidth = $("#main").width();
     var mHeight = $("#main").height();
+    
     if ((mHeight / mWidth) > (1206 / 750)) {
         mHeight = screenRate * mWidth;
         spriteScale = mWidth / 750;
