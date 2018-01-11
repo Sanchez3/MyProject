@@ -1,9 +1,9 @@
-#百度数字品牌资产榜
+# 百度数字品牌资产榜
 
 前端入门的第一个项目
 主要是抄写结构，JS封装，JS面向对象：Prototype模式、对象字面量……
 
-##Prototype模式
+## Prototype模式
 [sample1](https://github.com/Sanchez3/MyProject/blob/master/BaiduList/sample1.js)
 
  [《Javascript高级程序设计（第二版）》](http://www.wrox.com/WileyCDA/WroxTitle/Professional-JavaScript-for-Web-Developers-2nd-Edition.productCd-047022780X.html "Title")
@@ -33,7 +33,7 @@ Javascript规定，每一个构造函数都有一个prototype属性，指向另�
 　　alert(cat1.eat == cat2.eat); //true
 ```
 
-##对象字面量方式（比较清楚的查找对象包含的属性及方法）
+## 对象字面量方式（比较清楚的查找对象包含的属性及方法）
  [引用](http://www.cnblogs.com/gaojun/archive/2013/10/24/3386552.html "Title")
 
 [sample2](https://github.com/Sanchez3/MyProject/blob/master/BaiduList/sample2.js)

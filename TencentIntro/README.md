@@ -1,8 +1,8 @@
-#腾讯视频重磅内容缤纷呈现
+# 腾讯视频重磅内容缤纷呈现
 
 主要利用[Swiper3](http://www.swiper.com.cn/)
 
-##Swiper
+## Swiper
 * Swiper Animate 完成入场动画
 
 * Swiper Load 属性完成分段加载
@@ -33,7 +33,7 @@
 ```
 
 
-##Video视频
+## Video视频
 
 ios与Android在这方面有很大差异,video属性在android上不能生效
 

@@ -1,13 +1,13 @@
-#让你在现场 NBA  ***已下线***
+# 让你在现场 NBA  ***已下线***
 
-##phaser 的序列动画
+## phaser 的序列动画
 
 1. 整张图片 setinterval or  setTimeout 完成切换
 2. 使用CSS3动画 steps 
 3. 使用canvas phaser spritesheet  animation
 
 
-###[VideoConfig](https://github.com/Sanchez3/MyProject/blob/76966ee3b9feec8baa2bb186e639487cab1b02aa/NBA/VideoConfig.js)
+### [VideoConfig](https://github.com/Sanchez3/MyProject/blob/76966ee3b9feec8baa2bb186e639487cab1b02aa/NBA/VideoConfig.js)
 ```js
 /*
  视频序列帧配置类
@@ -28,7 +28,7 @@
 
 ```
 
-###[MovieClip](https://github.com/Sanchez3/MyProject/blob/76966ee3b9feec8baa2bb186e639487cab1b02aa/NBA/MovieClip.js)
+### [MovieClip](https://github.com/Sanchez3/MyProject/blob/76966ee3b9feec8baa2bb186e639487cab1b02aa/NBA/MovieClip.js)
 
 ```js
 /*
@@ -46,7 +46,7 @@
 var movieClip = new MovieClip(this,0,0,750,1206,window.enterConfig,function(){});
 ```
 
-##Phaser Group
+## Phaser Group
 new Group(game, parent, name, addToStage, enableBody, physicsBodyType)
 同group内精灵层级
 
@@ -59,7 +59,7 @@ var s3=g1.create(0,0,'s1');
 s1.bringToTop();//s1置于最上层
 ```
 
-##DeviceOrientation DeviceMotion
+## DeviceOrientation DeviceMotion
 HTML5 特性 DeviceOrientation
 - android IOS 支持DeviceOrientation
 - android不支持DeviceMotion

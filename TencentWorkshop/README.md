@@ -2,8 +2,8 @@
 
 上下划屏利用jquery.transition.js完成.
 
-##滑屏
-###.toggle(function, function, … )
+## 滑屏
+### .toggle(function, function, … )
 ```
 link .toggle(function, function, ... ) removed
 This is the "click an element to run the specified functions" signature of .toggle(). It should not be confused with the "change the visibility of an element" of .toggle() which is not deprecated. The former is being removed to reduce confusion and improve the potential for modularity in the library. The jQuery Migrate plugin can be used to restore the functionality.
@@ -50,7 +50,7 @@ $(".btn").on("click",function(){
 })
 ```
 
-###trigger
+### trigger
 jquery  trigger() 方法触发被选元素的指定事件类型。(自动触发被选元素的指定事件类型。)
 
 元素绑定bind,on某一事件,这时会触发该事件

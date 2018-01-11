@@ -1,6 +1,6 @@
-#我们15个
+# 我们15个
 
-##Phaser  add vs addOnce
+## Phaser  add vs addOnce
 ```js
 addOnce(listener, listenerContext, priority, args)
 Add a one-time listener -
@@ -15,13 +15,13 @@ eg. this.sprite.onInputUp.addOnce(btn_func, this);
 - 某些情况下,防止add多次加载,内存泄
 
 
-##Phaser 利用字体
+## Phaser 利用字体
 [生成fnt](http://kvazars.com/littera/)
 ```js
 this.load.bitmapFont('mday', 'assets/fonts/mday.png', 'assets/fonts/mday.fnt');
 ```
 
-##适配问题
+## 适配问题
 当viewport为
 ```html
 <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
