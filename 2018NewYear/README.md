@@ -32,7 +32,23 @@
 
 
 ## AR设计建议以及要求
-### 简单图片：训练集
+### [AR.js](https://github.com/jeromeetienne/AR.js) 
+
+简单讲利用Artoolkit的技术识别Marker，利用threejs展现3d动画（也可用2D WebGL renderer）
+
+> There are also range issues in optical tracking, since as markers are move further away from the camera, the markers occupy fewer pixels in the camera's view and results in having insufficient detail for recognition, tracking and identification. The larger the physical embedded marker pattern, the further away the embedded marker pattern can be detected and so the greater the track-ability of the marker.
+
+Marker的尺寸，影响到远近识别。
+
+[AR.js Marker Training](https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html) 的Marker生成尺寸 512px * 512px 
+
+
+
+
+
+### 简单图片：训练集 :x:
+
+> Note: 经测试，web端做训练占用大量CPU，再加上层WebGL动画效率很低，且训练精度低，影响识别效果。
 
  [ConvNetJS](http://cs.stanford.edu/people/karpathy/convnetjs/demo/image_regression.html) 图片训练测试 iteration约为300次
 
@@ -63,11 +79,11 @@
 
 如上述Maker图片得到结论：
 1.	Maker图像可以进行取样得到“独特”的训练图（色块分明）
-  2.色彩对比度要高，如图3
-  3.避免使用细线和小的色块，如图5和图6
-  4.可以使用简单取样后训练图来代表原图，如图4和图1
-  5.Maker图片可以有细节，前提不影响训练图，如图2 美国国旗星星
-  6.多种Maker图像（即多个贴纸）的训练图，要有特别区分
+2.	色彩对比度要高，如图3
+3.	避免使用细线和小的色块，如图5和图6
+4.	可以使用简单取样后训练图来代表原图，如图4和图1
+5.	Maker图片可以有细节，前提不影响训练图，如图2 美国国旗星星
+6.	多种Maker图像（即多个贴纸）的训练图，要有特别区分
 
 
 ### 复杂图片：特征值提取（待测）
