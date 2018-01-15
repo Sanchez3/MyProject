@@ -34,7 +34,7 @@
 ## AR设计建议以及要求
 ### [AR.js](https://github.com/jeromeetienne/AR.js) 
 
-简单讲利用Artoolkit的技术识别Marker，利用threejs展现3d动画（也可用2D WebGL renderer）
+简单讲利用[Artoolkit](https://www.artoolkit.org/)的技术识别Marker，利用threejs展现3d动画（也可用2D WebGL renderer）
 
 > There are also range issues in optical tracking, since as markers are move further away from the camera, the markers occupy fewer pixels in the camera's view and results in having insufficient detail for recognition, tracking and identification. The larger the physical embedded marker pattern, the further away the embedded marker pattern can be detected and so the greater the track-ability of the marker.
 
