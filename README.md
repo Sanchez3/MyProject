@@ -17,6 +17,7 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
   - 数英网 [上Tmall Discovery，发现日本无人镇 の秘密](https://www.digitaling.com/projects/24364.html)
 - 2017年1月
   - [Breaking News](http://tpro.lxustudio.cn/pet)
+  - 数英网 [突发新闻！巨型猫狗在北美引发恶性破坏事件，真相居然是……](https://www.digitaling.com/projects/25194.html)
 
 
 ### NB 574S [*](https://github.com/Sanchez3/MyProject/tree/master/NB574s)
