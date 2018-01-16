@@ -22,7 +22,7 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 
 ### NB 574S [*](https://github.com/Sanchez3/MyProject/tree/master/NB574s)
 - [你的2017成长关键词](http://nb574s.lxustudio.cn/)
-- [574S | 读取你的2017成长关键词](http://mp.weixin.qq.com/s/Y5P8D_3954HKYRZUGN_RqA)
+- 数英网 [New Balance × 网易云音乐：青春里的故事，长大了才懂](https://www.digitaling.com/projects/24943.html)
 
 ### QQ-X腾讯 [*](https://github.com/Sanchez3/MyProject/tree/master/QQ-X)
 
