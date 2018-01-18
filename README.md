@@ -28,6 +28,7 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 ### QQ-X腾讯 [*](https://github.com/Sanchez3/MyProject/tree/master/QQ-X)
 
 - [腾讯QQ-X计划：地球最后的净土，我在南极等你加入](https://qzs.qzone.qq.com/qzone/qzact/act/external/qqx_116/qqx_1116/dist/)
+- [LxU × QQ | 你说的白是什么白？](https://mp.weixin.qq.com/s/zVwEwYSJkoxcpoDd2BFMbg)
 
 
 ### NB fuel 疾速对决 [*](https://github.com/Sanchez3/MyProject/tree/master/NBfuel) 
