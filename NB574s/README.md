@@ -88,13 +88,13 @@ Pixijs burry [Retina support](https://github.com/pixijs/pixi.js/issues/621)
 
 - [ ] 必须刷新stage
 
-      ```javascript
-      var ticker = new PIXI.ticker.Ticker();
-      ticker.autoStart = false;
-      ticker.stop();
-      ticker.add(function() { app.renderer.render(app.stage); });
-      ticker.start();
-      ```
+```javascript
+var ticker = new PIXI.ticker.Ticker();
+ticker.autoStart = false;
+ticker.stop();
+ticker.add(function() { app.renderer.render(app.stage); });
+ticker.start();
+```
 
 OR 可尝试原生Canvas blur 但是由于使用rem作为单位，页面resize时不能很好的处理canvas大小，导致加载显示的图片尺寸不正确。
 
