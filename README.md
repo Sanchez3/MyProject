@@ -11,6 +11,10 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 
 ## 项目
 
+### 2018新春狗年布狗袋 [*](https://github.com/Sanchez3/MyProject/tree/master/2018NewYear)
+- [AR封印已开，布狗袋显灵啦](https://lxunogodie.applinzi.com/)
+- [少侠，这件宝物“狗年布狗袋”，可保你春节顺心顺意……](http://mp.weixin.qq.com/s/Ny7Qv-E1kP-vqEPyDjfemg)
+
 ### TMall Discovery [*](https://github.com/Sanchez3/MyProject/tree/master/TMD)
 - 2017年12月
   - [日本无人镇の秘密](http://jzsg.lxustudio.cn/)
