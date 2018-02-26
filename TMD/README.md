@@ -50,10 +50,6 @@
 | Phaser                           | 540kb          | resize, orientationchange |
 | createjs ( easeljs + preloadjs ) | 128kb+65kb     | few demos                 |
 
-
-
-
-
 - [ ] 横竖屏 [rootResize.js](https://github.com/Sanchez3/MyProject/blob/master/TMD/rootResize.js) / 横屏提示[orientLayer](https://github.com/Sanchez3/MyProject/blob/master/NBA2/orientLayer.html) 
 
 - [ ] 复制淘命令 [clipboard.js](https://github.com/zenorocha/clipboard.js)，succes 浮窗成功提示，error 浮窗提示(长按复制框内信息打开天猫app/淘宝)
@@ -72,6 +68,21 @@
   **视频 video:** 1min 不大于 10mb
 
   **音频 audio:** 30s 不大于 500kb  （建议1min左右，可循环）
+
+
+### 项目链接
+
+- [ ] 建议内链和外链统一使用网址末尾加反斜杠（/），为了网站URL地址更加标准。
+
+> Note: 
+>
+> 在传统意义上说，网址末尾是没有反斜杠的。有没有反斜杠的意义在于该url是指向一个文件还是一个目录：
+>
+> http://tpro.lxustudio.cn/pet  指向的是网站根目录下pet文件
+>
+> http://tpro.lxustudio.cn/pet/  指向的是网站根目录下pet目录
+>
+> 假设 tpro.lxustudio.cn/pet 被URL重写转跳到 tpro.lxustudio.cn/pet/上的话，那么tpro.lxustudio.cn/pet 就会多一次URL重写的过程，性能和时间上有微小的损耗，同样的道理，用哪个网址全凭个人喜好了，但是一定要注意网址的统一，选定其中一个后，在做都使用这个，这是因为内容虽然一模一样，但搜索对搜索引擎而言这2个网址对应2个页面，同时使用会造成权重分散。
 
 
 
