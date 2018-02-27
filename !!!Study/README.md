@@ -53,6 +53,41 @@
 | 4**  | 客户端错误，请求包含语法错误或无法完成请求   |
 | 5**  | 服务器错误，服务器在处理请求的过程中发生了错误 |
 
+### HTTP 消息结构
+
+HTTP使用唯一资源标识符（Uniform Resource Identifiers, URI）来传输数据和建立连接。URL（Uniform Resource Locator, 统一资源定位符）是特殊的URI，不仅用来标识一个资源，还指明了如何定位这个资源。
+
+#### 客户端请求消息
+
+请求信息格式：请求行（request line）、请求头部（header）、空行和请求数据。
+![Request](https://github.com/Sanchez3/MyProject/blob/master/!!!Study/request.jpg)
+
+#### 服务器响应消息
+
+响应信息格式：状态行、消息报头、空行和响应正文。
+
+![Request](https://github.com/Sanchez3/MyProject/blob/master/!!!Study/response.jpg)
 
 
+
+### HTTP工作原理
+
+请求/响应模型，客户端从服务器请求页面，服务器吧页面传给客户端。
+
+步骤：
+
+1. **客户端连接到服务器。**与服务器的HTTP端口（默认端口80）建立TCP[套接字](https://www.zhihu.com/question/21383903/answer/258837774)连接。
+2. **发送HTTP请求。**通过TCP套接字，客户端向服务器发送请求。
+3. **服务器接受请求并返回HTTP响应。**服务器解析请求，定位资源，写到TCP套接字，客户端读取。
+4. **释放链接TCP连接。**由`Connection`字段标识连接状态。
+5. **客户端解析HTML内容。**先解析状态行，解析响应头，响应头告知以下为若干字节的HTML文档和文档的字符集。读取响应数据HTML，根据语法格式化，显示。
+
+> eg：浏览器输入URL，回车访问流程：
+>
+> 1. 浏览器想DNS服务器请求解析该URL中域名对应的IP地址。
+> 2. 解析IP地址，根据IP地址和默认端口80，与服务器建立TCP连接。
+> 3. 浏览器发出读取文件（URL中域名后面部分对应的文件）的HTTP请求，该请求报文作为TCP三次握手的第三报文数据发给服务器。
+> 4. 服务器对浏览器作出相应，并把对应的HTML文本发送给浏览器。
+> 5. 释放TCP链接
+> 6. 浏览器将该HTML文本显示。
 
