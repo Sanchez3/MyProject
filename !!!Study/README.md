@@ -11,9 +11,11 @@
 ## 前端技巧 
 - ### [改变URL且不刷新页面](https://github.com/Sanchez3/MyProject/issues/5)
 
-## 新技术
+## 前端技术
 - ### [NPM vs YARN](https://github.com/Sanchez3/MyProject/issues/3)
-- ### [WebGL-Shader-three.js]()
+
+- ### [WebGL-Shader](https://github.com/Sanchez3/MyProject/issues/6)
+
 
 
 
