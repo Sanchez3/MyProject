@@ -3,7 +3,9 @@
 ## 简介
 
 包括积累前端技术的[笔记](https://github.com/Sanchez3/MyProject/tree/master/!!!Study)
+
 我所做的项目，项目经验和小结。
+
 >Note: 绝大多数项目都在微信端
 
 __*（当然完成的都是项目中技术部分，从切图到完成一个完整的移动端网站）*__
