@@ -12,7 +12,7 @@
 - ### [改变URL且不刷新页面](https://github.com/Sanchez3/MyProject/issues/5)
 
 ## 前端技术
-- ### [NPM vs YARN](https://github.com/Sanchez3/MyProject/issues/3)
+- ### [NPM vs YARN](https://github.com/Sanchez3/MyProject/issues/3/)
 
 - ### [WebGL-Shader](https://github.com/Sanchez3/MyProject/issues/6)
 
