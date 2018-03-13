@@ -19,7 +19,7 @@
 
 - ### [WebGL-Shader](https://github.com/Sanchez3/MyProject/issues/6)
 
-- ### [SourceMap](https://github.com/Sanchez3/MyProject/issues/7)
+- ### [Source Maps](https://github.com/Sanchez3/MyProject/issues/7)
 
 
 
