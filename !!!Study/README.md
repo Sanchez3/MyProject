@@ -9,7 +9,8 @@
 
 - ### [Array](https://github.com/Sanchez3/MyProject/issues/4)
 
-- ### JavaScript解释器
+- ### [JavaScript解释器](http://javascript.ruanyifeng.com/advanced/interpreter.html) 来自《JavaScript 标准参考教程（alpha）》，by 阮一峰
+
 
 ## 前端技巧 
 - ### [改变URL且不刷新页面](https://github.com/Sanchez3/MyProject/issues/5)
