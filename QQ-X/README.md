@@ -61,7 +61,7 @@ overflow: scroll;
 
 CSS3 Animation steps
 
-![Step timing functions](https://www.w3.org/TR/css3-transitions/step.png)
+![Step timing functions]()
 
 制作纯CSS的序列帧动画  [在线计算器](http://tid.tenpay.com/labs/css3_keyframes_calculator.html)
 
@@ -142,7 +142,5 @@ animation: b2-h 1s steps(9) infinite;
     }
 }
 ```
-
-# 你好，南极
 
 
