@@ -61,7 +61,7 @@ overflow: scroll;
 
 CSS3 Animation steps
 
-![Step timing functions]()
+![Step timing functions](https://github.com/Sanchez3/MyProject/blob/master/QQ-X/step-timing-func-examples.png)
 
 制作纯CSS的序列帧动画  [在线计算器](http://tid.tenpay.com/labs/css3_keyframes_calculator.html)
 
