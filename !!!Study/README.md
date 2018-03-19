@@ -25,7 +25,7 @@
 
 
 ## 前端题目
-- ### [闭包问题，this，函数作用域链](https://github.com/Sanchez3/MyProject/issues/8)
+- ### [JavaScript作用域，闭包，this](https://github.com/Sanchez3/MyProject/issues/8)
 - ### [排序算法]()
 
 
