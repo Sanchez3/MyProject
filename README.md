@@ -4,7 +4,7 @@
 
 包括积累前端技术的[笔记](https://github.com/Sanchez3/MyProject/tree/master/!!!Study)
 
-我所做的项目，项目经验和小结，小结链接见项目题目后 符号 [*****](https://github.com/Sanchez3/MyProject#%E9%A1%B9%E7%9B%AE)
+我所做的项目，项目经验和小结，小结链接见项目题目后 符号**[*](https://github.com/Sanchez3/MyProject#%E9%A1%B9%E7%9B%AE)**
 
 >Note: 绝大多数项目都在微信端
 
