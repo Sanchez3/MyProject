@@ -9,7 +9,7 @@
 - [ ] div处于block时 初始化cropper
 
 - [ ] canvas大小限制问题，影响到`getCroppedCanvas()`的结果，需设置`maxHeight` `maxWidth`，并且需要控制并判断处理的图片大小。
-      > Note: [the size limits of a canvas element](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)
+> Note: [the size limits of a canvas element](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)
 
 
 - [ ] 当cropper初始化后再调整CropBox大小位置
@@ -62,7 +62,7 @@ Pixijs blurry [Retina support](https://github.com/pixijs/pixi.js/issues/621)
 - [ ] :question: `!!CanvasRenderingContext2D && (CanvasRenderingContext2D.imageSmoothingEnabled = false);`
 - [ ] :question:`loadapp.context.imageSmoothingEnabled = true;`
 - [x] :heavy_exclamation_mark:  `PIXI.autodetectRenderer(100, 100, {resolution:2})`
-      > Note:还需要根据尺寸缩放元素
+> Note:还需要根据尺寸缩放元素
 
 
 
