@@ -55,9 +55,9 @@ cropper.getCroppedCanvas({
 
 
 
-##PIXI模糊问题
+## PIXI模糊问题
 
-Pixijs burry [Retina support](https://github.com/pixijs/pixi.js/issues/621)
+Pixijs blurry [Retina support](https://github.com/pixijs/pixi.js/issues/621)
 
 - [ ] :question: `!!CanvasRenderingContext2D && (CanvasRenderingContext2D.imageSmoothingEnabled = false);`
 
