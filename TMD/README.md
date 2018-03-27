@@ -35,9 +35,11 @@
 ```
 > Note:其中`video-poster`的样式应该与`video`的样式相同，`object-fit`和`object-position`
 
-
 ### 关键点
 
+- [ ] [Where should I put  tags in HTML markup?](https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup)  防止阻断浏览器解析HTML
+      - [x] `<script>` 放在 `<body/>`之前
+      - [x] 使用 async（script异步执行下载）和defer（script顺序执行）
 - [ ] 使用单位rem/px
   **rem:** 屏幕旋转，rem重设，全局font-size重设。css逐帧动画与雪碧图 使用复杂
   **px:**  transform scale 等比缩放 适配
@@ -56,11 +58,17 @@
 
 - [ ] 微信排版测试
 
-  **iPhone 5s/SE尺寸:** 640 * 1008  / 320 * 504
+  使用[Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn) Setting - device - Add custom device
 
-  **普通尺寸:** 750 * 1206  / 375 * 603
+  **User agent string:**  `Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1`
 
-  **iPhone X尺寸:** 750 * 1448 / 375 * 724
+  **iPhone 5s/SE尺寸:** 640 * 1008  / 320 * 504  
+
+  **普通尺寸:** 750 * 1206  / 375 * 603  **Device pixel ratio: 2**
+
+  **iPhone X尺寸:** 750 * 1448 / 375 * 724  **Device pixel ratio:** 3
+
+  ​
 
 
 - [ ] 微信media素材大小，参考[视频检测及压缩方法](https://wximg.qq.com/wxp/temp/VideoResizeMethod.pdf) 再加上通常习惯
