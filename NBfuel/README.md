@@ -10,7 +10,7 @@
 
 - preload="auto" 也无法触发video load事件
 
-- 在ended事件里启动一段音频或视频，使用插件[Howler](https://howlerjs.com/)也不成
+- ~~在ended事件里启动一段音频或视频，使用插件[Howler](https://howlerjs.com/)也不成~~
 
   - ```javascript
     video.addEventListener('timeupdate',function (){
