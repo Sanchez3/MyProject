@@ -38,11 +38,17 @@
 ### 关键点
 
 - [ ] [Where should I put  tags in HTML markup?](https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup)  防止阻断浏览器解析HTML
+
       - [x] `<script>` 放在 `<body/>`之前
+
       - [x] 使用 async（script异步执行下载）和defer（script顺序执行）
+
+> Note: 95.27%可支持该属性 https://caniuse.com/#feat=script-defer
+
 - [ ] 使用单位rem/px
   **rem:** 屏幕旋转，rem重设，全局font-size重设。css逐帧动画与雪碧图 使用复杂
   **px:**  transform scale 等比缩放 适配
+
 - [ ] 使用pixijs、phaser、createjs
 
 
