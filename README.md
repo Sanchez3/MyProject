@@ -17,6 +17,8 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 - [AR封印已开，布狗袋显灵啦](https://lxunogodie.applinzi.com/)
 - *数英网* [AR封印已开，布狗袋宝物显灵啦！](https://www.digitaling.com/projects/25942.html)
 ### TMall Discovery [*](https://github.com/Sanchez3/MyProject/tree/master/TMD)
+- 2018年3月末
+  - [咔嚓神器，了解一下](https://tpro.lxustudio.cn/calbee/)
 - 2017年12月
   - [日本无人镇の秘密](http://jzsg.lxustudio.cn/)
   - *数英网* [上Tmall Discovery，发现日本无人镇 の秘密](https://www.digitaling.com/projects/24364.html)
