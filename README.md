@@ -17,6 +17,8 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 - [AR封印已开，布狗袋显灵啦](https://lxunogodie.applinzi.com/)
 - *数英网* [AR封印已开，布狗袋宝物显灵啦！](https://www.digitaling.com/projects/25942.html)
 ### TMall Discovery [*](https://github.com/Sanchez3/MyProject/tree/master/TMD)
+- 2018年4月
+  - [谁谋杀了林黛玉](https://tpro.lxustudio.cn/rosecake/)
 - 2018年3月末
   - [咔嚓神器，了解一下](https://tpro.lxustudio.cn/calbee/)
 - 2017年12月
@@ -58,7 +60,12 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 ### Kappa百年活动 [*](https://github.com/Sanchez3/MyProject/tree/master/Kappa)
 * [GD教你穿Kappa](http://100.kappa.com.cn/video)
 * 数英网 [GD教你穿Kappa，看GD在镜头前面怎么凹造型！](http://www.digitaling.com/projects/17370.html)
+### 事实派
+
+- [让事实发声](http://fact.news.qq.com/)
+
 ### 百度体育行业洞察 
+
 * ~~百度体育行业洞察~~ ***少推广*** ***已下线***
 ### “放开我，北鼻”预热 [*](https://github.com/Sanchez3/MyProject/tree/master/BabySiri)
 * [baby siri](http://omgmkt.qq.com/babysiri/)
