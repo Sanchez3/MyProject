@@ -18,32 +18,60 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 - *数英网* [AR封印已开，布狗袋宝物显灵啦！](https://www.digitaling.com/projects/25942.html)
 ### TMall Discovery [*](https://github.com/Sanchez3/MyProject/tree/master/TMD)
 - 2018年4月
+
+  > PV: 1.6w UV: 1.3w
+
   - [谁谋杀了林黛玉](https://tpro.lxustudio.cn/rosecake/)
+
 - 2018年3月末
+
+  > PV: 6.3w UV: 5.3w
+
   - [咔嚓神器，了解一下](https://tpro.lxustudio.cn/calbee/)
+
 - 2017年12月
+
+  > PV: 4.5w UV: 3.8w
+
   - [日本无人镇の秘密](http://jzsg.lxustudio.cn/)
   - *数英网* [上Tmall Discovery，发现日本无人镇 の秘密](https://www.digitaling.com/projects/24364.html)
+
 - 2017年1月
+
+  > PV: 15w UV: 12w
+
   - [Breaking News](http://tpro.lxustudio.cn/pet)
   - 数英网 [突发新闻！巨型猫狗在北美引发恶性破坏事件，真相居然是……](https://www.digitaling.com/projects/25293.html)
 ### NB 574S [*](https://github.com/Sanchez3/MyProject/tree/master/NB574s)
+
 - ~~你的2017成长关键词~~ ***已下线***
 - 数英网 [New Balance × 网易云音乐：青春里的故事，长大了才懂](https://www.digitaling.com/projects/24943.html)
 ### QQ-X腾讯 [*](https://github.com/Sanchez3/MyProject/tree/master/QQ-X)
+
+> PV: 2.6w UV: 1.9w
+
 - [腾讯QQ-X计划：地球最后的净土，我在南极等你加入](https://qzs.qzone.qq.com/qzone/qzact/act/external/qqx_116/qqx_1116/dist/)
 - 数英网 [LxU × QQ | 你说的白是什么白？](https://www.digitaling.com/projects/25294.html)
 ### NB fuel 疾速对决 [*](https://github.com/Sanchez3/MyProject/tree/master/NBfuel) 
+
+> PV: 1.5w UV: 1w
+
 - [欧阳靖的Battle，你敢接吗？](http://nbfuel.lxustudio.cn/?key=1)
 - 数英网 [New Balance #疾速对决#，欧阳靖约你赛车道上“Battle”！](https://www.digitaling.com/projects/22403.html)
 ### 2015百度品牌数字资产榜 [*](https://github.com/Sanchez3/MyProject/tree/master/BaiduList)
 * ~~百度品牌数字资产榜 part2 榜单详情~~ ***已下线***
 * ~~百度品牌数字资产榜 part1 资产榜引导~~ ***部分修改*** ***已下线***
 ### 腾讯视频重磅内容缤纷呈现 [*](https://github.com/Sanchez3/MyProject/tree/master/TencentIntro)
+
+> PV: 1.2w UV: 7k
+
 * [腾讯视频重磅内容缤纷呈现](http://omgmkt.qq.com/intro/)
 ### 腾讯视频内部活动 [*](https://github.com/Sanchez3/MyProject/tree/master/TencentWorkshop)
 * ~~腾讯视频~~ ***已下线***
 ### 维秘性感测试手册 [*](https://github.com/Sanchez3/MyProject/tree/master/Sexy)
+
+> PV: 71w UV: 26w
+
 * [维秘性感测试手册](http://omgmkt.qq.com/sexy/)
 * 数英网 [腾讯视频：维秘天使内部选拔工具 移动网站](http://www.digitaling.com/projects/16173.html)
 ### 腾讯体育NBA活动 [1](https://github.com/Sanchez3/MyProject/tree/master/NBA1) [2](https://github.com/Sanchez3/MyProject/tree/master/NBA2)
@@ -53,11 +81,17 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 ### KAPPA抽奖活动 [*](https://github.com/Sanchez3/MyProject/tree/master/KappaAward)
 * ~~Kappa~~ ***已下线***
 ### 007推广 [*](https://github.com/Sanchez3/MyProject/tree/master/007)
+
+> PV: 18w UV: 4w
+
 * [打造完美007](http://omgmkt.qq.com/007/)
 * 数英网 [“007系列”你的007就是你自己 微信推广](http://www.digitaling.com/projects/17188.html)  ***活动已结束***
 ### 我们是15个 [*](https://github.com/Sanchez3/MyProject/tree/master/We15)
 * ~~进平顶，见你未知的世界！~~ ***少推广*** ***已下线***
 ### Kappa百年活动 [*](https://github.com/Sanchez3/MyProject/tree/master/Kappa)
+
+> PV: 29w UV: 8w
+
 * [GD教你穿Kappa](http://100.kappa.com.cn/video)
 * 数英网 [GD教你穿Kappa，看GD在镜头前面怎么凹造型！](http://www.digitaling.com/projects/17370.html)
 ### 事实派
@@ -68,5 +102,8 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 
 * ~~百度体育行业洞察~~ ***少推广*** ***已下线***
 ### “放开我，北鼻”预热 [*](https://github.com/Sanchez3/MyProject/tree/master/BabySiri)
+
+> PV: 66w UV: 35w
+
 * [baby siri](http://omgmkt.qq.com/babysiri/)
 * 数英网 [「放开我，北鼻」预热：Siri返老还童，变成了Baby版Siri](http://www.digitaling.com/projects/17969.html)
