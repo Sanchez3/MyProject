@@ -19,7 +19,7 @@ __*（当然完成的都是项目中技术部分，从切图到完成一个完�
 ### TMall Discovery [*](https://github.com/Sanchez3/MyProject/tree/master/TMD)
 - 2018年4月
 
-  > PV: 1.6w UV: 1.3w
+  > PV: 1.6w UV: 1.4w
 
   - [谁谋杀了林黛玉](https://tpro.lxustudio.cn/rosecake/)
 
