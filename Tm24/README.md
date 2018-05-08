@@ -12,7 +12,7 @@
 
 使用  `window.history.pushState()`  `window.history.replaceState()` 可能会影响微信分享
 
-- [ ] 待测
+- [ ] 未加载完全微信JS-SDK时，请不要立刻修改。待进一步测
 
 
 
