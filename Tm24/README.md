@@ -96,7 +96,7 @@ function PointInPoly(pt, poly) {
 
 
 
-## Phaser bug
+## Phaser Bug :bug:
 
 - [x] phaser canvas 旋转后，input事件出现bug
 - [x] phaser全屏 width height  resolution (window.devicePixelRatio) CANVAS缩放比例
