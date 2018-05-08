@@ -100,4 +100,5 @@ function PointInPoly(pt, poly) {
 
 - [x] phaser canvas 旋转后，input事件出现bug
 - [x] phaser全屏 width height  resolution (window.devicePixelRatio) CANVAS缩放比例
+- [x] phaser中物体`alpha=0`，但是事件触发，需要同时设置物体属性 `visible=false`
 
