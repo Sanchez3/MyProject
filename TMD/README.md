@@ -35,6 +35,43 @@
 ```
 > Note:其中`video-poster`的样式应该与`video`的样式相同，`object-fit`和`object-position`
 
+- [ ] 启用H5同层播放器时，首先要了解安卓微信分享问题，其次注意HTML  <video> 标签的样式，如下：
+
+```html
+<video id="video" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" src="./assets/media/tmgc.mp4" type="video/mp4"</video>
+```
+#### 安卓视频问题解决方法
+
+> Notice: 微信tbs 3个属性  `tbsCoreVersion` `tbsSdkVersion` `x5JsCoreEnabled`
+
+- 放弃同层播放
+
+  - 即视频区域之上的操作无响应。
+
+  - 对于视频默认的进度条，解决方法：尝试视频高度大于屏幕高度，从而显示不了进度条。
+
+    ​
+
+- 启用同层播放
+
+  - 视频播放中无法调用微信分享JS-SDK。
+
+  - 安卓手机未安装qq浏览器，微信tbs  `x5JsCoreEnabled:false`
+
+    - 微信分享朋友圈，可以触发安卓微信分享朋友圈方法，即截取当前视频画面（触发分享那一刻的视频画面）作为分享图片，利用项目标题+项目链接作为分享标题（利用[history](https://github.com/Sanchez3/MyProject/issues/5)保证与用户分享链接无多余参数 eg. `?from=singlemessage`）
+    - 分享给朋友，则是项目标题+项目链接作为分享标题
+
+    > Notice: 注意html video标签的结构与属性，如上代码块所示
+
+  - 安卓手机安装qq浏览器，微信tbs  `x5JsCoreEnabled:false`
+
+    - 微信分享仍无法调用微信分享，且分享调用qq浏览器分享方法，默认qq浏览器分享图标，分享标题H5标题，分享详情为标题+@QQ浏览器
+
+  - 微信tbs  `x5JsCoreEnabled:true`，该情况极少数，除非安装最新tbs，开启了`x5JsCoreEnabled`
+
+    - 微信分享同未安装qq浏览器一样，但是某些属性失效`x5videoexitfullscreen`
+    - bug多多，待测
+
 ### 关键点
 
 - [ ] [Where should I put  tags in HTML markup?](https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup)  防止阻断浏览器解析HTML
@@ -102,8 +139,8 @@
 
 
 
-### BUG
+### BUG :bug:
 
 - [ ] video播放不了，多测几台机子，重启。
-
 - [ ] 微信传播h5，严格遵守传播规定。（🚫天猫等字样出现，网络爬虫会抓获文本）
+- [x] 安卓手机启用H5同层播放器，`x5-video-player-type`支持的值类型：`h5`。播放视频时，无法调用微信分享。
