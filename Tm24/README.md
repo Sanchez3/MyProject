@@ -3,8 +3,6 @@
 ## 立夏 
 [我的夏之歌](https://tm24.lxustudio.cn/)
 
-
-
 ## 利用 History 保持项目链接一致性
 项目防止循环跳转，保证项目分享出去的链接一致。
 
@@ -26,7 +24,7 @@
 
 `decodeURIComponent()` 方法用于解码由 [`encodeURIComponent`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) 方法或者其它类似方法编码的部分统一资源标识符（URI）。
 
-> Notice: 存在bug :bug:
+> Note: 存在bug :bug:
 >
 > 部分手机微信端不支持该方法，需要利用 `try...catch` 或者查看方法是否存在。
 
