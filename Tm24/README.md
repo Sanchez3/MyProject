@@ -20,15 +20,22 @@
 
 安全性 需要对URL再编码 [H5被植入广告](https://github.com/Sanchez3/MyProject/tree/master/NBfuel#h5%E8%A2%AB%E6%A4%8D%E5%85%A5%E5%B9%BF%E5%91%8A)
 
-`encodeURIComponent()`是对统一资源标识符（URI）的组成部分进行编码的方法
+[关于URL编码](http://doiob.blog.163.com/blog/static/175757412201011291023290/)
 
-`decodeURIComponent()` 方法用于解码由 [`encodeURIComponent`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) 方法或者其它类似方法编码的部分统一资源标识符（URI）。
+1.  ;    /    ?   :     @     &     =     +    $     ,        {10个}  **保留字符**
+2. _   .   !   ~   *   '   (   )             {9个}  **不用转义**
+3. {  }  |   \   ^  [   ]   `::数字1键前::       {8个}  **避用、有则转义**
+4. <   >   #   %   "      {5 个}  
+   1.  %  #         **保留字符**
+   2. <   >   "      **转义**
+   ​
+[`encodeURI()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) 对URI的**全部**进行编码的方法；`decodeURI()` 解码 (对上述*情况1*不编码)
+
+[`encodeURIComponent()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)是对URI的**组成部分**进行编码的方法；`decodeURIComponent()` 解码 (对上述*情况1*编码)
 
 > Note: 存在bug :bug:
 >
-> 部分手机微信端不支持该方法，需要利用 `try...catch` 或者查看方法是否存在。
-
-
+> 部分手机微信端不支持该方法，需要利用 `try...catch` 或者查看方法是否存在，然后自行编码
 
 ## 点在矩形，矩形相交
 
