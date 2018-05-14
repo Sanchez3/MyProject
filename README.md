@@ -25,6 +25,11 @@ AR扫描，3D建模
 ### TMall Discovery [*](https://github.com/Sanchez3/MyProject/tree/master/TMD) 
 视频类项目
 - 2018年5月
+  - [戛纳](https://tpro.lxustudio.cn/cannes/)
+
+- 2018年5月
+
+  > PV: 9.3w UV: 7.6w
 
   - [国潮来了](https://tpro.lxustudio.cn/tmgc/)
   - *数英网* [天猫国潮行动：510国潮来了，放烟花庆祝一下！](https://www.digitaling.com/projects/27132.html)
