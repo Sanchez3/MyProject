@@ -190,21 +190,47 @@ npm上的FiGlet插件
 
 [AlphabetJS](https://github.com/starkwang/alphabetJS) 纯前端实现，样式单调
 
-### 操作步骤 
+### 操作步骤
 
-1. npm上下载 `figlet`
-2. node 上运行 
+#### Node API 
+
+1. `npm install figlet`
+2. node上运行 
 3. 复制保存结果，结果中添加换行符`\n`
 
+#### Browser API
 
+1. 添加font文件，eg. [Standard.flf](https://github.com/Sanchez3/MyProject/blob/master/NB574s/Standard.flf)
 
+2. 需要 [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)，加载font文件。安装[fetch](https://github.com/github/fetch)，`npm install whatwg-fetch --save`
 
+3. 引用`import whatwg-fetch` or `<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>`
+
+4. 安装 `npm install figlet`
+
+5. 引用 `import figlet` or `<script type="text/javascript" src="figlet.js"></script>`
+
+6. ```javascript
+   figlet.defaults({ fontPath: "assets/fonts" });
+   figlet('ABC','Standard.flf',function(err, text) {
+       if (err) {
+           console.log('something went wrong...');
+           console.dir(err);
+           return;
+       }
+       console.log(text);
+   });
+   ```
+
+[线上转换](http://patorjk.com/software/taag/ ) 复制保存结果，结果中添加换行符`\n`
 
 ## 抛弃Jquery 
 
-ajax的替代品：[Ajax](https://github.com/fdaciuk/ajax)
+ajax的替代品：[Ajax](https://github.com/fdaciuk/ajax) or [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)。[传统 Ajax 已死，Fetch 永生](https://github.com/camsong/blog/issues/2)
 
 其他语法相关 [You-Dont-Need-jQuery](https://github.com/nefe/You-Dont-Need-jQuery)
+
+[抛弃jQuery，拥抱原生JavaScript ](https://github.com/camsong/blog/issues/4)
 
 
 
