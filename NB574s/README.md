@@ -188,7 +188,15 @@ npm上的FiGlet插件
 
 [asciify](https://www.npmjs.com/package/asciify) 
 
-[AlphabetJS](https://github.com/starkwang/alphabetJS)
+[AlphabetJS](https://github.com/starkwang/alphabetJS) 纯前端实现，样式单调
+
+### 操作步骤 
+
+1. npm上下载 `figlet`
+2. node 上运行 
+3. 复制保存结果，结果中添加换行符`\n`
+
+
 
 
 
