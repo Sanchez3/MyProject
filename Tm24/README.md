@@ -22,42 +22,35 @@
 
 [关于URL编码](http://doiob.blog.163.com/blog/static/175757412201011291023290/)
 
-1.  ;    /    ?   :     @     &     =     +    $     ,        {10个}  **保留字符**
-2. _   .   !   ~   *   '   (   )             {9个}  **不用转义**
-3. {  }  |   \   ^  [   ]   `::数字1键前::       {8个}  **避用、有则转义**
-4. <   >   #   %   "      {5 个}  
-   1.  %  #         **保留字符**
-   2. <   >   "      **转义**
-   ​
+1.  `;   /   ?   :   @   &   =   +   $   ,`                     10个  **保留字符**
+
+2.  `_   .   !   ~   *   '   (   )`                             9个  **不用转义**
+
+3.  `{   }   |   \   ^   [   ]   ` <code>`</code>               8个  **避用、有则转义**
+
+4.  `<   >   #   %   "`                                         5个  
+   1.  `%  #`                                                        **保留字符**
+
+   2.  `<   >   "`                                                   **转义**
+
 [`encodeURI()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) 对URI的**全部**进行编码的方法；`decodeURI()` 解码 (对上述*情况1*不编码)
-
 [`encodeURIComponent()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)是对URI的**组成部分**进行编码的方法；`decodeURIComponent()` 解码 (对上述*情况1*编码)
-
 > Note: 存在bug :bug:
 >
 > 部分手机微信端不支持该方法，需要利用 `try...catch` 或者查看方法是否存在，然后自行编码
-
 ## 点在矩形，矩形相交
-
 ### 点在矩形中
-
 当矩形边与坐标轴平行，判断坐标点在不在矩形的left - right，bottom- top
-
 ```javascript
 function isPointIn (r, x, y) {
 return (x >= (r.left) && x < r.right && y >= r.bottom && y < r.top);
 };
 ```
 当矩形不平行于坐标轴时，
-
 方法1，将矩形经过旋转还原成平行
-
 方法2，判断该点的横纵坐标是否分别夹在于行的左右边和上下边中。
-
-​	eg. 矩形顶点P1，P2，P3，P4，判断P是否包含在矩形中
-
+​	eg. 形顶点P1，P2，P3，P4，判断P是否包含在矩形中
 ​		判断|P2P|×|P1P2|*|P3P|×|P3P4|<=0  &&  |P1P|×|P1P4|*|P2P|×|P2P3|<=0
-
 ```javascript
 function isPoinIn(mp1, mp2, mp3, mp4, mp) {
     if (Multiply(mp, mp1, mp2) * Multiply(mp, mp4, mp3) <= 0 && Multiply(mp, mp4, mp1) * Multiply(mp, mp3, mp2) <= 0)
@@ -69,16 +62,13 @@ function Multiply(p1, p2, p0) {
     return ((p1.X - p0.X) * (p2.Y - p0.Y) - (p2.X - p0.X) * (p1.Y - p0.Y));
 }
 ```
-
 引申 点在不规则图形中
-
 ```JavaScript
 //定义点的结构体
 function point(){
  this.x=0;
  this.y=0;
 }
-
 //计算一个点是否在多边形里,参数:点,多边形数组
 function PointInPoly(pt, poly) { 
     for (var c = false, i = -1, l = poly.length, j = l - 1; ++i < l; j = i) 
@@ -88,22 +78,11 @@ function PointInPoly(pt, poly) {
     return c; 
 }
 ```
-
 更多方法：
-
 [Point in polygon](https://en.wikipedia.org/wiki/Point_in_polygon)
-
 [Point in Polygon Strategies](http://erich.realtimerendering.com/ptinpoly/)
-
-
-
 相关用途：[“等一下，我碰！”——常见的2D碰撞检测 ](https://github.com/JChehe/blog/issues/8)
-
-
-
 ## Phaser Bug :bug:
-
 - [x] phaser canvas 旋转后，input事件出现bug
 - [x] phaser全屏 width height  resolution (window.devicePixelRatio) CANVAS缩放比例
 - [x] phaser中物体`alpha=0`，但是事件触发，需要同时设置物体属性 `visible=false`
-
