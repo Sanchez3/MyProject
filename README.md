@@ -15,8 +15,12 @@
 >__*（当然完成的都是项目中技术部分，从切图到完成一个完整的移动端网站）*__
 ## 项目
 ### 天猫二十四节气
-音乐游戏，简单交互[*](https://github.com/Sanchez3/MyProject/tree/master/Tm24)
-- 立夏 声援小美好 [我的夏之声](https://tm24.lxustudio.cn/)
+
+- 春分 游戏demo [*](https://github.com/Sanchez3/burstflowers)
+
+- 立夏 音乐游戏，简单交互[*](https://github.com/Sanchez3/MyProject/tree/master/Tm24)
+  - 声援小美好 [我的夏之声](https://tm24.lxustudio.cn/)
+  - *数英网* [天猫节气新解，在立夏声援小美好](https://www.digitaling.com/projects/27406.html)
 
 ### 2018新春狗年布狗袋 [*](https://github.com/Sanchez3/MyProject/tree/master/2018NewYear)
 AR扫描，3D建模
