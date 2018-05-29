@@ -15,7 +15,6 @@
 >__*（当然完成的都是项目中技术部分，从切图到完成一个完整的移动端网站）*__
 ## 项目
 ### 天猫二十四节气
-
 - 春分 游戏demo [*](https://github.com/Sanchez3/burstflowers)
   - *数英网* [天猫“国潮行动”：二十四传统节气新解释](https://www.digitaling.com/projects/27363.html)
 
