@@ -142,6 +142,7 @@
 ### BUG :bug:
 
 - [x] video播放不了，多测几台机子，重启。
+- [x] 视频编码问题，使用`Video: h264 (Constrained Baseline)` （🚫不能使用 `Video: mpeg4 (Simple Profile)`，做转码处理`ffmpeg -i video.mp4 -preset veryslow -crf 22 -strict experimental video.mp4` ）
 - [x] 微信传播h5，严格遵守传播规定。（🚫天猫等字样出现，网络爬虫会抓获文本）
 - [x] 安卓手机启用H5同层播放器，`x5-video-player-type`支持的值类型：`h5`。播放视频时，无法调用微信分享。
 - [x] Pixijs canvas阻碍了与事件关联的默认动作，即阻止了click事件行为，导致父元素点击区域是排除canvas的区域。`PIXI.interaction.InteractionManager.autoPreventDefault=false` [PIXI.interaction.InteractionManager](http://pixijs.download/dev/docs/PIXI.interaction.InteractionManager.html)
