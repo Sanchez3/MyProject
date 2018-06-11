@@ -28,6 +28,8 @@ AR扫描，3D建模
 - *数英网* [AR封印已开，布狗袋宝物显灵啦！](https://www.digitaling.com/projects/25942.html)
 ### TMall Discovery [*](https://github.com/Sanchez3/MyProject/tree/master/TMD) 
 视频类项目
+- 2018年6月
+  - [跨界实验室](https://tpro.lxustudio.cn/gc66/)
 - 2018年5月
   - [戛纳](https://tpro.lxustudio.cn/cannes/)
 - 2018年5月
