@@ -17,7 +17,7 @@ Method of displaying part of an element, using a selected image as a mask
 
 ## KEY
 
-利用animation的steps()做逐帧动画，控制mask的图片位置实现蒙版的帧动画
+利用`animation`的`steps()`做逐帧动画，控制mask的图片位置实现蒙版的帧动画
 
 ```css
 .mask{
