@@ -151,9 +151,9 @@
 
 - [x] `Error:  Unable to preventDefault inside passive event listener due to target being treated as passive.` [more](https://github.com/bevacqua/dragula/issues/468)  Add  `touch-action: none` or `{passive: false}`
 
-      ```javascript
-      document.addEventListener('touchmove', function(event) { event.preventDefault(); }, { passive: false });
-      ```
+```javascript
+document.addEventListener('touchmove', function(event) { event.preventDefault(); }, { passive: false });
+```
 
 - [x] Pixijs canvas阻碍了与事件关联的默认动作，即阻止了click事件行为，导致父元素点击区域是排除canvas的区域。`PIXI.interaction.InteractionManager.autoPreventDefault=false` [PIXI.interaction.InteractionManager](http://pixijs.download/dev/docs/PIXI.interaction.InteractionManager.html)
 
