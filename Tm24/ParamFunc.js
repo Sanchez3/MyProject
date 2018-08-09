@@ -28,7 +28,7 @@ function getQueryString(param) {
         } catch (error) {
             return mdecodeURLC(r[2]);
         }
-    }else return null;
+    } else return null;
 }
 
 function mencodeURLC(str) {
@@ -46,6 +46,5 @@ function mdecodeURLC(str) {
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"')
-        .replace(/&#x27;/g.
-            "'")
+        .replace(/&#x27;/g, "'")
 }
