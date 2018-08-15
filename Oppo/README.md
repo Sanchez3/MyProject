@@ -51,5 +51,10 @@
 
       ## 项目关键点
 
-- ​
-
+- AJAX
+- clipboard
+- html2canvas
+- swiper
+- 输入法键盘导致布局混乱
+- scrollr
+- 生成QRcode
