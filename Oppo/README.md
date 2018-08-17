@@ -52,9 +52,45 @@
       ## 项目关键点
 
 - AJAX
+
+  ```javascript
+         $.ajax({
+              url: "/ajax/getIdentifyCodeReserve",
+              data: _data,
+              crossDomain: true,
+              dataType: 'json',
+              type: 'GET',
+              success: function (r) {
+                  if (!!r && r.code == 10000) {
+                  
+                     }else{
+                     var msg=r.msg;
+                     console.log(r.msg)
+                     }
+              },
+              error: function (jqXHR, textStatus, errorThrow) {
+                  console.log("网络异常，请稍后重试");
+                  // console.log('Error: ' + errorThrow);
+         
+              }
+          });
+  ```
+
 - clipboard
+
+  - Btn or a href='javascript:;'
+  - ​
+
 - html2canvas
+
 - swiper
+
 - 输入法键盘导致布局混乱
+
 - scrollr
+
 - 生成QRcode
+
+- 微信扫一扫
+
+- ​
