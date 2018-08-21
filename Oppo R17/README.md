@@ -93,4 +93,7 @@
 
 - 微信扫一扫
 
-- ​
+- 清除DNS
+
+  - MAC ：`sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed`
+  - Chrome：1、`chrome://net-internals/#dns `   2、`clean host cache`
