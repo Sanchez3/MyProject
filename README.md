@@ -15,7 +15,7 @@
 >__*（当然完成的都是项目中技术部分，从切图到完成一个完整的移动端网站）*__
 ## 项目
 
-### OPPO R17 礼赠 [*](https://github.com/Sanchez3/OPPOR17)
+### OPPO R17 礼赠 [*](https://github.com/Sanchez3/OppoR17)
 视频，信息提交 
 - [OPPO R17 见面礼](https://oppor17.lxustudio.cn/reserve/) [激活你的R17专享礼](https://oppor17.lxustudio.cn/gift/)
 
