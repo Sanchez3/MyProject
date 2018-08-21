@@ -49,45 +49,36 @@
 
       ​
 
-      ## 项目关键点
+## 项目关键点
 
-- AJAX
-
-  ```javascript
-         $.ajax({
-              url: "/ajax/getIdentifyCodeReserve",
-              data: _data,
-              crossDomain: true,
-              dataType: 'json',
-              type: 'GET',
-              success: function (r) {
-                  if (!!r && r.code == 10000) {
-                  
-                     }else{
-                     var msg=r.msg;
-                     console.log(r.msg)
-                     }
-              },
-              error: function (jqXHR, textStatus, errorThrow) {
-                  console.log("网络异常，请稍后重试");
-                  // console.log('Error: ' + errorThrow);
-         
-              }
-          });
-  ```
+- AJAX [玩不转AJAX](https://github.com/Sanchez3/MyProject/issues/11)
 
 - clipboard
 
-  - Btn or a href='javascript:;'
-  - ​
+  -  `<button></button>` or `<a href='javascript:;'></a>` ，初始化成功
 
-- html2canvas
+     ​
 
-- swiper
+- [html2canvas](https://github.com/niklasvh/html2canvas) ＋  `canvas.toDataURL()`
+
+  - 同类型 js插件 [DOM to Image](https://github.com/tsayen/dom-to-image) 失败。 错误原因未知
+
+    ​
+
+- Swiper 
+
+  - HTMLElement  `display:none` Swiper初始化失败
+  - HTMLElement `autoAlpha : 0` ( `opacity : 0; visibility : hidden;` ) Swiper初始化失败
 
 - 输入法键盘导致布局混乱
 
-- scrollr
+  - 安卓端，当键盘出现时，`document.documentElement.clientHeight`会发生变化。解决办法：设置html、body为固定值 `window.innerHeight`
+
+  - 安卓端，保证用户体验。当输入框过多时，当焦点在最顶端输入框，保证其不会因为浮动被遮挡住（设置固定高度）；当焦点在底端输入框，要保证底端输入框不会被键盘遮挡住（设置固定）。
+
+    ​
+
+- [scrollmagic](http://scrollmagic.io/)
 
 - 生成QRcode
 
