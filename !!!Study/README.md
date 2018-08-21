@@ -16,6 +16,8 @@
 ## 前端技巧 
 - ### [改变URL且不刷新页面](https://github.com/Sanchez3/MyProject/issues/5)
 
+- ### [玩不转AJAX](https://github.com/Sanchez3/MyProject/issues/11)
+
 ## 前端技术
 - ### [NPM vs YARN](https://github.com/Sanchez3/MyProject/issues/3/)
 
