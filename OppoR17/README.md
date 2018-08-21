@@ -80,9 +80,9 @@
 
 - [scrollmagic](http://scrollmagic.io/)
 
-- 生成QRcode
+- 生成QRcode [QRCode.js](https://github.com/Sanchez3/qrcodejs)
 
-- 微信扫一扫
+- [微信扫一扫](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455871652)
 
 - 清除DNS
 
