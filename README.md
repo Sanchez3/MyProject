@@ -14,6 +14,11 @@
 >绝大多数项目都在微信端
 >__*（当然完成的都是项目中技术部分，从切图到完成一个完整的移动端网站）*__
 ## 项目
+
+### OPPO R17 礼赠 [*](https://github.com/Sanchez3/OPPOR17)
+视频，信息提交 
+- [OPPO R17 见面礼](https://oppor17.lxustudio.cn/reserve/) [激活你的R17专享礼](https://oppor17.lxustudio.cn/gift/)
+
 ### 天猫二十四节气
 - 春分 游戏demo [*](https://github.com/Sanchez3/burstflowers)
 
@@ -63,7 +68,7 @@ WebGL（Three.js），3D建模
 ### NB fuel 疾速对决 [*](https://github.com/Sanchez3/MyProject/tree/master/NBfuel) 
 用户选择，报名
 > PV: 1.5w UV: 1w
-- [欧阳靖的Battle，你敢接吗？](http://nbfuel.lxustudio.cn/?key=1)
+- ~~欧阳靖的Battle，你敢接吗？~~ ***已下线***
 - 数英网 [New Balance #疾速对决#，欧阳靖约你赛车道上“Battle”！](https://www.digitaling.com/projects/22403.html)
 ### 2015百度品牌数字资产榜 [*](https://github.com/Sanchez3/MyProject/tree/master/BaiduList)
 canvas动画，列表
