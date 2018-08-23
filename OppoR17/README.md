@@ -63,7 +63,13 @@
 
   - 同类型 js插件 [DOM to Image](https://github.com/tsayen/dom-to-image) 失败。 错误原因未知
 
-    ​
+- TweenMax 失去焦点，继续动作 
+
+```javascript
+  TweenMax.ticker.useRAF(false);
+  TweenMax.lagSmoothing(0);
+```
+
 
 - Swiper 
 
