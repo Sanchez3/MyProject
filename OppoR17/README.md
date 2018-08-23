@@ -53,7 +53,7 @@
 
 - AJAX [玩不转AJAX](https://github.com/Sanchez3/MyProject/issues/11)
 
-- clipboard
+- [clipboard.js](https://clipboardjs.com/)
 
   -  `<button></button>` or `<a href='javascript:;'></a>` ，初始化成功
 
@@ -78,7 +78,10 @@
 
     ​
 
-- [scrollmagic](http://scrollmagic.io/)
+- [scrollmagic](http://scrollmagic.io/) 
+
+  - 当页面 `document.documentElement.clientHeight`会发生变化时，元素会受到影响
+  - 长度单位为rem
 
 - 生成QRcode [QRCode.js](https://github.com/Sanchez3/qrcodejs)
 
