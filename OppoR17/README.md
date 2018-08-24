@@ -55,7 +55,11 @@
 
 - [clipboard.js](https://clipboardjs.com/)
 
-  -  `<button></button>` or `<a href='javascript:;'></a>` ，初始化成功
+  -  IOS设备，  若对象不是`a` 或者 `button`  ，`click` 点击事件会失效
+
+     添加 `href='javascript:;'` 
+
+     或者 添加 `selector {cursor: pointer;}` 
 
      ​
 
