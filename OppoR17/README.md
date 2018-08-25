@@ -97,6 +97,8 @@
 
 - [微信扫一扫](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455871652)
 
+- `document.write` 失效
+
 - 清除DNS
 
   - MAC ：`sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed`
