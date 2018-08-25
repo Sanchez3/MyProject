@@ -75,7 +75,7 @@
 ```
 
 
-- Swiper 
+- [Swiper](http://idangero.us/swiper/) 
 
   - HTMLElement  `display:none` Swiper初始化失败
   - HTMLElement `autoAlpha : 0` ( `opacity : 0; visibility : hidden;` ) Swiper初始化失败
