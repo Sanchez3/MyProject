@@ -156,7 +156,7 @@ document.addEventListener('touchmove', function(event) { event.preventDefault();
 ```
 
 - [x] 阻止跨站解析器阻断脚本通过document.write调用`document.write intervention and 3rd-party scripts`   
-
+      - [x] [Intervention: Blocking the load of cross-origin, parser-blocking scripts inserted via document.write for users on 2G](https://www.chromestatus.com/feature/5718547946799104)
       - [x] [CNZZ的JS统计代码被Chrome警告，如何解决？](https://www.jianshu.com/p/ec0bfb5fdf2f)
 ```javascript
 var cnzz_s_tag = document.createElement('script');
