@@ -155,6 +155,20 @@
 document.addEventListener('touchmove', function(event) { event.preventDefault(); }, { passive: false });
 ```
 
+- [x] 阻止跨站解析器阻断脚本通过document.write调用`document.write intervention and 3rd-party scripts`   
+
+      - [x] [CNZZ的JS统计代码被Chrome警告，如何解决？](https://www.jianshu.com/p/ec0bfb5fdf2f)
+```javascript
+var cnzz_s_tag = document.createElement('script');
+cnzz_s_tag.type = 'text/javascript';
+cnzz_s_tag.async = true;
+cnzz_s_tag.charset = 'utf-8';
+cnzz_s_tag.src = 'https://w.cnzz.com/c.php?id=XXXXXXXX&async=1';
+var root_s = document.getElementsByTagName('script')[0];
+root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+```
+
 - [x] Pixijs canvas阻碍了与事件关联的默认动作，即阻止了click事件行为，导致父元素点击区域是排除canvas的区域。`PIXI.interaction.InteractionManager.autoPreventDefault=false` [PIXI.interaction.InteractionManager](http://pixijs.download/dev/docs/PIXI.interaction.InteractionManager.html)
 
 > Note: dom标准事件流的触发的先后顺序为：**先捕获再冒泡**
+
