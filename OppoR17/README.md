@@ -47,7 +47,6 @@
 
       ​
 
-      ​
 
 ## 项目关键点
 
@@ -97,7 +96,7 @@
 
 - [微信扫一扫](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455871652)
 
-- `document.write` 失效
+- `document.write` []
 
 - 清除DNS
 
