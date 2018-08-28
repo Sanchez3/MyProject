@@ -96,7 +96,7 @@
 
 - [微信扫一扫](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455871652)
 
-- `document.write` []
+- [阻止跨站解析器 `document.write`](https://github.com/Sanchez3/MyProject/tree/master/TMD#%E9%98%BB%E6%AD%A2%E8%B7%A8%E7%AB%99%E8%A7%A3%E6%9E%90%E5%99%A8)
 
 - 清除DNS
 
