@@ -96,7 +96,10 @@
 
 - [微信扫一扫](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455871652)
 
-- [阻止跨站解析器 `document.write`](https://github.com/Sanchez3/MyProject/tree/master/TMD#%E9%98%BB%E6%AD%A2%E8%B7%A8%E7%AB%99%E8%A7%A3%E6%9E%90%E5%99%A8)
+- 阻止跨站解析器阻断脚本通过document.write调用`document.write intervention and 3rd-party scripts`
+
+  - [Intervention: Blocking the load of cross-origin, parser-blocking scripts inserted via document.write for users on 2G](https://www.chromestatus.com/feature/5718547946799104)
+  - [CNZZ的JS统计代码被Chrome警告，如何解决？](https://www.jianshu.com/p/ec0bfb5fdf2f)
 
 - 清除DNS
 
