@@ -18,6 +18,8 @@
 
 - ### [玩不转AJAX](https://github.com/Sanchez3/MyProject/issues/11)
 
+- ### [FFmpeg技巧](https://github.com/Sanchez3/MyProject/issues/12)
+
 ## 前端技术
 - ### [NPM vs YARN](https://github.com/Sanchez3/MyProject/issues/3/)
 
