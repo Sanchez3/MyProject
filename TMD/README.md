@@ -38,7 +38,7 @@
 - [ ] 启用H5同层播放器时，首先要了解安卓微信分享问题，其次注意HTML  <video> 标签的样式，如下：
 
 ```html
-<video id="video" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" src="./assets/media/tmgc.mp4" type="video/mp4"</video>
+<video id="video" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" src="./assets/media/video.mp4" type="video/mp4"</video>
 ```
 #### 安卓视频问题解决方法
 
@@ -97,13 +97,19 @@
 
 - [ ] 横竖屏 [rootResize.js](https://github.com/Sanchez3/MyProject/blob/master/TMD/rootResize.js) / 横屏提示[orientLayer](https://github.com/Sanchez3/MyProject/blob/master/NBA2/orientLayer.html) 
 
+- [ ] 微信平台 Android 横屏视频播放，请提前考虑构架（包括竖屏锁屏提示；若规避微信分享问题，那么进度条的位置；）
+
 - [ ] 复制淘命令 [clipboard.js](https://github.com/zenorocha/clipboard.js)，succes 浮窗成功提示，error 浮窗提示(长按复制框内信息打开天猫app/淘宝)
 
 - [ ] 微信排版测试
 
   使用[Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn) Setting - device - Add custom device
 
-  **User agent string:**  `Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1`
+  **User agent string:** 
+
+  **Apple：** `Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1  MicroMessenger/6.5.7`
+
+  **Android：**`Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Mobile Safari/537.36 MicroMessenger/6.5.7 `
 
   **iPhone 5s/SE尺寸:** 640 * 1008  / 320 * 504  
 
@@ -111,7 +117,7 @@
 
   **iPhone X尺寸:** 750 * 1448 / 375 * 724  **Device pixel ratio:** 3
 
-  ​
+  **Android 某机型尺寸：**400 * 700  **Device pixel ratio:** 3
 
 
 - [ ] 微信media素材大小，参考[视频检测及压缩方法](https://wximg.qq.com/wxp/temp/VideoResizeMethod.pdf) 再加上通常习惯
