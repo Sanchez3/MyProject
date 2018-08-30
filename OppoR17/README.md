@@ -51,6 +51,55 @@
 ## 项目关键点
 
 - AJAX [玩不转AJAX](https://github.com/Sanchez3/MyProject/issues/11)
+  - ajax错误一定要提示清楚，有利于调试bug，排除问题
+
+```javascript
+$.ajax({
+    url: url, //你要请求的api的URL
+    type: 'POST', //GET
+    async: true, //异步
+    crossDomain: true, //跨域
+    cache: false, //缓存
+    headers: { 'Access-Control-Allow-Origin': '*' }, //添加额外的请求头
+    data: { //必要的时候需要用JSON.stringify() 将JSON对象转换成字符串
+    },
+    timeout: 5000, //超时时间
+    dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text 
+    beforeSend: function (jqXHR) {
+        console.log(jqXHR)
+        console.log('发送前')
+    },
+    success: function (data, textStatus, jqXHR) {
+        console.log(data)
+        console.log(textStatus)
+        console.log(jqXHR)
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+        console.log('错误')
+        console.log(jqXHR)
+        console.log(textStatus)
+        switch (textStatus) {
+            case 'timeout':
+                console.log('timeout');
+                break;
+            case 'error':
+                console.log('Error');
+                break;
+            case 'abort':
+                console.log('Abort');
+                break;
+            case 'parsererror':
+                console.log('Parser Error');
+                break;
+            default:
+                console.log('Null');
+        }
+    },
+    complete: function (jqXHR, textStatus) {
+        console.log('结束')
+    }
+})
+```
 
 - [clipboard.js](https://clipboardjs.com/)
 
