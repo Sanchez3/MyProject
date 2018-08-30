@@ -52,6 +52,7 @@
 
 - AJAX [玩不转AJAX](https://github.com/Sanchez3/MyProject/issues/11)
   - ajax错误一定要提示清楚，有利于调试bug，排除问题
+  - [jQuery.ajax](https://www.jquery123.com/jQuery.ajax/) 各个参数
 
 ```javascript
 $.ajax({
