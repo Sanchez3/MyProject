@@ -156,8 +156,8 @@
 
 ```javascript
 video.addEventListener('x5videoenterfullscreen', function () {
-video.style.height = window.screen.height + 'px';
-video.style.width = window.screen.width + 'px';
+    video.style.height = window.screen.height + 'px';
+    video.style.width = window.screen.width + 'px';
 });
 ```
 - [x] `Error:  Unable to preventDefault inside passive event listener due to target being treated as passive.` [more](https://github.com/bevacqua/dragula/issues/468)  Add  `touch-action: none` or `{passive: false}`
@@ -181,6 +181,8 @@ cnzz_s_tag.src = cnzz_protocol+'w.cnzz.com/c.php?id=XXXXXXXX&async=1';
 var root_s = document.getElementsByTagName('script')[0];
 root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
 ```
+
+- [x] HTTPS混合HTTP 去掉`URL`中的`http://`或`https://`，将其替换为`//`。 URL`//`开头（相对协议URL`Protocol-relative URL`）
 
 - [x] Pixijs canvas阻碍了与事件关联的默认动作，即阻止了click事件行为，导致父元素点击区域是排除canvas的区域。`PIXI.interaction.InteractionManager.autoPreventDefault=false` [PIXI.interaction.InteractionManager](http://pixijs.download/dev/docs/PIXI.interaction.InteractionManager.html)
 
