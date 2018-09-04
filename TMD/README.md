@@ -67,8 +67,14 @@
 - 放弃同层播放
 
   - 即视频区域之上的操作无响应。
-
   - 对于视频默认的进度条，解决方法：尝试视频高度大于屏幕高度，从而显示不了进度条。
+
+- 利用[JSMpeg](https://github.com/phoboslab/jsmpeg)插件，控制视频播放；利用[Howler](https://github.com/goldfire/howler.js/)插件或原生`audio`，控制音频播放。
+
+  - Android手机老旧或者Android版本过低（低于5.0），效果差，建议还是使用`video`播放
+  - 利用`ffmpeg`转换（或者软件 `Pr` 、`Media Encoder` ），视频格式为`ts`，且**视频无音轨**，音轨单独导出 （分辨率，码率，采样率等根据需要自行[调整](https://www.ffmpeg.org/ffmpeg.html)）。
+    - mp4转ts：`ffmpeg -i video.mp4 -f mpegts -codec:v mpeg1video -s 750x1206 -r 24 -b 800k output.ts` 
+    - mp4转mp3：`ffmpeg -i vidoe.mp4 -ac 2 -ab 96k -ar 44100 audio.mp3`
 
 
 
@@ -120,11 +126,13 @@
   **Android 某机型尺寸：**400 * 700  **Device pixel ratio:** 3
 
 
-- [ ] 微信media素材大小，参考[视频检测及压缩方法](https://wximg.qq.com/wxp/temp/VideoResizeMethod.pdf) 再加上通常习惯
+- [ ] 微信media素材大小，参考[视频检测及压缩方法](https://wximg.qq.com/wxp/temp/VideoResizeMethod.pdf) 
 
   **视频 video:** 1min 不大于 10mb
 
   **音频 audio:** 30s 不大于 500kb  （建议1min左右，可循环）
+
+  手机视频采样率：![手机视频比特率](https://github.com/Sanchez3/MyProject/blob/master/TMD/手机视频比特率.png)
 
 
 ### 项目链接
@@ -148,7 +156,7 @@
 ### BUG :bug:
 
 - [x] video播放不了，多测几台机子，重启。
-- [x] 视频编码问题，使用`Video: h264 (Constrained Baseline)` （🚫不能使用 `Video: mpeg4 (Simple Profile)`，做转码处理`ffmpeg -i video.mp4 -preset veryslow -crf 22 -strict experimental video.mp4` ）
+- [x] 视频编码问题，使用`Video: h264 (Constrained Baseline)` （🚫不能使用 `Video: mpeg4 (Simple Profile)`，做转码处理`ffmpeg -i video.mp4 -vocodec h264 out.mp4` ）
 - [x] 微信传播h5，严格遵守传播规定。（🚫天猫等字样出现，网络爬虫会抓获文本）
 - [x] 安卓手机启用H5同层播放器，`x5-video-player-type`支持的值类型：`h5`。播放视频时，无法调用微信分享。
 - [x] 微信平台 Android设置X5同层播放器，进入全屏视频，load页面若已添加css动画，会出现背景消失bug。
