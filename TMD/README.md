@@ -70,12 +70,22 @@
   - 对于视频默认的进度条，解决方法：尝试视频高度大于屏幕高度，从而显示不了进度条。
 
 - 利用 [JSMpeg](https://github.com/phoboslab/jsmpeg) 插件，控制视频播放；~~利用[Howler](https://github.com/goldfire/howler.js/)插件或原生`audio`，控制音频播放。~~
-
   - Android手机老旧或者Android版本过低（低于4.4），效果差，建议还是使用`video`播放
   - 利用 [FFmpeg](https://www.ffmpeg.org/) 转换（或者软件 `Pr` 、`Media Encoder` ），视频格式为`ts`，~~且**视频无音轨**，音轨单独导出~~ （分辨率，码率，采样率等根据需要自行[调整](https://www.ffmpeg.org/ffmpeg.html)）。
     - mp4转ts：`ffmpeg -i video.mp4 -f mpegts -codec:v mpeg1video -s 750x1206 -r 24 -b:v 800k -codec:a mp2 -ar 44100 -ac 2 -b:a 128k output.ts` 
     - ~~mp4转mp3：`ffmpeg -i vidoe.mp4 -ac 2 -ab 96k -ar 44100 audio.mp3`~~
 
+```javascript
+// ts-wrapper - the HTML Canvas elment, set object-fit and object-position as you need
+var player = new JSMpeg.Player('/assets/media/output.ts', {
+    canvas: document.getElementById('ts-wrapper'), 
+    loop: false,
+    autoplay: false,
+ 	pauseWhenHidden:false,
+  	preserveDrawingBuffer:true,
+    poster:'/assets/img/poster.png'
+})
+```
 
 
 ### 关键点
