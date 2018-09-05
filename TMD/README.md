@@ -1,12 +1,12 @@
-# 天猫推广
+# 视频类项目（天猫推广）
 
 ## 项目前期搭建问题点
 
 ### Video
 
 ```html
-<video id="mv" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true">
-    <source src="./assets/media/*.mp4" type="video/mp4">
+<video id="video" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true">
+    <source src="/assets/media/video.mp4" type="video/mp4">
 </video>
 <div class="video-poster"></div>
 ```
@@ -38,7 +38,7 @@
 - [ ] 启用H5同层播放器时，首先要了解安卓微信分享问题，其次注意HTML  <video> 标签的样式，如下：
 
 ```html
-<video id="video" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" src="./assets/media/video.mp4" type="video/mp4"</video>
+<video id="video" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" src="/assets/media/video.mp4" type="video/mp4"</video>
 ```
 #### 安卓视频问题解决方法
 
@@ -50,7 +50,7 @@
 
   - 安卓手机未安装qq浏览器，微信tbs  `x5JsCoreEnabled:false`
 
-    - 微信分享朋友圈，可以触发安卓微信分享朋友圈方法，即截取当前视频画面（触发分享那一刻的视频画面）作为分享图片，利用项目标题+项目链接作为分享标题（利用[history](https://github.com/Sanchez3/MyProject/issues/5)保证与用户分享链接无多余参数 eg. `?from=singlemessage`）
+    - 微信分享朋友圈，可以触发安卓微信分享朋友圈方法，即截取当前视频画面（触发分享那一刻的视频画面）作为分享图片，利用项目标题+项目链接作为分享标题（利用 [history](https://github.com/Sanchez3/MyProject/issues/5) 保证与用户分享链接无多余参数 eg. `?from=singlemessage`）
     - 分享给朋友，则是项目标题+项目链接作为分享标题
 
     > Notice: 注意html video标签的结构与属性，如上代码块所示
@@ -69,12 +69,12 @@
   - 即视频区域之上的操作无响应。
   - 对于视频默认的进度条，解决方法：尝试视频高度大于屏幕高度，从而显示不了进度条。
 
-- 利用[JSMpeg](https://github.com/phoboslab/jsmpeg)插件，控制视频播放；利用[Howler](https://github.com/goldfire/howler.js/)插件或原生`audio`，控制音频播放。
+- 利用 [JSMpeg](https://github.com/phoboslab/jsmpeg) 插件，控制视频播放；~~利用[Howler](https://github.com/goldfire/howler.js/)插件或原生`audio`，控制音频播放。~~
 
-  - Android手机老旧或者Android版本过低（低于5.0），效果差，建议还是使用`video`播放
-  - 利用`ffmpeg`转换（或者软件 `Pr` 、`Media Encoder` ），视频格式为`ts`，且**视频无音轨**，音轨单独导出 （分辨率，码率，采样率等根据需要自行[调整](https://www.ffmpeg.org/ffmpeg.html)）。
-    - mp4转ts：`ffmpeg -i video.mp4 -f mpegts -codec:v mpeg1video -s 750x1206 -r 24 -b:v 800k output.ts` 
-    - mp4转mp3：`ffmpeg -i vidoe.mp4 -ac 2 -ab 96k -ar 44100 audio.mp3`
+  - Android手机老旧或者Android版本过低（低于4.4），效果差，建议还是使用`video`播放
+  - 利用 [FFmpeg](https://www.ffmpeg.org/) 转换（或者软件 `Pr` 、`Media Encoder` ），视频格式为`ts`，~~且**视频无音轨**，音轨单独导出~~ （分辨率，码率，采样率等根据需要自行[调整](https://www.ffmpeg.org/ffmpeg.html)）。
+    - mp4转ts：`ffmpeg -i video.mp4 -f mpegts -codec:v mpeg1video -s 750x1206 -r 24 -b:v 800k -codec:a mp2 -ar 44100 -ac 1 -b:a 128k output.ts` 
+    - ~~mp4转mp3：`ffmpeg -i vidoe.mp4 -ac 2 -ab 96k -ar 44100 audio.mp3`~~
 
 
 
@@ -109,7 +109,7 @@
 
 - [ ] 微信排版测试
 
-  使用[Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn) Setting - device - Add custom device
+  使用 [Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn) Setting - device - Add custom device
 
   **User agent string:** 
 
@@ -160,7 +160,7 @@
 - [x] 微信传播h5，严格遵守传播规定。（🚫天猫等字样出现，网络爬虫会抓获文本）
 - [x] 安卓手机启用H5同层播放器，`x5-video-player-type`支持的值类型：`h5`。播放视频时，无法调用微信分享。
 - [x] 微信平台 Android设置X5同层播放器，进入全屏视频，load页面若已添加css动画，会出现背景消失bug。
-- [x] 安卓手机启用H5同层播放器注意把video元素的高设为屏幕高度时，要用「window.screen.height」而不能用「document.documentElement.clientHeight」，因为后者不包含导航栏高度，将会导致无法满屏
+- [x] 安卓手机启用H5同层播放器注意把video元素的高设为屏幕高度时，要用 `window.screen.height` 而不能用 `document.documentElement.clientHeight` ，因为后者不包含导航栏高度，将会导致无法满屏
 
 ```javascript
 video.addEventListener('x5videoenterfullscreen', function () {
@@ -180,7 +180,9 @@ document.addEventListener('touchmove', function(event) { event.preventDefault();
   [CNZZ的JS统计代码被Chrome警告，如何解决？](https://www.jianshu.com/p/ec0bfb5fdf2f)
 
 ```javascript
-var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://")
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+//Protocol-relative URL
+//var cnzz_protocol = "//";
 var cnzz_s_tag = document.createElement('script');
 cnzz_s_tag.type = 'text/javascript';
 cnzz_s_tag.async = true;
@@ -190,7 +192,7 @@ var root_s = document.getElementsByTagName('script')[0];
 root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
 ```
 
-- [x] HTTPS混合HTTP 去掉`URL`中的`http://`或`https://`，将其替换为`//`。 URL`//`开头（相对协议URL `Protocol-relative URL`）
+HTTPS混合HTTP 去掉`URL`中的`http://`或`https://`，将其替换为`//`。 URL`//`开头（相对协议URL `Protocol-relative URL`）
 
 > Note: 兼容性问题，比如在IE6上，或者一些比较特殊的WEB容器中，就无法解析
 
