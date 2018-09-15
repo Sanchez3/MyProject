@@ -40,6 +40,8 @@ AR扫描，3D建模
 - *数英网* [AR封印已开，布狗袋宝物显灵啦！](https://www.digitaling.com/projects/25942.html)
 ### TMall Discovery [*](https://github.com/Sanchez3/MyProject/tree/master/TMD) 
 视频类项目
+- 2018年9月 Android手机采用ts格式和jsmpeg插件
+  - [跨界实验室](http://tpro.lxustudio.cn/tgyw/) 
 - 2018年6月
   - [跨界实验室](https://tpro.lxustudio.cn/gc66/)
 - 2018年5月
