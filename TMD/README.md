@@ -69,7 +69,7 @@
   - 即视频区域之上的操作无响应。
   - 对于视频默认的进度条，解决方法：尝试视频高度大于屏幕高度，从而显示不了进度条。
 
-- 利用 [JSMpeg](https://github.com/phoboslab/jsmpeg) 插件，控制视频播放；利用[Howler](https://github.com/goldfire/howler.js/)插件或原生`audio`，控制音频播放（:bug:[音视频失步](https://blog.csdn.net/DeliaPu/article/details/75667661)
+- 利用 [JSMpeg](https://github.com/phoboslab/jsmpeg) 插件，控制视频播放（:bug:点击播放后，​视频仍需加载，出现黑白的加载画面 待解决 ​）；利用[Howler](https://github.com/goldfire/howler.js/)插件或原生`audio`，控制音频播放（:bug:[音视频失步](https://blog.csdn.net/DeliaPu/article/details/75667661)
 
   ）。
   - Android手机老旧或者Android版本过低（低于4.4），效果差，建议还是使用`video`播放
