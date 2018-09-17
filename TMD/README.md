@@ -75,6 +75,7 @@
   - 利用 [FFmpeg](https://www.ffmpeg.org/) 转换（或者软件 `Pr` 、`Media Encoder` ），视频格式为`ts` **视频有无音轨视，请视情况而定**。音轨单独导出 （分辨率，码率，采样率等根据需要自行[调整](https://www.ffmpeg.org/ffmpeg.html)）。 `–an`去除音频
     - 转ts格式：`ffmpeg -i video.mp4 -f mpegts -codec:v mpeg1video -s 750x1206 -r 24 -b:v 800k -codec:a mp2 -ar 44100 -ac 2 -b:a 128k output.ts`  or  `ffmpeg -i video.mp4 -f mpegts -vcodec copy output.ts` 
     - 提取音频：`ffmpeg -i vidoe.mp4 -ac 2 -ab 128k -ar 44100 audio.mp3`
+      - 音视频分别播放存在的问题：1. 画面失去焦点。 2.音视频同步开始。
     - 引入js插件：
       - 1、`<script src="jsmpeg.min.js"></script>` 从github扒代码  
       - 2、`npm install jsmpeg-player --save` 并`import JSMpeg from 'jsmpeg-player';`  [JSMpeg Player(TS Player)](https://github.com/cycdpo/jsmpeg-player)
