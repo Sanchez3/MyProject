@@ -15,7 +15,7 @@
 
 - [ ] 项目后端接口，接口文档及接口密钥
 
-- [ ] 所有页面都要部署埋点统计，并保证数据的准确性
+- [ ] 所有页面都要部署埋点统计，并保证数据的准确性。建议使用[百度统计](https://tongji.baidu.com/) 
 
 - [ ] 项目搭建。提供网络拓扑图、使用的组件清单
 
@@ -129,9 +129,9 @@ $.ajax({
   - HTMLElement  `display:none` Swiper初始化失败
   - HTMLElement `autoAlpha : 0` ( `opacity : 0; visibility : hidden;` ) Swiper初始化失败
 
-- 输入法键盘导致布局混乱
+- 输入法键盘导致布局混乱 [X5同层播放器试用报告](https://x5.tencent.com/tbs/guide/web/x5-video.html)
 
-  - 安卓端，当键盘出现时，`document.documentElement.clientHeight`会发生变化。解决办法：设置html、body为固定值 `window.innerHeight`
+  - 安卓端，当键盘出现时，`document.documentElement.clientHeight`会发生变化。解决办法：设置html、body为固定值 `window.innerHeight` `window.screen.height`
 
   - 安卓端，保证用户体验。当输入框过多时，当焦点在最顶端输入框，保证其不会因为浮动被遮挡住（设置固定高度）；当焦点在底端输入框，要保证底端输入框不会被键盘遮挡住（设置固定）。
 
