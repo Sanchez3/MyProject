@@ -146,6 +146,53 @@ $.ajax({
 
 - [微信扫一扫](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455871652)
 
+- 解决`Rem`单位的逐帧动画抖动解决  [reference](https://aotu.io/notes/2017/08/14/fix-sprite-anim/)
+```html
+<style>
+.load-sprite {
+    position: absolute;
+    width: 349px;
+    height: 288px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 28%;
+    display: inline-block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: url(../img/load-sprite.png);
+    transform-origin: top center;
+    background-size: 8725px 288px; 
+    -webkit-animation: load-anim 1s steps(24) infinite;
+    animation: load-anim 1s steps(24) infinite;
+}
+@keyframes load-anim {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@-webkit-keyframes load-anim {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+</style>
+
+<script>
+  function rootResize(){
+    document.getElementById('load-sprite').style.transform = 'scale('+wFsize/100+')';
+  }
+  window.onresize = rootResize;
+  rootResize();
+</script>
+```
+
 - 阻止跨站解析器阻断脚本通过document.write调用`document.write intervention and 3rd-party scripts`
 
   - [Intervention: Blocking the load of cross-origin, parser-blocking scripts inserted via document.write for users on 2G](https://www.chromestatus.com/feature/5718547946799104)
