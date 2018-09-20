@@ -11,9 +11,9 @@
 >
 >但是
 >
->**访问时长** （访问时长是访问质量的一个衡量指标）
+>**访问时长**（访问时长是访问质量的一个衡量指标）
 >
->**访问深度 **（平均访问深度=浏览次数/访问次数 访问深度越大，网站的粘性越高。）
+>**访问深度**（平均访问深度=浏览次数/访问次数 访问深度越大，网站的粘性越高。）
 >
 >**PV和UV的比值** （PV/UV 平均每位独立访问者所浏览的页面访问量）
 >
@@ -26,10 +26,15 @@
 ------
 #### 天猫二十四节气
 - 春分 游戏demo [*](https://github.com/Sanchez3/burstflowers)
-  **Phaser** Particles Filter
+
+  **Phaser**，Particles Filter
+
   - *数英网* [天猫“国潮行动”：二十四传统节气新解释](https://www.digitaling.com/projects/27363.html)
+
 - 立夏 音乐游戏，简单交互[*](https://github.com/Sanchez3/MyProject/tree/master/Tm24)
-  音频，**Phaser**
+
+  **Phaser**，音频
+
   - 声援小美好 [我的夏之声](https://tm24.lxustudio.cn/)
   - *数英网* [天猫节气新解，在立夏声援小美好](https://www.digitaling.com/projects/27406.html)
 
@@ -76,12 +81,12 @@
 ------
 
 #### 2018新春狗年布狗袋 [*](https://github.com/Sanchez3/MyProject/tree/master/2018NewYear)
-AR扫描，**three.js 3D建模**
+**three.js 3D建模**，AR扫描
 - [AR封印已开，布狗袋显灵啦](https://lxunogodie.applinzi.com/)
 - *数英网* [AR封印已开，布狗袋宝物显灵啦！](https://www.digitaling.com/projects/25942.html)
 
 #### QQ-X腾讯 [*](https://github.com/Sanchez3/MyProject/tree/master/QQ-X)
-**Three.js 3D建模**
+**three.js 3D建模**
 > PV: 2.6w UV: 1.9w VV:2.1w
 - [腾讯QQ-X计划：地球最后的净土，我在南极等你加入](https://qzs.qzone.qq.com/qzone/qzact/act/external/qqx_116/qqx_1116/dist/)
 - 数英网 [LxU × QQ | 你说的白是什么白？](https://www.digitaling.com/projects/25294.html)
