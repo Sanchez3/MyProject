@@ -151,7 +151,7 @@
     ```html
 
     <body>
-    	<div class="load-sprite sprite-scale" id="load-sprite"></div>
+      <div class="load-sprite sprite-scale" id="load-sprite"></div>
     </body>
 
     <style>
