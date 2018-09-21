@@ -54,53 +54,53 @@
   - ajax错误一定要提示清楚，有利于调试bug，排除问题
   - [jQuery.ajax](https://www.jquery123.com/jQuery.ajax/) 各个参数
 
-```javascript
-$.ajax({
-    url: url, //你要请求的api的URL
-    type: 'POST', //GET
-    async: true, //异步
-    crossDomain: true, //跨域
-    cache: false, //缓存
-    headers: { 'Access-Control-Allow-Origin': '*' }, //添加额外的请求头
-    data: { //必要的时候需要用JSON.stringify() 将JSON对象转换成字符串
-    },
-    timeout: 5000, //超时时间
-    dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text 
-    beforeSend: function (jqXHR) {
-        console.log(jqXHR)
-        console.log('发送前')
-    },
-    success: function (data, textStatus, jqXHR) {
-        console.log(data)
-        console.log(textStatus)
-        console.log(jqXHR)
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-        console.log('错误')
-        console.log(jqXHR)
-        console.log(textStatus)
-        switch (textStatus) {
-            case 'timeout':
-                console.log('timeout');
-                break;
-            case 'error':
-                console.log('Error');
-                break;
-            case 'abort':
-                console.log('Abort');
-                break;
-            case 'parsererror':
-                console.log('Parser Error');
-                break;
-            default:
-                console.log('Null');
-        }
-    },
-    complete: function (jqXHR, textStatus) {
-        console.log('结束')
-    }
-})
-```
+  ```javascript
+  $.ajax({
+      url: url, //你要请求的api的URL
+      type: 'POST', //GET
+      async: true, //异步
+      crossDomain: true, //跨域
+      cache: false, //缓存
+      headers: { 'Access-Control-Allow-Origin': '*' }, //添加额外的请求头
+      data: { //必要的时候需要用JSON.stringify() 将JSON对象转换成字符串
+      },
+      timeout: 5000, //超时时间
+      dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text 
+      beforeSend: function (jqXHR) {
+          console.log(jqXHR)
+          console.log('发送前')
+      },
+      success: function (data, textStatus, jqXHR) {
+          console.log(data)
+          console.log(textStatus)
+          console.log(jqXHR)
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+          console.log('错误')
+          console.log(jqXHR)
+          console.log(textStatus)
+          switch (textStatus) {
+              case 'timeout':
+                  console.log('timeout');
+                  break;
+              case 'error':
+                  console.log('Error');
+                  break;
+              case 'abort':
+                  console.log('Abort');
+                  break;
+              case 'parsererror':
+                  console.log('Parser Error');
+                  break;
+              default:
+                  console.log('Null');
+          }
+      },
+      complete: function (jqXHR, textStatus) {
+          console.log('结束')
+      }
+  })
+  ```
 
 - [clipboard.js](https://clipboardjs.com/)
 
@@ -118,10 +118,10 @@ $.ajax({
 
 - TweenMax 失去焦点，继续动作 
 
-```javascript
-  TweenMax.ticker.useRAF(false);
-  TweenMax.lagSmoothing(0);
-```
+  ```javascript
+    TweenMax.ticker.useRAF(false);
+    TweenMax.lagSmoothing(0);
+  ```
 
 
 - [Swiper](http://idangero.us/swiper/) 
@@ -146,67 +146,125 @@ $.ajax({
 
 - [微信扫一扫](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455871652)
 
-- 解决`Rem`单位的逐帧动画抖动解决  [reference](https://aotu.io/notes/2017/08/14/fix-sprite-anim/)
-```html
-<style>
-.load-sprite {
-    position: absolute;
-    width: 349px;
-    height: 288px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 28%;
-    display: inline-block;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-image: url(../img/load-sprite.png);
-    transform-origin: top center;
-    background-size: 8725px 288px; 
-    -webkit-animation: load-anim 1s steps(24) infinite;
-    animation: load-anim 1s steps(24) infinite;
-}
-@keyframes load-anim {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
-}
-@-webkit-keyframes load-anim {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
-}
-</style>
+- 解决`Rem`单位的逐帧动画抖动解决  [Reference](https://aotu.io/notes/2017/08/14/fix-sprite-anim/)
 
-<script>
-  function rootResize(){
-    document.getElementById('load-sprite').style.transform = 'scale('+wFsize/100+')';
-  }
-  window.onresize = rootResize;
-  rootResize();
-</script>
-```
+    - 方法1
+    ```html
+
+    <body>
+    	<div class="load-sprite sprite-scale" id="load-sprite"></div>
+    </body>
+
+    <style>
+    .load-sprite {
+        position: absolute;
+        width: 349px;
+        height: 288px;
+        /*left: 0;
+        right: 0;
+        margin: auto;*/
+      	left: 50%;
+      	margin-left:-174.5px;
+        top: 28%;
+        display: inline-block;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-image: url(../img/load-sprite.png);
+        transform-origin: top center;
+        background-size: 8725px 288px; 
+        -webkit-animation: load-anim 1s steps(24) infinite;
+        animation: load-anim 1s steps(24) infinite;
+    }
+    @keyframes load-anim {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 100% 0;
+        }
+    }
+    @-webkit-keyframes load-anim {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 100% 0;
+        }
+    }
+    </style>
+
+    <script>
+      function rootResize(){
+        // `${}` es6 模板字符串
+        
+        //document.getElementById('load-sprite').style.transform = `scale(${wFsize/100})`;
+        
+        //插入css样式 sprite-scale 针对于有多个sprite情况
+        /* specify our style rules in a string */
+        var cssRules = `.sprite-scale{ transform:scale(${wFsize / 100}); -webkit-transform:scale(${wFsize / 100}) }`;
+        /* create the style element */
+        var styleElement = document.createElement('style');
+        /* add style rules to the style element */
+        styleElement.appendChild(document.createTextNode(cssRules));
+        /* attach the style element to the document head */
+        document.getElementsByTagName('head')[0].appendChild(styleElement);
+      }
+      window.onresize = rootResize;
+      rootResize();
+    </script>
+    ```
+
+    - ​方法2
+    ```html
+    <body>
+      <svg viewBox="0, 0, 349, 288" class="svg-sprite">
+        <image xlink:href="../img/load-sprite.png" width="8725" height="288" />
+      </svg>
+    </body>
+
+    <style>
+    .svg-sprite {
+        position: absolute;
+        width: 3.49rem;
+        height: 2.88rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 28%;
+    }
+    .svg-sprite image {
+     	/* steps次数 不同于方法1*/
+        -webkit-animation: svg-anim 1s steps(25) infinite;
+        animation: svg-anim 1s steps(25) infinite;
+    }
+    @keyframes svg-anim {
+        100% {
+             transform: translate3d(-8725px, 0, 0);
+        }
+    }
+    @-webkit-keyframes svg-anim {
+        100% {
+             transform: translate3d(-8725px, 0, 0);
+        }
+    }
+
+    </style>
+    ```
 
 - 阻止跨站解析器阻断脚本通过document.write调用`document.write intervention and 3rd-party scripts`
 
   - [Intervention: Blocking the load of cross-origin, parser-blocking scripts inserted via document.write for users on 2G](https://www.chromestatus.com/feature/5718547946799104)
   - [CNZZ的JS统计代码被Chrome警告，如何解决？](https://www.jianshu.com/p/ec0bfb5fdf2f)
-```javascript
-var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://")
-var cnzz_s_tag = document.createElement('script');
-cnzz_s_tag.type = 'text/javascript';
-cnzz_s_tag.async = true;
-cnzz_s_tag.charset = 'utf-8';
-cnzz_s_tag.src = cnzz_protocol+'w.cnzz.com/c.php?id=XXXXXXXX&async=1';
-var root_s = document.getElementsByTagName('script')[0];
-root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
-```
+  ```javascript
+  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://")
+  var cnzz_s_tag = document.createElement('script');
+  cnzz_s_tag.type = 'text/javascript';
+  cnzz_s_tag.async = true;
+  cnzz_s_tag.charset = 'utf-8';
+  cnzz_s_tag.src = cnzz_protocol+'w.cnzz.com/c.php?id=XXXXXXXX&async=1';
+  var root_s = document.getElementsByTagName('script')[0];
+  root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+  ```
 
 - 清除DNS
 
