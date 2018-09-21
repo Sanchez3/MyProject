@@ -213,7 +213,7 @@
     </script>
     ```
 
-    - ​方法2
+    - ​方法2 用于 **无自动化工具处理图片** 环境，改进见[Reference](https://aotu.io/notes/2017/08/14/fix-sprite-anim/)
     ```html
     <body>
       <svg viewBox="0, 0, 349, 288" class="svg-sprite">
