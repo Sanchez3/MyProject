@@ -16,9 +16,9 @@
 
 - [ ] 适配问题（视频是否有安全区域，`object-fit`和`object-position`）
 
-- [ ] 视频播放完毕，无法自动播放音频（bgm需要），微信bug
+- [ ] ~~视频播放完毕，无法自动播放音频（bgm需要），微信bug~~
 
-- [ ] 横竖屏提示（video是否需要暂停播放，Android视频全屏播放，（qq域名下不用全屏））
+- [ ] 横竖屏提示 or 旋转画面（video是否需要暂停播放，Android视频全屏播放，（qq域名下不用全屏））
 
 - [ ] Android Video播放结束时bug，全屏框停留n秒（添加空白canvas填充）
 
