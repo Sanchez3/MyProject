@@ -23,23 +23,23 @@
 - [ ] Android Video播放结束时bug，全屏框停留n秒（添加空白canvas填充）
 
 - [ ] 避免使用video 属性poster，在低版本IOS上有bug！(已播放但是poster没有消失)，建议使用div写poster，并利用js控制消失:
-```javascript
- var _video = document.getElementsByTagName('video')[0];
- _video.addEventListener('timeupdate', timeupdatef);
- function timeupdatef() {
-     if (_video.currentTime > 0.1) {
-         document.getElementsByClassName('video-poster')[0].style.display = 'none';
-         _video.removeEventListener('timeupdate', timeupdatef);
-     }
- }
-```
-> Note:其中`video-poster`的样式应该与`video`的样式相同，`object-fit`和`object-position`
+  ```javascript
+   var _video = document.getElementsByTagName('video')[0];
+   _video.addEventListener('timeupdate', timeupdatef);
+   function timeupdatef() {
+       if (_video.currentTime > 0.1) {
+           document.getElementsByClassName('video-poster')[0].style.display = 'none';
+           _video.removeEventListener('timeupdate', timeupdatef);
+       }
+   }
+  ```
+  > Note:其中`video-poster`的样式应该与`video`的样式相同，`object-fit`和`object-position`
 
 - [ ] 启用H5同层播放器时，首先要了解安卓微信分享问题，其次注意HTML  <video> 标签的样式，如下：
 
-```html
-<video id="video" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" src="/assets/media/video.mp4" type="video/mp4"</video>
-```
+  ```html
+  <video id="video" width="750" height="1206" x5-video-orientation="portrait" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" src="/assets/media/video.mp4" type="video/mp4"</video>
+  ```
 #### 安卓视频问题解决方法
 
 > Notice: 微信tbs 3个属性  `tbsCoreVersion` `tbsSdkVersion` `x5JsCoreEnabled`
@@ -66,7 +66,7 @@
 
 - 放弃同层播放
 
-  - 即视频区域之上的操作无响应。
+  <!-- - 即视频区域之上的操作无响应。 -->
   - 对于视频默认的进度条，解决方法：尝试视频高度大于屏幕高度，从而显示不了进度条。
 
 - 利用 [JSMpeg](https://github.com/phoboslab/jsmpeg) 插件，控制视频播放（:bug:点击播放后，视频仍需加载，出现黑白的加载画面 待解决 ）；利用[Howler](https://github.com/goldfire/howler.js/)插件或原生`audio`，控制音频播放（:bug:[音视频失步](https://blog.csdn.net/DeliaPu/article/details/75667661)）。
@@ -81,17 +81,17 @@
       - 2、`npm install jsmpeg-player --save` 并`import JSMpeg from 'jsmpeg-player';`  [JSMpeg Player(TS Player)](https://github.com/cycdpo/jsmpeg-player)
 
 
-```javascript
-// ts-wrapper - the HTML Canvas elment, set object-fit and object-position as you need
-var player = new JSMpeg.Player('/assets/media/output.ts', {
-    canvas: document.getElementById('ts-wrapper'), 
-    loop: false,
-    autoplay: false,
- 	pauseWhenHidden:false,
-  	preserveDrawingBuffer:true,
-    poster:'/assets/img/poster.png'
-})
-```
+    ```javascript
+    // ts-wrapper - the HTML Canvas elment, set object-fit and object-position as you need
+    var player = new JSMpeg.Player('/assets/media/output.ts', {
+        canvas: document.getElementById('ts-wrapper'), 
+        loop: false,
+        autoplay: false,
+     	pauseWhenHidden:false,
+      	preserveDrawingBuffer:true,
+        poster:'/assets/img/poster.png'
+    })
+    ```
 
 
 ### 关键点
@@ -111,11 +111,11 @@ var player = new JSMpeg.Player('/assets/media/output.ts', {
 - [ ] 使用pixijs、phaser、createjs
 
 
-| Framework                        | Size (+loader) | Problem + Challenge       |
-| -------------------------------- | -------------- | ------------------------- |
-| Pixijs                           | 424kb          |                           |
-| Phaser                           | 540kb          | resize, orientationchange |
-| createjs ( easeljs + preloadjs ) | 128kb+65kb     | few demos                 |
+  | Framework                        | Size (+loader) | Problem + Challenge       |
+  | -------------------------------- | -------------- | ------------------------- |
+  | Pixijs                           | 424kb          |                           |
+  | Phaser                           | 540kb          | resize, orientationchange |
+  | createjs ( easeljs + preloadjs ) | 128kb+65kb     | few demos                 |
 
 - [ ] 横竖屏 [rootResize.js](https://github.com/Sanchez3/MyProject/blob/master/TMD/rootResize.js) / 横屏提示[orientLayer](https://github.com/Sanchez3/MyProject/blob/master/NBA2/orientLayer.html) 
 
@@ -179,39 +179,39 @@ var player = new JSMpeg.Player('/assets/media/output.ts', {
 - [x] 微信平台 Android设置X5同层播放器，进入全屏视频，load页面若已添加css动画，会出现背景消失bug。
 - [x] 安卓手机启用H5同层播放器注意把video元素的高设为屏幕高度时，要用 `window.screen.height` 而不能用 `document.documentElement.clientHeight` ，因为后者不包含导航栏高度，将会导致无法满屏
 
-```javascript
-video.addEventListener('x5videoenterfullscreen', function () {
-    video.style.height = window.screen.height + 'px';
-    video.style.width = window.screen.width + 'px';
-});
-```
+  ```javascript
+  video.addEventListener('x5videoenterfullscreen', function () {
+      video.style.height = window.screen.height + 'px';
+      video.style.width = window.screen.width + 'px';
+  });
+  ```
 - [x] `Error:  Unable to preventDefault inside passive event listener due to target being treated as passive.` [more](https://github.com/bevacqua/dragula/issues/468)  Add  `touch-action: none` or `{passive: false}`
 
-```javascript
-document.addEventListener('touchmove', function(event) { event.preventDefault(); }, { passive: false });
-```
+  ```javascript
+  document.addEventListener('touchmove', function(event) { event.preventDefault(); }, { passive: false });
+  ```
 - [x] 阻止跨站解析器阻断脚本通过document.write调用`document.write intervention and 3rd-party scripts`
 
   [Intervention: Blocking the load of cross-origin, parser-blocking scripts inserted via document.write for users on 2G](https://www.chromestatus.com/feature/5718547946799104)
 
   [CNZZ的JS统计代码被Chrome警告，如何解决？](https://www.jianshu.com/p/ec0bfb5fdf2f)
 
-```javascript
-var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-//Protocol-relative URL
-//var cnzz_protocol = "//";
-var cnzz_s_tag = document.createElement('script');
-cnzz_s_tag.type = 'text/javascript';
-cnzz_s_tag.async = true;
-cnzz_s_tag.charset = 'utf-8';
-cnzz_s_tag.src = cnzz_protocol+'s22.cnzz.com/z_stat.php?id=XXXXXXXXX&web_id=XXXXXXXXX';
-var root_s = document.getElementsByTagName('script')[0];
-root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
-```
+  ```javascript
+  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  //Protocol-relative URL
+  //var cnzz_protocol = "//";
+  var cnzz_s_tag = document.createElement('script');
+  cnzz_s_tag.type = 'text/javascript';
+  cnzz_s_tag.async = true;
+  cnzz_s_tag.charset = 'utf-8';
+  cnzz_s_tag.src = cnzz_protocol+'s22.cnzz.com/z_stat.php?id=XXXXXXXXX&web_id=XXXXXXXXX';
+  var root_s = document.getElementsByTagName('script')[0];
+  root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+  ```
 
-HTTPS混合HTTP 去掉`URL`中的`http://`或`https://`，将其替换为`//`。 URL`//`开头（相对协议URL `Protocol-relative URL`）
+  HTTPS混合HTTP 去掉`URL`中的`http://`或`https://`，将其替换为`//`。 URL`//`开头（相对协议URL `Protocol-relative URL`）
 
-> Note: 兼容性问题，比如在IE6上，或者一些比较特殊的WEB容器中，就无法解析
+  > Note: 兼容性问题，比如在IE6上，或者一些比较特殊的WEB容器中，就无法解析
 
 - [x] Pixijs canvas阻碍了与事件关联的默认动作，即阻止了click事件行为，导致父元素点击区域是排除canvas的区域。`PIXI.interaction.InteractionManager.autoPreventDefault=false` [PIXI.interaction.InteractionManager](http://pixijs.download/dev/docs/PIXI.interaction.InteractionManager.html)
 
