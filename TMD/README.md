@@ -149,6 +149,7 @@
   **音频 audio:** 30s 不大于 500kb  （建议1min左右，可循环）
 
   手机视频采样率：
+
   ![手机视频比特率](https://github.com/Sanchez3/MyProject/blob/master/TMD/手机视频比特率.png)
 
 
