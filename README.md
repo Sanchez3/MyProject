@@ -144,9 +144,9 @@
 
 #### OPPO R17 礼赠 [*](https://github.com/Sanchez3/MyProject/tree/master/OppoR17)
 视频，信息提交 
-- [OPPO R17 见面礼](https://oppor17.lxustudio.cn/reserve/) 
+- ~~[OPPO R17 见面礼](https://oppor17.lxustudio.cn/reserve/)~~ ***已下线***
 > PV: 207.9w UV: 174.4w 
-- [激活你的R17专享礼](https://oppor17.lxustudio.cn/gift/)
+- ~~[激活你的R17专享礼](https://oppor17.lxustudio.cn/gift/)~~ ***已下线***
 > PV: 29.0w UV: 21.0w
 
 #### 维秘性感测试手册 [*](https://github.com/Sanchez3/MyProject/tree/master/Sexy)
