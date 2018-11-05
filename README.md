@@ -25,6 +25,10 @@
 ## 项目
 ### 2D Game Framework
 ------
+#### Thinkpad X1
+**Phaser** ，拼图游戏 + 测试
+  - [你的美学气质报告](https://thinkpadx1.lxustudio.cn/)
+
 #### 天猫二十四节气
 - 春分 游戏demo [*](https://github.com/Sanchez3/burstflowers)
 
