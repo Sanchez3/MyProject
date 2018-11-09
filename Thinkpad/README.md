@@ -62,4 +62,25 @@ this.scale.pageAlignVertically = true;
 >
 > It's painfully clear which one is better for overall performance.
 
-具体至项目中，某些安卓设备例如对于webgl的支持并不好，所以`RendererType`使用`Phaser.CANVAS`
+具体至项目中，某些安卓设备例如对于webgl的支持并不好or仅仅是图片元素等普通动画，`RendererType`使用`Phaser.CANVAS`，效果更好。
+
+
+
+### phaser-list-view.js
+
+插件具体实践问题
+
+- 初始化后，位于场景最上层，其他元素需再次`bringToTop`，以及它监控整个game全局input事件，**注意事件冲突**。
+
+- 由于尺寸问题，listview中**子元素的大小也需要重新调整**，重写具体方法
+
+  `list_view_core.js`中 `add` 方法  改写 ：
+
+  ```javascript
+  xy = lastChild[this.p.xy] + (0, _util.getWidthOrHeight)(lastChild, this.p.wh)/window.devicePixelRatio + this.o.padding;
+  this.length = (xy + child[this.p.wh]/window.devicePixelRatio);
+  ```
+
+- `destory()`方法，destroy the list view and clean up all event listeners，同时他会**销毁listview中所有子元素**。若想重利用子元素，需要重新创建。
+
+- 
