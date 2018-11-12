@@ -66,7 +66,52 @@ this.scale.pageAlignVertically = true;
 
 
 
-### phaser-list-view.js
+### 手势操作
+
+两个触点，缩放，旋转。
+
+```javascript
+var inputHelper = { isGesture: false, dragStartX: 0, dragStartY: 0, dragX: 0, dragY: 0, dragDX: 0, dragDY: 0, dragging: false, touchStartDistance: 0, touchStartAngle: 0 };
+function handleGestureStart(p1, p2, sprite) {
+    inputHelper.isGesture = true;
+    //calculate distance and angle between fingers
+    // var dx = p2.x - p1.x;
+    // var dy = p2.y - p1.y;
+    // inputHelper.touchStartDistance = Math.sqrt(dx * dx + dy * dy);
+    inputHelper.touchStartDistance = Phaser.Math.distance(p2.x, p2.y, p1.x, p1.y)
+    // inputHelper.touchStartAngle = Math.atan2(dy, dx);
+    inputHelper.touchStartAngle = Phaser.Math.angleBetweenPoints(p1, p2)
+    //we also store the current scale and rotation of the actual object we are affecting. This is needed because to enable incremental rotation/scaling. 
+    inputHelper.startScale = sprite.scale;
+    inputHelper.startAngle = sprite.rotation;
+}
+function handleGesture(p1, p2, sprite) {
+    if (inputHelper.isGesture) {
+        // var dx = p2.x - p1.x;
+        // var dy = p2.y - p1.y;
+        var touchDistance = Phaser.Math.distance(p2.x, p2.y, p1.x, p1.y)
+        // var touchAngle = Math.atan2(dy, dx);
+        var touchAngle = Phaser.Math.angleBetweenPoints(p1, p2)
+        //calculate the difference between current touch values and the start values
+        var scalePixelChange = touchDistance - inputHelper.touchStartDistance;
+        var angleChange = touchAngle - inputHelper.touchStartAngle;
+        //calculate how much this should affect the actual object
+        // currentScale = this.inputHelper.startScale.x + scalePixelChange * 0.01;
+        var currentRotation = inputHelper.startAngle + angleChange;
+        var currentScale = Math.min(Math.max(0.25, inputHelper.startScale.y + scalePixelChange * 0.008), 2);
+        sprite.rotation = currentRotation;
+		// if flip, change scale
+        if (sprite.flipF) {
+            sprite.scale = new PIXI.Point(-currentScale, currentScale);
+        } else {
+            sprite.scale = new PIXI.Point(currentScale, currentScale);
+        }
+        // update Select
+        sprite.updateSelect(currentScale, sprite.flipF)
+    }
+}
+```
+### 插件 phaser-list-view.js
 
 插件具体实践问题
 
@@ -86,7 +131,7 @@ this.scale.pageAlignVertically = true;
 
 
 
-### 敏感词过滤
+## 敏感词过滤
 
 **全文搜索，逐个匹配。**利用词库，[数组+正则](https://www.imcyk.com/post/87.html) 
 
