@@ -83,4 +83,42 @@ this.scale.pageAlignVertically = true;
 
 - `destory()`方法，destroy the list view and clean up all event listeners，同时他会**销毁listview中所有子元素**。若想重利用子元素，需要重新创建。
 
-- 
+
+
+
+### 敏感词过滤
+
+**全文搜索，逐个匹配。**利用词库，[数组+正则](https://www.imcyk.com/post/87.html) 
+
+```javascript
+function filterkeyWords(data, str) {
+    var s = str;
+    var r = 0;
+    var a = new Object();
+    for (var i in data) {
+        var patt = new RegExp('(' + data[i] + ')', 'gi');
+        var ret_test = patt.test(s);
+        if (ret_test) {
+            s = s.replace(patt, '***');
+            r = r + 1;
+        }
+    }
+    a.s = s;
+    a.r = r;
+    return a;
+}
+// example
+//var rs = filterkeyWords(keyWordArray,'fuck');
+//console.log(rs)
+```
+
+
+
+**[DFA 敏感词过滤](https://github.com/wangjinglian/DFA)** 使用*Node.js* 文件系统（*fs* 模块）模块，读取词库；利用DFA算法（确定有限状态自动机）实现匹配。
+
+> ### DFA算法介绍
+>
+> DFA是一种计算模型，数据源是一个有限个集合，通过当前状态和事件来确定下一个状态,即 状态+事件=下一状态，由此逐步构建一个有向图，其中的节点就是状态，所以在DFA算法中只有查找和判断，没有复杂的计算，从而提高算法效率
+
+*Reference:* [js实现敏感词过滤算法](https://juejin.im/post/5b5456ec6fb9a04fe91a7834)
+
