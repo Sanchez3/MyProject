@@ -28,6 +28,7 @@
 #### Thinkpad X1
 **Phaser** ，拼图游戏 + 测试
   - [你的美学气质报告](https://thinkpadx1.lxustudio.cn/)
+  - *数英网* [ThinkPad：作一幅画，你的气质就这样被看光了](https://www.digitaling.com/projects/44778.html)
 
 #### 天猫二十四节气
 - 春分 游戏demo [*](https://github.com/Sanchez3/burstflowers)
