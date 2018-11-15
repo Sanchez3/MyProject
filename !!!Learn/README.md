@@ -27,5 +27,10 @@
 
 
 
+## [测测你的哲学气质](https://c.m.163.com/nc/qa/activity/dada_philosophy_7/index.html)
+测试
 
+- 过场动画以及一些效果，由序列帧实现。eg.点击后水波效果；画面旋转转场效果；
+
+- 第五题 乌鸦 场景，有鸟在自由飞。实现参考：[PaperPlanes](https://github.com/Sanchez3/paperplanes)
 
