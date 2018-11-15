@@ -44,9 +44,37 @@ this.scale.pageAlignVertically = true;
 
   2. 某一方向 scroll 
 
-     利用[phaser-list-view](https://github.com/mattcolman/phaser-list-view) 或者 canvas上层叠加dom，原生`overflow:scroll`、Swiper4 js插件
+     利用[phaser-list-view](https://github.com/mattcolman/phaser-list-view) 或者 canvas上层叠加dom，原生`overflow:scroll`、[Swiper4](https://www.swiper.com.cn/) js插件
 
 ### 渲染，性能问题
+
+某些机器上（少部分iphone，几乎全部Android）！sprite的图片或纹理（sprite sheet or texture atlas）尺寸超过**安全尺寸2048*2048**，**拖动效率**骤减！！！（同理 使用image，tilesprite等；无论渲染 renderer 是 CANVAS 还是 WEBGL ）
+
+> Note: this is device / hardware specific, not restricted by the browser or Phaser.
+>
+> Game FPS drops, Some common causes:
+>
+> 1) Game size is too large. Asking it to render too many pixels per frame can cause significant lag.
+>
+> 2) Texture sizes are too large, or there are too many of them filling up memory.
+>
+> 3) Expensive operations in main loops - pixel perfect click tests for example.
+>
+> 4) HTML page hasn't been set-up properly for games (i.e. viewport scaling allowed, other elements causing slow down)
+
+
+
+#### SpriteSheet Vs Atlas
+
+选择`Atlas`更好
+
+> Note: There is no technical advantage of using a sprite sheet at all. They tend to use more space both in memory and bandwidth because they don't pack frame data as efficiently as a texture atlas does.
+>
+> However, there are lots of legacy graphics out there in that format, and its still quite popular today. So we support them. But you should try and pack graphics into atlases where possible to save on ram.
+
+
+
+#### 详细原理
 
 > # [Advanced Rendering Tutorial](https://phaser.io/tutorials/advanced-rendering-tutorial)
 >
