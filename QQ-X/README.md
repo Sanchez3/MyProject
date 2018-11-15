@@ -44,8 +44,8 @@ js:
 function handler(e) {
 	e.preventDefault();
 }
-document.addEventListener('touchmove', handler, false);
-document.removeEventListener('touchmove', handler, false);
+document.addEventListener('touchmove', handler, { passive: false });
+document.removeEventListener('touchmove', handler, { passive: false });
 ```
 
 Css:
