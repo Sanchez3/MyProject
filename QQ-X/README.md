@@ -1,6 +1,43 @@
-# QQ空间南极探索招募令
+# QQ空间南极探索
+
+## QQ-X 3D方面
+
+### 模型
+
+- 方法1：3ds Max 使用[ThreeJSExporter](https://github.com/timoxley/threejs/blob/master/utils/exporters/max/ThreeJSExporter.ms)脚本`3dsmax -U MAXScript ThreeJSExporter.ms`，导出`.js`文件（Json），注意检查文件特殊字符错误，以及贴图地址。
+
+- 方法2：**（推荐的）** 在3DS Max中使用OBJ导出器选项；然后使用[convert_obj_three.py](https://github.com/timoxley/threejs/blob/master/utils/exporters/obj/convert_obj_three.py)脚本，转为json model；通过 THREE.JSONLoader加载文件。
+
+```Javascript
+var loader = new THREE.JSONLoader(); 
+loader.load('js/model.js', function (geometry) { 
+   var mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({})); 
+       mesh.position.x =0; 
+       mesh.position.y =0; 
+       mesh.position.z =0; 
+   scene.add(mesh); 
+}); 
+```
+
+> Note: 详细见
+>
+> - [从3dMax导出供threeJS使用的带动作模型与加载（认真修改详尽版）](https://segmentfault.com/a/1190000009242021)
+> - [Petition to add VRayMtl support to 3D Max exporter](https://github.com/mrdoob/three.js/issues/893)
+> - [(WebGL) Max to Three.js workflow tips and tricks](http://bkcore.com/blog/3d/webgl-three-js-workflow-tips.html)
+
+
+
+### 效果
+
+- 每个场景的时间轴通过 [TimelineMax](https://greensock.com/docs/TimelineMax) 控制。
+- 场景中雨与雪，粒子效果 [buffergeometry / custom / attributes / **particles**](https://threejs.org/examples/webgl_buffergeometry_custom_attributes_particles.html)
+- 纸飞机，以及暴风雪效果 [paperplanes](https://github.com/Sanchez3/paperplanes)  [threejs/examples/**canvas_geometry_birds**](https://github.com/timoxley/threejs/blob/master/examples/canvas_geometry_birds.html)
+- 文字效果 [splittext](https://github.com/Sanchez3/splittext)
+
+
 
 ## [Skrollr.js](https://github.com/Prinzhorn/skrollr)视差滚动效果
+
 手机端 原生`overflow:scroll`被禁用。通过手势移动距离，控制dom移动。与swiper插件可共存。
 
 详细资料：[使用Skrollr.js實作視差滾動](http://lala0812.logdown.com/posts/240837-skrollr-easily-implement-css3-html5-parallax-scrolling)
