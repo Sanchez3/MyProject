@@ -92,6 +92,36 @@ this.scale.pageAlignVertically = true;
 
 具体至项目中，某些安卓设备例如对于webgl的支持并不好or仅仅是图片元素等普通动画，`RendererType`使用`Phaser.CANVAS`，效果更好。
 
+### 操作框 虚线
+
+**Phaser** 利用 `bitmapData` 做 `canvas context` 的任何操作；并且可作为 `Images/Sprites` 的纹理 `texture` 。
+
+> Important note: Every BitmapData creates its own Canvas element. Because BitmapData's are now Game Objects themselves, and don't live on the display list, they are NOT automatically cleared when you change State. Therefore you *must* call BitmapData.destroy in your State's shutdown method if you wish to free-up the resources the BitmapData used, it will not happen for you.
+
+**虚线** `ctx.setLineDash(segments);` 
+
+参考：[CanvasRenderingContext2D.setLineDash()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)  [Canvas学习：绘制虚线和圆点线](https://www.w3cplus.com/canvas/draw-dashed-and-dotted-lines.html)
+
+```javascript
+var bmd= game.add.bitmapData(w, h);
+var ctx = bmd.ctx;
+ctx.lineWidth = '4';
+ctx.strokeStyle = 'white';
+ctx.setLineDash([9, 3]);
+ctx.beginPath()
+ctx.moveTo(0, 0);
+ctx.lineTo(w, 0);
+ctx.lineTo(w, h);
+ctx.lineTo(0, h);
+ctx.closePath();
+ctx.stroke();
+var sprite=game.make.sprite(0, 0, bmd);
+//若需要重新调整大小，建议以下方法调整，而不是重新创建个bitmapData。
+// bmd.resize(nw,nh); 
+// sprite.loadTexture(bmd);
+```
+
+
 
 
 ### 手势操作
@@ -194,4 +224,8 @@ function filterkeyWords(data, str) {
 > DFA是一种计算模型，数据源是一个有限个集合，通过当前状态和事件来确定下一个状态,即 状态+事件=下一状态，由此逐步构建一个有向图，其中的节点就是状态，所以在DFA算法中只有查找和判断，没有复杂的计算，从而提高算法效率
 
 *Reference:* [js实现敏感词过滤算法](https://juejin.im/post/5b5456ec6fb9a04fe91a7834)
+
+
+
+## 数据埋点
 
