@@ -134,8 +134,8 @@ function handleGesture(p1, p2, sprite) {
         } else {
             sprite.scale = new PIXI.Point(currentScale, currentScale);
         }
-        // update Select
-        sprite.updateSelect(currentScale, sprite.flipF)
+        // update Selection box
+        sprite.updateBox(currentScale, sprite.flipF)
     }
 }
 ```
