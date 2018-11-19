@@ -42,14 +42,18 @@
 人脸识别技术
 
 - 一些主流的技术供应商：[Face++](https://www.faceplusplus.com.cn/)、[百度人脸识别](https://ai.baidu.com/tech/face)、[腾讯人脸识别](https://ai.qq.com/doc/detectface.shtml)……
-
-- 可识别关键属性：男性女性，年龄，眼镜，笑容，人脸姿势，眼睛状态（睁着、闭着），情绪，人种肤色，嘴状态，面部特征（健康，色斑，青春痘，黑眼圈）
-- 人脸关键点：精准定位并返回最多 106 个高精度关键点，让您的应用可以进行人脸贴纸、3D 动画模型等复杂变换操作。
+  - 可识别关键属性：男性女性，年龄，眼镜，笑容，人脸姿势，眼睛状态（睁着、闭着），情绪，人种肤色，嘴状态，面部特征（健康，色斑，青春痘，黑眼圈）
+  - 人脸关键点：精准定位并返回最多 106 个高精度关键点，让您的应用可以进行人脸贴纸、3D 动画模型等复杂变换操作。
 - ajax实现使用[It's AJAX](https://github.com/ded/reqwest)
 - wave动画  canvas绘制，根据音频频率，绘制波形图
   - [打造跳跃音波播音乐放器(Electron+Nodejs+React)](https://juejin.im/post/5af02453518825672c00dfd4) 其中绘制波形图
   - [JS | Web Audio API (下) 我的音乐浪](https://www.jianshu.com/p/b52d09ee4c7c)
   - [wayou/**3D_Audio_Spectrum_VIsualizer**](https://github.com/Wayou/3D_Audio_Spectrum_VIsualizer)
   - [tone.js](https://tonejs.github.io/)
+
+## [有人喊你收快递](http://cai.heymeo.net/)
+语音合成技术
+- 技术供应商 [百度语音合成](https://ai.baidu.com/tech/speech/tts) 
+  - 提供男声，女声；控制音频播放速度；情感合成
 
 
