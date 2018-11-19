@@ -50,5 +50,6 @@
   - [打造跳跃音波播音乐放器(Electron+Nodejs+React)](https://juejin.im/post/5af02453518825672c00dfd4) 其中绘制波形图
   - [JS | Web Audio API (下) 我的音乐浪](https://www.jianshu.com/p/b52d09ee4c7c)
   - [wayou/**3D_Audio_Spectrum_VIsualizer**](https://github.com/Wayou/3D_Audio_Spectrum_VIsualizer)
-- 
+  - [tone.js](https://tonejs.github.io/)
+
 
