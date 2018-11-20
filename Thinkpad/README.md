@@ -90,7 +90,7 @@ this.scale.pageAlignVertically = true;
 >
 > It's painfully clear which one is better for overall performance.
 
-具体至项目中，某些安卓设备例如对于webgl的支持并不好or仅仅是图片元素等普通动画，`RendererType`使用`Phaser.CANVAS`，效果更好。
+具体至项目中，某些安卓设备例如对于`WEBGL`的支持并不好 or 仅仅是图片元素等普通动画，`RendererType`使用`Phaser.CANVAS`，效果更好。
 
 ### 操作框 虚线
 
@@ -191,7 +191,7 @@ function handleGesture(p1, p2, sprite) {
 
 ## 敏感词过滤
 
-**全文搜索，逐个匹配。**利用词库，[数组+正则](https://www.imcyk.com/post/87.html) 
+**全文搜索，逐个匹配。** 利用词库，[数组+正则](https://www.imcyk.com/post/87.html) 
 
 ```javascript
 function filterkeyWords(data, str) {
