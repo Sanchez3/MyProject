@@ -128,6 +128,8 @@ var sprite=game.make.sprite(0, 0, bmd);
 
 两个触点，缩放，旋转。
 
+**Reference:** [Rotate and Scale using Multitouch Gestures](https://codepen.io/hanseklund/pen/izloq?editors=1010)
+
 ```javascript
 var inputHelper = { isGesture: false, dragStartX: 0, dragStartY: 0, dragX: 0, dragY: 0, dragDX: 0, dragDY: 0, dragging: false, touchStartDistance: 0, touchStartAngle: 0 };
 function handleGestureStart(p1, p2, sprite) {
