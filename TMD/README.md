@@ -67,6 +67,7 @@
 - 放弃同层播放
 
   <!-- - 即视频区域之上的操作无响应。 -->
+
   - 对于视频默认的进度条，解决方法：尝试视频高度大于屏幕高度，从而显示不了进度条。
 
 - 利用 [JSMpeg](https://github.com/phoboslab/jsmpeg) 插件，控制视频播放（:bug:点击播放后，视频仍需加载，出现黑白的加载画面 待解决 ）；利用[Howler](https://github.com/goldfire/howler.js/)插件或原生`audio`，控制音频播放（:bug:[音视频失步](https://blog.csdn.net/DeliaPu/article/details/75667661)）。
@@ -80,18 +81,17 @@
       - 1、`<script src="jsmpeg.min.js"></script>` 从github扒代码  
       - 2、`npm install jsmpeg-player --save` 并`import JSMpeg from 'jsmpeg-player';`  [JSMpeg Player(TS Player)](https://github.com/cycdpo/jsmpeg-player)
 
-
-    ```javascript
-    // ts-wrapper - the HTML Canvas elment, set object-fit and object-position as you need
-    var player = new JSMpeg.Player('/assets/media/output.ts', {
-        canvas: document.getElementById('ts-wrapper'), 
-        loop: false,
-        autoplay: false,
-     	pauseWhenHidden:false,
-      	preserveDrawingBuffer:true,
-        poster:'/assets/img/poster.png'
-    })
-    ```
+  ```javascript
+  // ts-wrapper - the HTML Canvas elment, set object-fit and object-position as you need
+  var player = new JSMpeg.Player('/assets/media/output.ts', {
+      canvas: document.getElementById('ts-wrapper'), 
+      loop: false,
+      autoplay: false,
+   	pauseWhenHidden:false,
+    	preserveDrawingBuffer:true,
+      poster:'/assets/img/poster.png'
+  })
+  ```
 
 
 ### 关键点
@@ -109,11 +109,11 @@
 - [ ] 使用pixijs、phaser、createjs
 
 
-  | Framework                        | Size (+loader) | Problem + Challenge       |
-  | -------------------------------- | -------------- | ------------------------- |
-  | Pixijs                           | 424kb          |                           |
-  | Phaser                           | 540kb          | resize, orientationchange |
-  | createjs ( easeljs + preloadjs ) | 128kb+65kb     | few demos                 |
+| Framework                        | Size (+loader) | Problem + Challenge       |
+| -------------------------------- | -------------- | ------------------------- |
+| Pixijs                           | 424kb          |                           |
+| Phaser                           | 540kb          | resize, orientationchange |
+| createjs ( easeljs + preloadjs ) | 128kb+65kb     | few demos                 |
 
 - [ ] 横竖屏 [rootResize.js](https://github.com/Sanchez3/MyProject/blob/master/TMD/rootResize.js) / 横屏提示[orientLayer](https://github.com/Sanchez3/MyProject/blob/master/NBA2/orientLayer.html) 
 
@@ -176,14 +176,21 @@
 - [x] 微信传播h5，严格遵守传播规定。（🚫天猫等字样出现，网络爬虫会抓获文本）
 - [x] 安卓手机启用H5同层播放器，`x5-video-player-type`支持的值类型：`h5`。播放视频时，无法调用微信分享。
 - [x] 微信平台 Android设置X5同层播放器，进入全屏视频，load页面若已添加css动画，会出现背景消失bug。
-- [x] 安卓手机启用H5同层播放器注意把video元素的高设为屏幕高度时，要用 `window.screen.height` 而不能用 `document.documentElement.clientHeight` ，因为后者不包含导航栏高度，将会导致无法满屏
-
+- [x] 安卓手机启用H5同层播放器注意把video元素的高设为屏幕高度时，要用 `window.screen.height` 而不能用 `document.documentElement.clientHeight` ，因为后者不包含导航栏高度，将会导致无法满屏。
   ```javascript
   video.addEventListener('x5videoenterfullscreen', function () {
       video.style.height = window.screen.height + 'px';
       video.style.width = window.screen.width + 'px';
   });
   ```
+- [x] 安卓手机启用H5同层播放器，还要把视频下移，使整体UI与进入全屏前保持一致
+  ```css
+  video {
+      object-position: center  1.14rem;
+      object-fit: cover|contain;
+  }
+  ```
+
 - [x] `Error:  Unable to preventDefault inside passive event listener due to target being treated as passive.` [more](https://github.com/bevacqua/dragula/issues/468)  Add  `touch-action: none` or `{passive: false}`
 
   ```javascript
