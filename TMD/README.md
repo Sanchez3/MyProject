@@ -121,7 +121,7 @@
 
 - [ ] 复制淘命令 [clipboard.js](https://github.com/zenorocha/clipboard.js)，succes 浮窗成功提示，error 浮窗提示(长按复制框内信息打开天猫app/淘宝)
 
-- [ ] 微信排版测试
+- [ ] **微信**排版测试
 
   使用 [Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn) Setting - device - Add custom device
 
@@ -131,13 +131,13 @@
 
   **Android：**`Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Mobile Safari/537.36 MicroMessenger/6.5.7 `
 
-  **iPhone 5s/SE尺寸:** 640 * 1008  / 320 * 504  
+  **iPhone 5s/SE尺寸:** 640 * 1008  **Device pixel ratio:** 1 / 320 * 504  **Device pixel ratio:** 2  
 
-  **普通尺寸:** 750 * 1206  / 375 * 603  **Device pixel ratio: 2**
+  **普通尺寸:** 750 * 1206  **Device pixel ratio:** 1 / 375 * 603  **Device pixel ratio: 2**
 
-  **iPhone X尺寸:** 750 * 1448 / 375 * 724  **Device pixel ratio:** 3
+  **iPhone X尺寸:** 1125 * 2172 **Device pixel ratio:** 1 /750 * 1448 **Device pixel ratio:** 2 / 375 * 724  **Device pixel ratio:** 3
 
-  **Android 某机型尺寸：**400 * 700  **Device pixel ratio:** 3
+  **Android 某机型尺寸：** 400 * 700  **Device pixel ratio:** 3
 
 
 - [ ] 微信media素材大小，参考[视频检测及压缩方法](https://wximg.qq.com/wxp/temp/VideoResizeMethod.pdf) 
