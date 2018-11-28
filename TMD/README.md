@@ -131,11 +131,21 @@
 
   **Android：**`Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Mobile Safari/537.36 MicroMessenger/6.5.7 `
 
-  **iPhone 5s/SE尺寸:** 640 * 1008  **Device pixel ratio:** 1 / 320 * 504  **Device pixel ratio:** 2  
+  **iPhone 5s/SE尺寸:** 
 
-  **普通尺寸:** 750 * 1206  **Device pixel ratio:** 1 / 375 * 603  **Device pixel ratio: 2**
+  - 640 * 1008  **Device pixel ratio:** 1 
+  - 320 * 504  **Device pixel ratio:** 2  
 
-  **iPhone X尺寸:** 1125 * 2172 **Device pixel ratio:** 1 /750 * 1448 **Device pixel ratio:** 2 / 375 * 724  **Device pixel ratio:** 3
+  **普通尺寸:** 
+
+  - 750 * 1206  **Device pixel ratio:** 1 
+  - 375 * 603  **Device pixel ratio: 2**
+
+  **iPhone X尺寸:** 
+
+  - 1125 * 2172 **Device pixel ratio:** 1 
+  - 750 * 1448 **Device pixel ratio:** 2 
+  - 375 * 724  **Device pixel ratio:** 3
 
   **Android 某机型尺寸：** 400 * 700  **Device pixel ratio:** 3
 
