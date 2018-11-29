@@ -96,7 +96,7 @@ Table of Contents
 #### Kappa百年活动 [*](https://github.com/Sanchez3/MyProject/tree/master/Kappa)
 **Phaser** 
 > PV: 29w UV: 8w
-- [GD教你穿Kappa](http://100.kappa.com.cn/video)
+- ~~[GD教你穿Kappa](http://100.kappa.com.cn/video)~~
 - 数英网 [GD教你穿Kappa，看GD在镜头前面怎么凹造型！](http://www.digitaling.com/projects/17370.html)
 
 
