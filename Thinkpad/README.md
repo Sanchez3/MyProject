@@ -172,7 +172,7 @@ function handleGesture(p1, p2, sprite) {
 }
 ```
 ### 插件 phaser-list-view.js
-
+[mattcolman/phaser-list-view](https://github.com/mattcolman/phaser-list-view)
 插件具体实践问题
 
 - 初始化后，位于场景最上层，其他元素需再次`bringToTop`，以及它监控整个game全局input事件，**注意事件冲突**。
