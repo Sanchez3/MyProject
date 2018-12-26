@@ -15,9 +15,10 @@ loader.load('js/model.js', function (geometry) {
        mesh.position.x =0; 
        mesh.position.y =0; 
        mesh.position.z =0; 
-   scene.add(mesh); 
+       scene.add(mesh); 
 }); 
 ```
+灯光，摄像头等在环境自行调节 [Threejs Editor](https://threejs.org/editor/)
 
 > Note: 详细见
 >
