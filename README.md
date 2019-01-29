@@ -29,6 +29,7 @@ Table of Contents
       * [简介](#简介)
       * [项目](#项目)
          * [2D Game Framework](#2d-game-framework)
+            * [Citicbank <a href="https://github.com/Sanchez3/MyProject/tree/master/Citicbank">*</a>](#citicbank)
             * [Thinkpad X1 <a href="https://github.com/Sanchez3/MyProject/tree/master/Thinkpad">*</a>](#thinkpad-x1)
             * [天猫二十四节气](#天猫二十四节气)
             * [2015百度品牌数字资产榜 <a href="https://github.com/Sanchez3/MyProject/tree/master/BaiduList">*</a>](#2015百度品牌数字资产榜-)
@@ -58,6 +59,10 @@ Table of Contents
 
 ### 2D Game Framework
 ------
+#### Citicbank [*](https://github.com/Sanchez3/MyProject/tree/master/Citicbank)
+**Pixi.js** ，人脸融合 + pixijs生产图片
+   - [刷脸送福迎新春](https://citicbank.lxustudio.com/)
+
 #### Thinkpad X1 [*](https://github.com/Sanchez3/MyProject/tree/master/Thinkpad)
 **Phaser** ，拼图游戏 + 测试
 > PV: 18w UV: 11w 
