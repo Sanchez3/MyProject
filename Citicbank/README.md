@@ -47,3 +47,25 @@ document.body.appendChild(image);
 >encoderOptions 可选
 >
 >在指定图片格式为 image/jpeg 或 image/webp的情况下，可以从 0 到 1 的区间内选择图片的质量。如果超出取值范围，将会使用默认值 0.92。其他参数会被忽略。
+重写方法base64
+```javascript
+import * as PIXI from 'pixi.js'
+PIXI.extract.webgl.prototype.base64 = function base64(target, format, quality) {
+    return this.canvas(target).toDataURL(format, quality)
+}
+
+PIXI.extract.canvas.prototype.base64 = function base64(target, format, quality) {
+    return this.canvas(target).toDataURL(format, quality)
+}
+```
+
+### 人脸融合
+face++，真贵真不错。
+腾讯云，便宜凑活用。问题如下：
+- 推荐配置 脸型参数：最低 脸型参数：最高
+  > 脸型参数(融合数值越高，融合后的五官越像模特) ，模板越明显，用户越难分辨
+  >
+  > 脸型参数（脸型数值越高，融合后的脸型越像模特） ，模板被扭曲，强行匹配用户图
+- 融合眉毛以下脸部位，眉毛保持跟模特一模一样！！！face++并不会。
+- 融合肤质模糊或粗糙
+- 脸部有遮挡时，结果图中脸庞四周会出现黑影
