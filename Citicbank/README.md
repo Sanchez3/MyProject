@@ -60,8 +60,10 @@ PIXI.extract.canvas.prototype.base64 = function base64(target, format, quality) 
 ```
 
 ### 人脸融合
-face++，真贵真不错。
-腾讯云，便宜凑活用。问题如下：
+face++，真贵真不错。[demo体验](https://www.faceplusplus.com.cn/face-merging/#demo)
+
+腾讯云，便宜凑活用。目前不是天天p图团队的技术支持了，效果明显下降。以前的案例参考也不能算数。
+当前问题如下：
 - 推荐配置 脸型参数：最低 脸型参数：最高
   > 脸型参数(融合数值越高，融合后的五官越像模特) ，模板越明显，用户越难分辨
   >
