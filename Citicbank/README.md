@@ -119,6 +119,8 @@ $(video).on('webkitbeginfullscreen', function() {
 以上`exitFullscreen`方法在手机端不一定生效
 
 ## H5监听后退事件与关闭事件
+使用 [howler.js](https://howlerjs.com/)播放声音，在中信的App上，关闭h5页面后，声音仍播放。推荐使用原生audio，避免出现此类bug
+
 - **window.unonload事件**，不一定生效
 - **visibilitychange事件**，不一定生效
   ```javascript
