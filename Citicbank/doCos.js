@@ -50,7 +50,7 @@
                     fmsg = err
                 } else {
                     fmsg = '备份成功';
-                    //将成功上传至cos，返回的location数据返回至服务器做记录
+                    //将成功上传至cos，返回的location数据 传至服务器做记录
                     // ajax().post('/zx/setImageTrace', { name: _name, path: data.Location }).always(function(response, xhr) {});
                 }
                 console.log(fmsg)
