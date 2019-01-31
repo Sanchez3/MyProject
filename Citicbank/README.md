@@ -59,15 +59,15 @@ PIXI.extract.canvas.prototype.base64 = function base64(target, format, quality) 
 }
 ```
 
-### 视频问题再探讨（还有bug）
-#### playsinline属性
+## 视频问题再探讨（还有bug）
+### playsinline属性
 webkit-playsinline="true"：视频播放时局域播放，不脱离文档流 。但是这个属性比较特别， 需要嵌入网页的APP比如WeChat中UIwebview 的allowsInlineMediaPlayback = YES webview.allowsInlineMediaPlayback = YES，才能生效。换句话说，如果APP不设置，你页面中加了这标签也无效，这也就是为什么安卓手机WeChat 播放视频总是全屏，因为APP不支持playsinline，而ISO的WeChat却支持。
 
-#### app内使用ts格式播放
+### app内使用ts格式播放
 微信播放顺畅，
 **但是其他APP播放效率不能保证**
 
-#### 用户关闭（过渡的）视频
+### 用户关闭（过渡的）视频
 `x5videoexitfullscreen` 属性和`webkitendfullscreen` 属性，都要设置
 ```javascript
 //进入全屏
@@ -110,12 +110,46 @@ $(video).on('webkitbeginfullscreen', function() {
 ```
 以上`exitFullscreen`方法在手机端不一定生效
 
+## H5监听后退事件与关闭事件
+- **window.unonload事件**，不一定生效
+- **visibilitychange事件**，不一定生效
+  ```javascript
+  var hiddenProperty = 'hidden' in document ? 'hidden' :    
+    'webkitHidden' in document ? 'webkitHidden' :    
+    'mozHidden' in document ? 'mozHidden' :    
+    null;
+  var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+  var onVisibilityChange = function(){
+      if (document[hiddenProperty]) {    
+          console.log('页面非激活');
+      }else{
+          console.log('页面激活')
+      }
+  }
+  document.addEventListener(visibilityChangeEvent, onVisibilityChange); 
+  ```
+- **popstate方法**
+  1. `pushState`，修改历史记录条目，同时这会影响到某些App的h5页面，出现App自带的返回按键标识（或关闭按键标识）
+  2. 监听`popstate`，触发时调用自定义事件
+  ```javascript
+   pushHistory(); 
+   window.addEventListener("popstate", function(e) { 
+       alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能 
+   }, false); 
+   function pushHistory() { 
+       var state = { 
+           title: "title", 
+           url: "#"
+       }; 
+       window.history.pushState(state, "title", "#"); 
+   }
+  ```
+### Ref
+- [移动端h5监听浏览器返回操作（目前在react项目中用到）](https://blog.csdn.net/sinat_17775997/article/details/81699492)
+- [使用h5新特性，轻松监听任何App自带返回键](https://segmentfault.com/a/1190000013700474)
 
 
-
-
-
-### 人脸融合
+## 人脸融合
 face++，真贵真不错。[demo体验](https://www.faceplusplus.com.cn/face-merging/#demo)
 
 腾讯云，便宜凑活用。目前不是天天p图团队的技术支持了，效果明显下降。以前的案例参考(军装，民国以及微信小程序疯狂变脸)也不能算数。[具体分裂矛盾](https://www.huxiu.com/article/279376.html?h_s=h2)
