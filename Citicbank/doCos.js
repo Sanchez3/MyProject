@@ -2,7 +2,7 @@
  function doCos(_file,_name) {
         var that = this;
 
-        var Bucket = 'zxbak-1252855915';
+        var Bucket = 'zxbak-0000000000';
         var Region = 'ap-shanghai';
 
         var cos = new COS({
