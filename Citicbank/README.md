@@ -13,6 +13,9 @@
 ## 动态效果与时间消耗
 > Note: 不单要注意动态过渡顺畅，也要避免因增强动态效果，而让用户过多等待！有时候**增强动态效果**会影响整个项目效率与速度
 
+### Cos
+- [腾讯云 COS JS SDK（XML API）](https://github.com/tencentyun/cos-js-sdk-v5)
+- 在上面基础上修改的[doCos](https://github.com/Sanchez3/MyProject/blob/master/Citicbank/doCos.js)
 
 ## 图片压缩
 发送图片。`nginx: 413 Request Entity Too Large`
