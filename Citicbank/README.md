@@ -58,6 +58,14 @@ PIXI.extract.canvas.prototype.base64 = function base64(target, format, quality) 
     return this.canvas(target).toDataURL(format, quality)
 }
 ```
+## pixijs 加载图片地址问题
+> Note:所有的html页面中的相对地址都是相对于服务器根目录(http://192.168.0.1/)的，而不是跟目录下的该Web应用的目录( http://192.168.0.1/webapp/的)。
+
+推荐使用`/`
+
+应该尽量避免使用类似 `.` `./` `../../` 等类似的相对该文件位置的相对路径
+
+可能会出现问题：pixijs canvas加载过，而后dom若存在文件，再次被加载（或加载失败）
 
 ## 视频问题再探讨（还有bug）
 ### playsinline属性
@@ -144,7 +152,7 @@ $(video).on('webkitbeginfullscreen', function() {
        window.history.pushState(state, "title", "#"); 
    }
   ```
-### Ref
+### Reference
 - [移动端h5监听浏览器返回操作（目前在react项目中用到）](https://blog.csdn.net/sinat_17775997/article/details/81699492)
 - [使用h5新特性，轻松监听任何App自带返回键](https://segmentfault.com/a/1190000013700474)
 
