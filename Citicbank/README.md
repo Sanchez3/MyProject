@@ -59,6 +59,62 @@ PIXI.extract.canvas.prototype.base64 = function base64(target, format, quality) 
 }
 ```
 
+### 视频问题再探讨（还有bug）
+#### playsinline属性
+webkit-playsinline="true"：视频播放时局域播放，不脱离文档流 。但是这个属性比较特别， 需要嵌入网页的APP比如WeChat中UIwebview 的allowsInlineMediaPlayback = YES webview.allowsInlineMediaPlayback = YES，才能生效。换句话说，如果APP不设置，你页面中加了这标签也无效，这也就是为什么安卓手机WeChat 播放视频总是全屏，因为APP不支持playsinline，而ISO的WeChat却支持。
+
+#### app内使用ts格式播放
+微信播放顺畅，
+**但是其他APP播放效率不能保证**
+
+#### 用户关闭（过渡的）视频
+`x5videoexitfullscreen` 属性和`webkitendfullscreen` 属性，都要设置
+```javascript
+//进入全屏
+function FullScreen() {
+    var ele = document.documentElement;
+    if (ele .requestFullscreen) {
+        ele .requestFullscreen();
+    } else if (ele .mozRequestFullScreen) {
+        ele .mozRequestFullScreen();
+    } else if (ele .webkitRequestFullScreen) {
+        ele .webkitRequestFullScreen();
+    }
+}
+//退出全屏
+exitFullscreen(elem) {
+    elem = elem || document;
+    if (elem.cancelFullScreen) {
+        elem.cancelFullScreen();
+    } else if (elem.mozCancelFullScreen) {
+        elem.mozCancelFullScreen();
+    } else if (elem.webkitCancelFullScreen) {
+        elem.webkitCancelFullScreen();
+    } else if (elem.webkitExitFullScreen) {
+        elem.webkitExitFullScreen()
+    }
+}
+
+// 播放结束时
+$(video).on('ended',function(){
+    //退出全屏
+    exitFullscreen()
+});
+
+// 【进入全屏webkitbeginfullscreen】-【退出全屏webkitendfullscreen】
+$(video).on('webkitbeginfullscreen', function() {
+    video.play();
+ }).on('webkitendfullscreen', function() {
+    video.pause();
+ });
+```
+以上`exitFullscreen`方法在手机端不一定生效
+
+
+
+
+
+
 ### 人脸融合
 face++，真贵真不错。[demo体验](https://www.faceplusplus.com.cn/face-merging/#demo)
 
