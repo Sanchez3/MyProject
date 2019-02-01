@@ -60,7 +60,7 @@ Table of Contents
 ### 2D Game Framework
 ------
 #### Citicbank [*](https://github.com/Sanchez3/MyProject/tree/master/Citicbank)
-**Pixi.js** ，人脸融合 + pixijs生产图片
+**Pixi.js** ，人脸融合 + pixijs提取图片
    - [刷脸送福迎新春](https://citicbank.lxustudio.com/)
 
 #### Thinkpad X1 [*](https://github.com/Sanchez3/MyProject/tree/master/Thinkpad)
