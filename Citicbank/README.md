@@ -77,7 +77,7 @@ PIXI.extract.canvas.prototype.base64 = function base64(target, format, quality) 
 
 ## 视频问题再探讨（还有bug）
 ### playsinline属性
-webkit-playsinline="true"：视频播放时局域播放，不脱离文档流 。但是这个属性比较特别， 需要嵌入网页的APP比如WeChat中UIwebview 的allowsInlineMediaPlayback = YES webview.allowsInlineMediaPlayback = YES，才能生效。换句话说，如果APP不设置，你页面中加了这标签也无效，这也就是为什么安卓手机WeChat 播放视频总是全屏，因为APP不支持playsinline，而ISO的WeChat却支持。
+`webkit-playsinline="true"`：视频播放时局域播放，不脱离文档流 。但是这个属性比较特别， 需要嵌入网页的APP比如WeChat中UIwebview 的`allowsInlineMediaPlayback = YES` `webview.allowsInlineMediaPlayback = YES`，才能生效。换句话说，如果APP不设置，你页面中加了这标签也无效，这也就是为什么安卓手机WeChat 播放视频总是全屏，因为APP不支持playsinline，而ISO的WeChat却支持。
 
 ### app内使用ts格式播放
 微信播放顺畅，
