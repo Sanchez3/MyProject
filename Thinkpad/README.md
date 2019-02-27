@@ -1,5 +1,24 @@
 # Thinkpad X1
 
+## 🐛 微信公众号中弹出键盘再收起时，原虚拟键盘位点击事件无效
+
+### Solution:
+
+针对ios，通过监听input,select,textarea失去焦事件时，控制页面滑动`scroll`，触发浏览器的重绘，使的错误的渲染回复正常，滚动位置也不会有改变，没有影响体验。
+
+```javascript
+document.getElementById('pname').addEventListener('blur',function(){
+    document.body && (document.body.scrollTop = document.body.scrollTop);
+})
+```
+
+### Ref：
+
+- [ios 最新系统bug与解决——微信公众号中弹出键盘再收起时，原虚拟键盘位点击事件无效](https://www.codercto.com/a/43883.html)
+- [微信打开网页键盘弹起后页面上滑，导致弹框里的按钮响应区域错位](http://html51.com/info-59028-1/)
+
+
+
 ## Phaser 
 
 ### 适配问题
