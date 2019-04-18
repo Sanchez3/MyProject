@@ -29,6 +29,7 @@ Table of Contents
       * [简介](#简介)
       * [项目](#项目)
          * [2D Game Framework](#2d-game-framework)
+            * [ASMR <a href="https://github.com/Sanchez3/MyProject/tree/master/ASMR">*</a>](#asmr)
             * [Citicbank <a href="https://github.com/Sanchez3/MyProject/tree/master/Citicbank">*</a>](#citicbank)
             * [Thinkpad X1 <a href="https://github.com/Sanchez3/MyProject/tree/master/Thinkpad">*</a>](#thinkpad-x1)
             * [天猫二十四节气](#天猫二十四节气)
@@ -59,6 +60,10 @@ Table of Contents
 
 ### 2D Game Framework
 ------
+#### ASMR [*](https://github.com/Sanchez3/MyProject/tree/master/Citicbank)
+**Phaser** ，音频播放，音频控制
+   - [床上音乐节](https://asmr.lxustudio.com/)
+
 #### Citicbank [*](https://github.com/Sanchez3/MyProject/tree/master/Citicbank)
 **Pixi.js** ，人脸融合 + pixijs提取图片
    - [刷脸送福迎新春](https://citicbank.lxustudio.com/)
