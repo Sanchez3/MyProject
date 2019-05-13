@@ -29,6 +29,7 @@ Table of Contents
       * [简介](#简介)
       * [项目](#项目)
          * [2D Game Framework](#2d-game-framework)
+            * [Georgia <a href="https://github.com/Sanchez3/MyProject/tree/master/Georgia">*</a>](#georgia)
             * [ASMR <a href="https://github.com/Sanchez3/MyProject/tree/master/ASMR">*</a>](#asmr)
             * [Citicbank <a href="https://github.com/Sanchez3/MyProject/tree/master/Citicbank">*</a>](#citicbank)
             * [Thinkpad X1 <a href="https://github.com/Sanchez3/MyProject/tree/master/Thinkpad">*</a>](#thinkpad-x1)
@@ -60,6 +61,10 @@ Table of Contents
 
 ### 2D Game Framework
 ------
+#### Georgia [*](https://github.com/Sanchez3/MyProject/tree/master/Georgia)
+**Pixi.js** ，滑动交互scroll interactions
+   - [谁的职场不多磨](https://georgia.lxustudio.com/)
+
 #### ASMR [*](https://github.com/Sanchez3/MyProject/tree/master/Citicbank)
 **Phaser** ，音频播放，音频控制
    - [床上音乐节](https://asmr.lxustudio.com/)
