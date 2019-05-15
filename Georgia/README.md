@@ -2,10 +2,15 @@
 
 ## 滑动交互Scroll Interactions
 
+### 参考Reference:
+
+- [一镜到底Demo](https://coding.net/u/MomentStudio/p/long-take-demo/git) 
+- [从零到一：实现通用一镜到底H5](https://segmentfault.com/a/1190000017848401)
+
 ### 利用 gsap 的TweenMax 和TimelineMax处理动画进度（时间轴）
 
-参考[一镜到底Demo](https://coding.net/u/MomentStudio/p/long-take-demo/git)
 简单逻辑如下
+
 ```javascript
 var timeline = new TimelineMax({ paused: true });
 var tw=new TweenMax.fromTo(obj, duration, from, to);
@@ -75,6 +80,14 @@ canvasElement.addEventListener("touchcancel", function(e) {
 
 - 视频A播放结束后，接着播放视频B 。**目前待解决**
 
-- 
-
   
+
+
+**Pixi.js**
+
+- 适配问题 Resizing Renderer 
+  - https://github.com/pixijs/pixi.js/wiki/v4-Tips,-Tricks,-and-Pitfalls#resizing-renderer
+
+  - [PIXI.Application need to been resizeable when window resize](https://github.com/pixijs/pixi.js/issues/4757)
+
+- 
