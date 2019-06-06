@@ -29,6 +29,7 @@ Table of Contents
       * [简介](#简介)
       * [项目](#项目)
          * [2D Game Framework](#2d-game-framework)
+            * [WWF <a href="https://github.com/Sanchez3/MyProject/tree/master/WWF">*</a>](#wwf)
             * [Georgia <a href="https://github.com/Sanchez3/MyProject/tree/master/Georgia">*</a>](#georgia)
             * [ASMR <a href="https://github.com/Sanchez3/MyProject/tree/master/ASMR">*</a>](#asmr)
             * [Citicbank <a href="https://github.com/Sanchez3/MyProject/tree/master/Citicbank">*</a>](#citicbank)
@@ -61,6 +62,9 @@ Table of Contents
 
 ### 2D Game Framework
 ------
+#### WWF [*](https://github.com/Sanchez3/MyProject/tree/master/WWF)
+**Pixi.js** ，滑动交互scroll interactions
+   - [你发现TA了吗？](https://wwf-opf.lxustudio.com/)
 #### Georgia [*](https://github.com/Sanchez3/MyProject/tree/master/Georgia)
 **Pixi.js** ，滑动交互scroll interactions
    - [谁的职场不多磨](https://georgia.lxustudio.com/)
