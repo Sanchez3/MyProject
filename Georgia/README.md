@@ -21,7 +21,7 @@ timeline.add(tl, 0);
 ```
 
 
-###利用[Zynga Scroller](https://github.com/pbakaus/scroller)监控滑动距离，以及滑动惯性等
+### 利用[Zynga Scroller](https://github.com/pbakaus/scroller)监控滑动距离，以及滑动惯性等
 ```javascript
 //scroller totalH
 //window height window.cfg.height
@@ -55,6 +55,35 @@ canvasElement.addEventListener("touchcancel", function(e) {
 }, { passive: false });
 ```
 
+### 事件监听方法
+`on trigger off`事件在Scroller中调用`trigger('progress', timeline.time())`
+
+```javascript
+// ────────────────────────────────────────────────────────────────────────────────
+// 事件
+// ────────────────────────────────────────────────────────────────────────────────
+function on(name, callback) {
+    this.callbacks[name] = this.callbacks[name] || []
+    this.callbacks[name].push(callback)
+}
+
+function off(name, callback) {
+    const callbacks = this.callbacks[name]
+    if (callbacks && callbacks instanceof Array) {
+        const index = callbacks.indexOf(callback)
+        if (index !== -1) callbacks.splice(index, 1)
+    }
+}
+
+function trigger(name, params) {
+    const callbacks = this.callbacks[name]
+    if (callbacks && callbacks instanceof Array) {
+        callbacks.forEach((cb) => {
+            cb(params)
+        })
+    }
+}
+```
 
 
 
