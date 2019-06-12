@@ -1,4 +1,12 @@
 # 一镜到底
+## BUG
+
+### [Swiper4](https://www.swiper.com.cn/) Events（事件）
+
+`slideChangeTransitionStart` `slideChangeTransitionEnd` 事件 手机端出现bug：缓慢拖动（滑动）时，事件无法触发。
+使用`transitionStart` `transitionEnd` 通过判断`this.activeIndex`判断当前活动块(激活块)
+
+
 ## 进度控制
 
 ####现状：
