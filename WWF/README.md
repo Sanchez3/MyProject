@@ -6,6 +6,16 @@
 `slideChangeTransitionStart` `slideChangeTransitionEnd` 事件 手机端出现bug：缓慢拖动（滑动）时，事件无法触发。
 使用`transitionStart` `transitionEnd` 通过判断`mySwiper.activeIndex`判断当前活动块(激活块)
 
+## 微信端视频自动播放
+
+```javascript
+document.addEventListener("WeixinJSBridgeReady", function() {
+  window.isWXReady = true;
+  document.getElementsByTagName('video')[0].play();
+}, false);
+```
+
+
 
 ## 进度控制
 
